@@ -16,11 +16,13 @@
         licenseKey: '0CE829D2-E63344BC-9BADE6C2-2831D733',
         slidesNavigation: true,
         css3: true,
+        scrollBar: false,
         normalScrollElements: '.home-top-content',
         fitToSection: false,
+        fitToSectionDelay: 2000,
         scrollHorizontally: true,
         lazyLoad: true,
-        fixedElements: 'header, footer',
+        fixedElements: 'header',
         // scrollHorizontally: true
       });
 

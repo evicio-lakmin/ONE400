@@ -1,0 +1,64 @@
+//
+//  Variables
+//  _____________________________________________
+
+$grid__columns: 12;
+$grid__gutter:  0;
+
+$name--X: X;
+$name--S: S;
+$name--M: M;
+$name--L: L;
+$name--XL: XL;
+
+$break--S:  480px;
+$break--M:  768px;
+$break--L:  1024px;
+$break--XL: 1440px;
+
+$screen--S:  $break--S + 1;
+$screen--M:  $break--M + 1;
+$screen--L:  $break--L + 1;
+$screen--XL: $break--XL + 1;
+
+$lightblue    : #1ca8ff;
+$twilightblue : #0b3354;
+$black        : #000000;
+$white        : #FFFFFF;
+$whiteDark    : #f8f8f8;
+$gray         :  #dcdcdc;
+
+
+$base-font-primary : freight-text-pro, serif;
+$base-font-secondary : canada-type-gibson, sans-serif;
+$base-font-size: 15px !default;
+$base-line-height: 24px !default;
+$btn-font-weight : 400;
+
+$base-unit: 'em' !default;
+
+$h1-font-size: 2    * $base-font-size !default;
+$h2-font-size: 1.5  * $base-font-size !default;
+$h3-font-size: 1.17 * $base-font-size !default;
+$h4-font-size: 1    * $base-font-size !default;
+$h5-font-size: 0.83 * $base-font-size !default;
+$h6-font-size: 0.67 * $base-font-size !default;
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+$line-height-large:         1.33 !default;
+$line-height-small:         1.5 !default;
+
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
