@@ -7,6 +7,7 @@
 @import '_buttons.scss';
 @import '_base.scss';
 @import '_menu.scss';
+@import '_navbar.scss';
 
 header {
     z-index: -1;
@@ -18,20 +19,6 @@ header {
     // padding:20px;
     min-height: 50px;
 }
-
-.logo{
-  margin-left: 145px;
-  margin-top: 25px;
-  a {
-    color: #fff;
-    font-size: 30px;
-    text-decoration: none;
-  }
-}
-
-
-
-
 
 // home top content starts
 .block.home-top-content {
