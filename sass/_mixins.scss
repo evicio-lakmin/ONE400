@@ -526,16 +526,17 @@
 }
 
 @mixin font-size($sizes) {
-	@each $breakpoint, $size in $sizes {
-		@if $breakpoint == base {
-			font-size: $size;
-		} @else {
-			//@include mq($breakpoint) {
-			@include mq() {
-				font-size: $size;
-			}
-		}
-	}
+	// @each $breakpoint, $size in $sizes {
+	// 	@if $breakpoint == base {
+	// 		font-size: $size;
+	// 	} @else {
+	// 		//@include mq($breakpoint) {
+	// 		@include mq() {
+	// 			font-size: $size;
+	// 		}
+	// 	}
+	// }
+	font-size: $sizes; 
 }
 
 @mixin hardware($backface: true, $perspective: 1000) {
@@ -652,4 +653,8 @@
 
 @mixin text-transform($property : uppercase){
 	text-transform: $property;
+}
+
+@mixin text-align($value : center){
+	text-align: $value;
 }

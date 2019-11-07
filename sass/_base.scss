@@ -4,7 +4,11 @@ html,body {
   margin: 0px;
   font-family: $base-font-primary; 
 }
-
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
 p, 
 article,
 table,
@@ -27,22 +31,22 @@ h6 {
   font-family: $base-font-primary;
 }
 
-h1 {
+h1, .h1 {
   @include font-size(42px);
 }
-h2 {
+h2, .h2 {
   @include font-size(36px);
 }
-h3 {
+h3, .h3  {
   @include font-size(30px); 
-}
-h4 {
+} 
+h4, .h4 {
   @include font-size(24px);
 }
-h5 {
+h5, .h5{
   @include font-size(16px);
 }
-h6 {
+h6, .h6 {
   @include font-size(12px);
 }
 .container {
@@ -54,9 +58,29 @@ img{
   width:100%;
 }
 
-div {
+* {
   box-sizing: border-box;
 }
 .title {
   font-size: 60px;
 }
+
+
+.mobile-only {
+  display: none;
+  visibility: hidden;
+
+  @media screen and (max-width: $break--M) { 
+    display: block  !important;
+    visibility: visible  !important;
+  }
+}
+
+.desktop-only {
+  display: block;
+  visibility: visible;
+  @media screen and (max-width: $break--M) { 
+    display: none  !important;
+    visibility: hidden  !important;
+  }
+} 

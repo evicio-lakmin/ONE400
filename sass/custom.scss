@@ -10,40 +10,45 @@
 
 header {
     z-index: -1;
-   // z-index: 999;
     position: fixed;
-    left: 0;
-    right: 0;
     top: 0;
     padding:20px;
+    left:0px;
+    right:0px;
+    @include soft--sides(20px);
     min-height: 50px;
+    .logo a {
+        color:$white;
+        text-decoration: none;
+    }
 }
-
-.logo a {
-    color: #fff;
-    font-size: 30px;
-    text-decoration: none;
-}
-
-
-
-
 
 // home top content starts
 .block.home-top-content {
-  text-align: center;
-  padding: 5% 0;
-  background-color: #FFFFFF;
-  margin: 0;
+  @include text-align();
+  @include soft--ends(5%);
+  background-color: $white;
+  @include flush--ends();
+  
+  @media screen and (max-width: $break--M) {
+    @include text-align(left);
+    width: 100%;
+    @include soft--ends(20%);
+    @include soft--sides(30px);
+  }
   .content {
     h2 {
+        @extend .h4;
         margin: 15px 0;
     }
-
     article {
       width: 70%;
       margin: auto;
       color: #424242;
+      @media screen and (max-width: $break--M) { 
+        width: 100%;
+        @include push--ends(30px);
+      }
     }
     .right-content {
       position: absolute;
@@ -52,28 +57,24 @@ header {
       top: 0;
     }
   }
-
 }
 
-
-  #myVideo {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
-  
   .video-fullpage {
-    height: 100vh;
-    width: 100%;
-    z-index: 0;
-    position: relative;
-    top: 0;
-}
+      height: 100vh;
+      width: 100%;
+      z-index: 0;
+      position: relative;
+      top: 0;
+      .video-player {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+  }
 
   .header-content {
-    // margin-top: 15%;
     position: relative;
     height: calc(100% - 50%);
     h3.title {
@@ -96,14 +97,13 @@ header {
     z-index: 99;
     width: 100%;
     background-color: rgba(128, 128, 128, 0.1);
-   
     display: flex;
 
     .tab{
       position: relative;
       flex:1;
       text-align: center;
-      padding: 75px 0;
+      @include soft--ends(75px);
       overflow: hidden;
       cursor: pointer;
       font-size: 21px;
@@ -127,7 +127,8 @@ header {
         position: absolute;
         transition: bottom 0.5s ease;
         width: 100%;
-        padding: 30px 15px;
+        @include soft--ends(30px);
+        @include soft--sides(15px);
         flex-direction: row;
         box-sizing: border-box;
         font-size: 21px;
@@ -196,6 +197,13 @@ header {
       display: inline-block;
       width: 50%;
       color: #fff;
+
+      @media screen and (max-width: $break--M) {
+        width: 100%;
+        margin-top: 35%;
+        @include soft--sides(20px);
+      }
+      
       h1 {
         font-size: 42px;
         line-height: 42px;
@@ -207,14 +215,12 @@ header {
       }
 
       a.btn {
-        margin: 5% 0;
-        
+        @include push--ends(5%);
       }
       a.link {
           color: #fff;
       }
-
-      span {
+      span 
           display: block;
           // margin: 3% 0;
       }
@@ -227,7 +233,7 @@ header {
   @include soft--ends(4em);
   h2 {
     @include text-transform();
-    margin:0;
+    @include flush--ends();
     font-family: $base-font-secondary;
   }
 }
@@ -242,13 +248,23 @@ header {
 
 .how-can-we-help-section {
 
-
   .btn {
       margin-top: 10%;
+      @media screen and (max-width: $break--M) {
+        width: 100%;
+      }
   }
   @include soft--ends(4em);
   background-color: #0b3354;
   color:$white;
+  @media screen and (max-width: $break--M) {
+    width: 100%;
+    margin-top: 35%;
+    @include soft--sides(30px);
+
+
+  }
+
   .left {
     @extend .M6;
     h6 {
@@ -257,10 +273,13 @@ header {
       font-size: 21px;
       font-weight: 200;
       line-height: 36px;
+
+      @media screen and (max-width: $break--M) {
+        @include push--ends(2em);
+      }
     }
     h2 {
       @include push--ends(5px);
-      font-size: 36px;
     }
   }
   .right {
@@ -289,7 +308,7 @@ header {
     font-size: 36px;
   }
   .right {
-    background-color: $gray;
+    background-color: $whiteDark;
     @include soft--ends(10%);
     @include soft--sides(10%);
     @extend .M6;
@@ -313,6 +332,7 @@ header {
   background-color: gainsboro;
   h2 {
     font-size: 42px;
+    @include soft--ends(5%);
     line-height: 1em;
   }
   .inner-content {
@@ -335,6 +355,9 @@ header {
     .image {
       width: 30%;
       display: inline-block;
+      img { 
+        vertical-align: sub;
+      }
     }
   }
   .post.content {
@@ -342,6 +365,11 @@ header {
       padding: 20em 10em;
       z-index: 9;
       position: relative;
+      @media screen and (max-width: $break--M) {
+        padding: 5em 2em;
+        @include soft--sides(2em);
+        @include soft--ends(5em);
+      }
   }
   @extend .row;
   .reasarch-left-block {
@@ -352,7 +380,8 @@ header {
     .inner-content {
       width: 70%;
       background-color: $gray;
-      padding: 20% 10%;
+      @include soft--ends(10%);
+      @include soft--sides(10%);
     }
   }
   .reasarch-right-block {
@@ -386,12 +415,12 @@ header {
   bottom: 0;
   background-size: cover !important;
 }
-
+ 
 .become-a-click-block {
-  // @extend .title-block;
+  background-color: $white;
   text-align: center;
   @include soft--ends(4em);
-
+  @extend .desktop-only;
   .content {
       width:45%;
       @include push--auto();
@@ -409,11 +438,9 @@ header {
     font-size: 24px;
     font-weight: 100;
     width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    @include push--auto();
     line-height: 1.4em;
   }
-
 }
 
 footer {
@@ -432,6 +459,10 @@ footer {
       span {
         width:75%;
         display: block;
+      }
+
+      @media screen and (max-width: $break--M){
+        @include soft--sides(30px);
       }
     }
     .right-column {
@@ -736,8 +767,4 @@ ul.social-media-icons {
      clip: rect(0, 0, 0, 0);
      white-space: nowrap;
      border: 0;
- }
-
- .section {
-   z-index: 999;
  }

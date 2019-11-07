@@ -17,7 +17,7 @@
 <div class="fullpage">
   <div class="fixed-header">
       <div class="logo"><a href="#">ONE400</a></div>
-      <a href="#menu" class="menu-link">
+      <a href="#menu" onclick="fullpage_hide(this)" class="menu-link">
               <span>toggle menu</span>
       </a>
       <div id="menu" class="panel">
@@ -37,7 +37,7 @@
       <!-- background video of the header area -->
     <section class="video-fullpage">
         <!-- Background video -->
-        <video autoplay muted  loop id="myVideo">
+        <video class="videoplayer" autoplay muted  loop id="myVideo">
           <source src="assets/videos/backgrounds/one400.mov" type="video/mp4">
         </video>
       </section>
@@ -47,7 +47,7 @@
   
   <section class="header-slider section">
       <!-- slide -->
-      <div class="tab slide header-content">
+      <div class="tab slide header-content" data-anchor="slide1">
         <div class="container">
           <div class="tab-navigation">
             <ul>
@@ -65,7 +65,7 @@
           </div>
       </div>
       <!-- slide -->
-      <div class="tab slide header-content">
+      <div class="tab slide header-content" data-anchor="slide2">
         <div class="container">
           <div class="content">
             <div class="tab-navigation">
@@ -90,13 +90,13 @@
         </div>
       </div>
         <!-- slide -->
-      <div class="tab slide header-content">
+      <div class="tab slide header-content" data-anchor="slide3">
           <div class="container">
             <div class="tab-navigation">
               <ul>
-                <li class="active"><span>SERVICE BY SEGMENT</span></li>
-                <li></li>
-                <li></li>
+                <li data-menuanchor="slide1" class="active"><span>SERVICE BY SEGMENT</span></li>
+                <li data-menuanchor="slide2"></li>
+                <li data-menuanchor="slide3"></li>
                 <li></li>
               </ul>
             </div>
@@ -156,6 +156,8 @@
           <div class="content">
             <h2 class="h2">Design a plan for the present and future of your organization</h2>
             <article class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor consectetur adipiscing elitconsectetur adipiscing elit.</article>
+
+            <div class="mobile-only"> <a class="btn btn-block btn-primary">Explore all services</a> </div>
           </div>
       </div>
     </section>
@@ -226,7 +228,7 @@
     </div>
   </section>
   <!-- STARTS CASE STUDIES SECTION  -->
-  <section class="section fp-noscroll fp-auto-height research-section">
+  <section class="section fp-auto-height research-section">
     <div class="title-block">
       <div class="container">
         <h2>Research & Insights</h2>
@@ -270,16 +272,17 @@
           </div>
       </div>
     </div>
-    <!-- become a client sub section -->
-    <div class="become-a-click-block">
-      <div class="content">
-        <h2>ONE400 is a trusted advisor and a resource for legal organizations nationally and globally.</h2>
-        <h4>Learn more about how we can help you achieve your most mission-critical priorities.</h4>
-        <a class="btn btn-primary" href="#">Become a client </a>
-      </div>
-    </div>
   </section>
   <!-- ENDS CASE STUDIES SECTION  -->
+  <!-- STARTS BECOME A CLIENT SECTION -->
+  <section class="become-a-click-block fp-auto-height section">
+    <div class="content">
+      <h2>ONE400 is a trusted advisor and a resource for legal organizations nationally and globally.</h2>
+      <h4>Learn more about how we can help you achieve your most mission-critical priorities.</h4>
+      <a class="btn btn-primary" href="#">Become a client </a>
+    </div>
+  </section>
+  <!-- ENDS BECOME A CLIENT SECTION -->
   <!-- STARTS EXPLORE ONE400 AREA -->
   <section class="block explore-one-400 fp-auto-height section">
       <div class="row">
