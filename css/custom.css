@@ -888,10 +888,6 @@ div {
 /* ==========================
    MENU FULLPAGE CSS
 ========================== */
-.main-navbar {
-  position: fixed;
-  z-index: 1005; }
-
 .panel {
   position: fixed;
   right: -100%;
@@ -905,7 +901,7 @@ div {
   color: #000000; }
 
 #menu {
-  background: rgba(255, 255, 255, 0.95);
+  background: white;
   z-index: 1000; }
 
 #menu ul {
@@ -914,7 +910,8 @@ div {
 #menu li {
   text-align: center;
   transition: all 0.4s ease;
-  padding: 20px 0; }
+  padding: 20px 0;
+  list-style: none; }
 
 #menu li a {
   color: #000000;
@@ -924,15 +921,15 @@ div {
   text-transform: uppercase;
   padding: 20px 0; }
 
-#menu li:hover {
-  background: rgba(33, 33, 33, 0.9); }
+#menu li:hover a {
+  color: #1CA8FF; }
 
 .menu-link {
   z-index: 999;
   display: block;
   position: fixed;
   top: 0;
-  right: 25px;
+  right: 72px;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -1017,6 +1014,64 @@ div {
   -webkit-transition-delay: 0, 0.3s;
   transition-delay: 0, 0.3s; }
 
+/* Style the menu tab */
+.menu-container {
+  display: flex; }
+  .menu-container .menu-items {
+    flex: 5; }
+  .menu-container .menu-item-info {
+    flex: 6;
+    margin-top: 150px; }
+
+/* Style the tab content */
+.tabcontent {
+  padding: 20px 0;
+  display: none; }
+
+.logo {
+  margin-top: 25px;
+  display: inline-block;
+  flex: 8 !important; }
+  .logo a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none; }
+
+.main-navbar {
+  position: fixed;
+  z-index: 1005;
+  width: 100%; }
+  .main-navbar .nav-container {
+    max-width: 100%;
+    margin-left: 150px;
+    margin-right: 90px;
+    display: flex; }
+    .main-navbar .nav-container > div {
+      flex: 1; }
+
+.search-area {
+  display: flex;
+  justify-content: flex-end; }
+
+.search-button {
+  position: fixed;
+  top: 31px; }
+  .search-button i {
+    font-size: 32px;
+    color: #fff; }
+
+/* Style the button that is used to open and close the collapsible content */
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Style the collapsible content. Note: hidden by default */
+.search-input {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  top: 85px; }
+
 header {
   z-index: -1;
   position: fixed;
@@ -1024,14 +1079,6 @@ header {
   right: 0;
   top: 0;
   min-height: 50px; }
-
-.logo {
-  margin-left: 145px;
-  margin-top: 25px; }
-  .logo a {
-    color: #fff;
-    font-size: 30px;
-    text-decoration: none; }
 
 .block.home-top-content {
   text-align: center;

@@ -15,14 +15,19 @@
 
 <!-- Main NavBar -->
 <nav class="main-navbar">   
-  <div class="container">
-    <div class="logo"><a href="#">ONE400</a></div>
+  <div class="nav-container">
+    <div class="logo"><a href="#">ONE400</a></div>       
     <div class="search-area">
-      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#" class="search-button collapsible"><i class="fas fa-search"></i></a>      
+      <!-- <div class="search-input">
+        <p><input type="text" name="search" placeholder="Search.."></p>
+      </div>   -->
+    </div> 
+    <div>
+      <a href="#menu" class="menu-link">
+        <span>Menu</span>
+      </a>
     </div>
-    <a href="#menu" class="menu-link">
-      <span>Menu</span>
-    </a>
   </div>
 </nav>
 
@@ -30,15 +35,39 @@
 <div class="fullpage">
   <div class="fixed-header"> 
       <div id="menu" class="panel">
-          <nav role="navigation">
-              <ul>
-                    <li><a data-scroll href="#">Home</a></li>
-                    <li><a data-scroll href="#">Portofolio</a></li>
-                    <li><a data-scroll href="#">Blog</a></li>
-                    <li><a data-scroll href="#">contact</a></li>
-                    <li><a data-scroll href="#">About</a></li>
-                </ul>
-            </nav>   
+        <div class="menu-container">
+          <div class="menu-items menu-tab">
+              <nav role="navigation">
+                  <ul>
+                        <li><a data-scroll href="#" class="tablinks" onmouseover="openCity(event, 'Services')">Services</a></li>
+                        <li><a data-scroll href="#" class="tablinks" onmouseover="openCity(event, 'Work')">Work</a></li>
+                        <li><a data-scroll href="#" class="tablinks" onmouseover="openCity(event, 'Insights')">Insights</a></li>
+                        <li><a data-scroll href="#" class="tablinks" onmouseover="openCity(event, 'About')">About</a></li>
+                        <li><a data-scroll href="#" class="tablinks" onmouseover="openCity(event, 'ContactUs')">Contact Us</a></li>
+                    </ul>
+                </nav>
+          </div>
+          <div class="menu-item-info">
+              <div id="Services" class="tabcontent">
+                  <h1>Services</h1>
+                </div>
+                
+                <div id="Work" class="tabcontent">
+                  <h1>Work</h1>
+                </div>
+                
+                <div id="Insights" class="tabcontent">
+                  <h1>Insights</h1>
+                </div>
+                <div id="About" class="tabcontent">
+                  <h1>About</h1>
+                </div>
+                <div id="ContactUs" class="tabcontent">
+                  <h1>Contact Us</h1>
+                </div>
+          </div>  
+          
+        </div>   
       </div>
   </div>
   <!-- header section -->
