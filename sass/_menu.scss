@@ -4,6 +4,11 @@
    MENU FULLPAGE CSS
 ========================== */
 
+.main-navbar {
+  position: fixed;
+  z-index: 1005;
+}
+
 .panel {
   position: fixed;
   right: -100%; /*left or right and the width of your navigation panel*/
@@ -18,7 +23,7 @@
 
 #menu{
   background: rgba(255, 255, 255, 0.95);
-  z-index: 998;
+  z-index: 1000;
 }
 
 #menu ul{
@@ -49,7 +54,7 @@ z-index: 999;
 display: block;
 position: fixed;
 top: 0;
-right: 0;
+right: 25px;
 overflow: hidden;
 margin: 0;
 padding: 0;
@@ -79,7 +84,7 @@ position: absolute;
 top: 45px;
 left: 18px;
 right: 18px;
-height: 6px;
+height: 4px;
 border-radius: 2px;
 background: white;
 -webkit-transition: background 0 0.3s;
@@ -92,7 +97,7 @@ position: absolute;
 display: block;
 left: 0;
 width: 100%;
-height: 6px;
+height: 4px;
 border-radius: 2px;
 background-color: #fff;
 content: "";
@@ -103,13 +108,13 @@ content: "";
 }
 
 .menu-link span::before {
-top: -15px;
+top: -11px;
 -webkit-transition-property: top, -webkit-transform;
         transition-property: top, transform;
 }
 
 .menu-link span::after {
-bottom: -15px;
+bottom: -11px;
 -webkit-transition-property: bottom, -webkit-transform;
         transition-property: bottom, transform;
 }
@@ -125,6 +130,7 @@ background: none;
 
 .menu-open span::before {
 top: 0;
+background-color: #000;
 -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
         transform: rotate(45deg);
@@ -132,6 +138,7 @@ top: 0;
 
 .menu-open span::after {
 bottom: 0;
+background-color: #000;
 -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);

@@ -15,14 +15,18 @@ header {
     left: 0;
     right: 0;
     top: 0;
-    padding:20px;
+    // padding:20px;
     min-height: 50px;
 }
 
-.logo a {
+.logo{
+  margin-left: 145px;
+  margin-top: 25px;
+  a {
     color: #fff;
     font-size: 30px;
     text-decoration: none;
+  }
 }
 
 

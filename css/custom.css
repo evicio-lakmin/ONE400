@@ -888,6 +888,10 @@ div {
 /* ==========================
    MENU FULLPAGE CSS
 ========================== */
+.main-navbar {
+  position: fixed;
+  z-index: 1005; }
+
 .panel {
   position: fixed;
   right: -100%;
@@ -902,7 +906,7 @@ div {
 
 #menu {
   background: rgba(255, 255, 255, 0.95);
-  z-index: 998; }
+  z-index: 1000; }
 
 #menu ul {
   margin-top: 150px; }
@@ -928,7 +932,7 @@ div {
   display: block;
   position: fixed;
   top: 0;
-  right: 0;
+  right: 25px;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -956,7 +960,7 @@ div {
   top: 45px;
   left: 18px;
   right: 18px;
-  height: 6px;
+  height: 4px;
   border-radius: 2px;
   background: white;
   -webkit-transition: background 0 0.3s;
@@ -968,7 +972,7 @@ div {
   display: block;
   left: 0;
   width: 100%;
-  height: 6px;
+  height: 4px;
   border-radius: 2px;
   background-color: #fff;
   content: "";
@@ -978,12 +982,12 @@ div {
   transition-delay: 0.3s, 0; }
 
 .menu-link span::before {
-  top: -15px;
+  top: -11px;
   -webkit-transition-property: top, -webkit-transform;
   transition-property: top, transform; }
 
 .menu-link span::after {
-  bottom: -15px;
+  bottom: -11px;
   -webkit-transition-property: bottom, -webkit-transform;
   transition-property: bottom, transform; }
 
@@ -996,12 +1000,14 @@ div {
 
 .menu-open span::before {
   top: 0;
+  background-color: #000;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
 .menu-open span::after {
   bottom: 0;
+  background-color: #000;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg); }
@@ -1017,13 +1023,15 @@ header {
   left: 0;
   right: 0;
   top: 0;
-  padding: 20px;
   min-height: 50px; }
 
-.logo a {
-  color: #fff;
-  font-size: 30px;
-  text-decoration: none; }
+.logo {
+  margin-left: 145px;
+  margin-top: 25px; }
+  .logo a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none; }
 
 .block.home-top-content {
   text-align: center;
