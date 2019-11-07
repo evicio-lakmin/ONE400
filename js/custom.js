@@ -94,4 +94,20 @@ function setImageHeight(){
   $Content.css("height", $imageHeight);
 }
 
+
+$('.fp-prev').append('<span class="fa fa-angle-left"></span>');
+$('.fp-next').append('<span class="fa fa-angle-right"></span>');
+
+// $("#contactModal").modal({
+//   fadeDuration: 100
+// });
 setImageHeight();
+
+
+//temporary disabled
+$('.selectbox').on("click", function(){
+
+  // $(this).parent().toggleClass('active');
+
+});
+
