@@ -4,32 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>ONE400</title>
   <link rel="stylesheet" href="https://use.typekit.net/rve6bgr.css">
   
   <link rel="stylesheet" href="css/custom.css">
+  <!-- font awesome link -->
+  <script src="https://kit.fontawesome.com/d25f4dcc2b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+<!-- Main NavBar -->
+<nav class="main-navbar">   
+  <div class="container">
+    <div class="logo"><a href="#">ONE400</a></div>
+    <div class="search-area">
+      <a href="#"><i class="fas fa-search"></i></a>
+    </div>
+    <a href="#menu" class="menu-link">
+      <span>Menu</span>
+    </a>
+  </div>
+</nav>
+
 <!-- fullpage Js - Main div -->
 <div class="fullpage">
+  <div class="fixed-header"> 
+      <div id="menu" class="panel">
+          <nav role="navigation">
+              <ul>
+                    <li><a data-scroll href="#">Home</a></li>
+                    <li><a data-scroll href="#">Portofolio</a></li>
+                    <li><a data-scroll href="#">Blog</a></li>
+                    <li><a data-scroll href="#">contact</a></li>
+                    <li><a data-scroll href="#">About</a></li>
+                </ul>
+            </nav>   
+      </div>
+  </div>
   <!-- header section -->
   <header>
-    <div class="logo"><a href="#">ONE400</a></div>
-    <a href="#menu" class="menu-link">
-            <span>toggle menu</span>
-    </a>
-    <div id="menu" class="panel">
-        <nav role="navigation">
-            <ul>
-                  <li><a data-scroll href="#">Home</a></li>
-                  <li><a data-scroll href="#">Portofolio</a></li>
-                  <li><a data-scroll href="#">Blog</a></li>
-                  <li><a data-scroll href="#">contact</a></li>
-                  <li><a data-scroll href="#">About</a></li>
-              </ul>
-          </nav>   
-    </div>
       <!-- background video of the header area -->
     <section class="video-fullpage">
         <!-- Background video -->
@@ -47,7 +60,7 @@
         <div class="container">
           <div class="tab-navigation">
             <ul>
-              <li><span class="active">SERVICE BY SEGMENT</span></li>
+              <li class="active"><span>SERVICE BY SEGMENT</span></li>
               <li></li>
               <li></li>
               <li></li>
@@ -66,7 +79,7 @@
           <div class="content">
             <div class="tab-navigation">
               <ul>
-                <li><span class="active">SERVICE BY SEGMENT</span></li>
+                <li class="active"><span>SERVICE BY SEGMENT</span></li>
                 <li></li>
                 <li></li>
                 <li></li>
@@ -90,7 +103,7 @@
           <div class="container">
             <div class="tab-navigation">
               <ul>
-                <li><span class="active">SERVICE BY SEGMENT</span></li>
+                <li class="active"><span>SERVICE BY SEGMENT</span></li>
                 <li></li>
                 <li></li>
                 <li></li>
@@ -143,44 +156,48 @@
                 <a href="#">Learn more</a>
             </div>
           </div>
-  
       </div> 
     </section>
+
+    <!-- home page main content block -->
     <section class="block home-top-content fp-auto-height section">
-        <div class="container">
-          <h2 class="h2">Design a plan for the present and future of your organization</h2>
-          <article class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor consectetur adipiscing elitconsectetur adipiscing elit.</article>
-        </div>
-      </section>
+      <div class="container">
+          <div class="content">
+            <h2 class="h2">Design a plan for the present and future of your organization</h2>
+            <article class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor consectetur adipiscing elitconsectetur adipiscing elit.</article>
+          </div>
+      </div>
+    </section>
+    <!-- home page main content block -->
 
-
-  <!-- home page case studies section  -->
-  <section class="case-study-section section">
-    <!-- slide - case study -->
-    <div class="slide" id="slide1" data-anchor="slide1" style="background: url(assets/images/home-case-study.jpg);">
-      <!-- inner content of the case study slider -->
-      <div class="inner-content">
-        <div class="container">
-            <div class="content">
-                <h1>A modern redesign for a sophisticated brand</h1>
-                <a class="btn" href="#">View the case study</a>
-                <span>
-                  <a class="link" href="">View all featured case studies >></a>
-                </span>
-            </div>
+    <!-- home page case studies section  -->
+    <section class="case-study-section section">
+      <!-- slide - case study -->
+      <div class="slide" id="slide1" data-anchor="slide1" style="background: url(assets/images/home-case-study.jpg);">
+        <!-- inner content of the case study slider -->
+        <div class="inner-content">
+          <div class="container">
+              <div class="content">
+                  <h1>A modern redesign for a sophisticated brand</h1>
+                  <a class="btn btn-primary" href="#">View the case study</a>
+                  <span>
+                    <a class="link" href="">View all featured case studies <i class="fas fa-arrow-right"></i> </a>
+                  </span>
+              </div>
+          </div>
         </div>
       </div>
-    </div>
     <!-- slide - case study -->
     <div class="slide" id="slide2" data-anchor="slide2" style="background: url(assets/images/home-case-study.jpg);">
       <!-- inner content of the case study slider -->
       <div class="inner-content">
         <div class="container">
         <div class="content">
+          <small>Signature Resolution</small>
             <h1>A modern redesign for a sophisticated brand</h1>
-            <a class="btn" href="#">View the case study</a>
+            <a class="btn btn-primary" href="#">View the case study</a>
             <span>
-              <a class="link" href="">View all featured case studies >></a>
+              <a class="link" href="">View all featured case studies <i class="fas fa-arrow-right"></i> </a>
             </span>
           </div>
         </div>
@@ -193,9 +210,9 @@
           <div class="container">
           <div class="content">
               <h1>A modern redesign for a sophisticated brand</h1>
-              <a class="btn" href="#">View the case study</a>
+              <a class="btn btn-primary" href="#">View the case study</a>
               <span>
-                <a class="link" href="">View all featured case studies >></a>
+                <a class="link" href="">View all featured case studies <i class="fas fa-arrow-right"></i> </a>
               </span>
             </div>
           </div>
@@ -208,41 +225,155 @@
           <div class="container">
           <div class="content">
               <h1>A modern redesign for a sophisticated brand</h1>
-              <a class="btn" href="#">View the case study</a>
-              <span>
-                <a class="link" href="">View all featured case studies >></a>
+              <a class="btn btn-primary" href="#">View the case study</a>
+              <span> 
+                <a class="link" href="">View all featured case studies <i class="fas fa-arrow-right"></i></a>
               </span>
             </div>
           </div>
         </div>
     </div>
   </section>
-
-  <!-- how can we help you block on home page -->
-  <section class="block how-can-we-help-section fp-auto-height section">
+  <!-- STARTS CASE STUDIES SECTION  -->
+  <section class="section fp-noscroll fp-auto-height research-section">
+    <div class="title-block">
       <div class="container">
-        <div class="row">
-          <div class="left">
-              <h2 class="text-center">How can we help you?</h2>
-              <h6 class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h6>
+        <h2>Research & Insights</h2>
+      </div>
+    </div>
+    <div class="research-blocks">
+      <!-- reasarch-left-block -->
+      <div class="reasarch-left-block">
+        <div class="content-back-img" style="background: url(assets/images/backgound-research.jpg);"></div>
+        <div class="post content">
+          <h5>Tranding</h5>
+          <h2>Subscription legal plans and why your law firm needs one</h2>
+          <div class="content-info">
+              <span>10.21.19 </span> |  <span> <a href="#"> Article in Technology </a> </span>
           </div>
-          <div class="right"> <a class="btn btn-primary">Contact Us</a> </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="content-bottom-block">
+          <div class="inner-content">
+            <h2>Blockchain for Attorneys</h2>
+            <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</P>
+            <div class="content-info">
+                <span>10.21.19 </span> |  <span> <a href="#">Article in Technology </a></span>
+            </div>
+          </div>
+          <div class="image"><img src="assets/images/post-left.png" alt="post title" ></div>
         </div>
       </div>
-    </section>
-    
-    <footer>
-        <div class="left-column">
+      <!-- reasarch-right-block -->
+      <div class="reasarch-right-block">
+        <div class="image"><img src="assets/images/post-right.png" alt="post title" ></div>
+          <div class="content-bottom-block">
+              <div class="inner-content">
+                <h2>How the latest tech will shake up legal</h2>
+
+                <div class="content-info">
+                    <span>10.21.19 </span> |  <span> <a href="#">Article in Technology</a></span>
+                </div>
+                <a class="btn btn-secondary" href="#"> Explore all research + insights <i class="fas fa-arrow-right"></i> </a>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- become a client sub section -->
+    <div class="become-a-click-block">
+      <div class="content">
+        <h2>ONE400 is a trusted advisor and a resource for legal organizations nationally and globally.</h2>
+        <h4>Learn more about how we can help you achieve your most mission-critical priorities.</h4>
+        <a class="btn btn-primary" href="#">Become a client </a>
+      </div>
+    </div>
+  </section>
+  <!-- ENDS CASE STUDIES SECTION  -->
+  <!-- STARTS EXPLORE ONE400 AREA -->
+  <section class="block explore-one-400 fp-auto-height section">
+      <div class="row">
+        <div class="left"> 
+          <div class="image">
+            <img src="assets/images/image-explore.jpg" alt="">
+          </div>
+        </div>
+        <div class="right">
+            <h2 class="text-center">Explore ONE400</h2>
+            <h6 class="text-center">Innovation doesn’t start with technology, it starts with people. At ONE400 we have dedicated team members whose very job is to innovate and contribute to our clients success on a daily basis..</h6>
+            <a class="link">Lean more about us <i class="fas fa-arrow-right"></i> </a>
+            <a class="link">Meet the team <i class="fas fa-arrow-right"></i> </a>
+        </div>
+      </div>
+  </section>
+  <!-- ENDS EXPLORE ONE400 AREA -->
+  <!-- START HOW CAN WE HELP BLOCK -->
+  <section class="block how-can-we-help-section fp-auto-height section">
+    <div class="container">
+      <div class="row">
+        <div class="left">
+            <h2 class="text-center">How can we help you?</h2>
+            <h6 class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h6>
+        </div>
+        <div class="right"> <a class="btn btn-primary">Contact Us</a> </div>
+      </div>
+    </div>
+  </section>
+  <!-- ENDS HOW CAN WE HELP BLOCK -->
+
+  <!-- FOOTER -->
+  <footer class="section fp-auto-height fp-auto-height-responsive">
+    <div class="container">
+      <div class="footer-rows">
+        <!-- left-column -->
+      <div class="left-column">
+          <span class="logo-footer"><img src="assets/images/logo.svg" alt="ONE400 Logo"></span>
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</span>
           <ul class="social-media-icons">
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#"><i></i></a></li>
-              <li><a href="#"><i></i></a></li>
-              <li><a href="#"><i></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
-        <div class="right-column"></div>
-      </footer>
+        <!-- right-column -->
+        <div class="right-column">
+          <div class="contact-links">
+            <h5>Contact</h5>
+            <p>Interested in becoming a client? <a class="link" href="#">Let’s connect</a></p>
+            <p>Curious about working at ONE400? <a class="link" href="#">View openings</a></p>
+            <p>Other inquiries <a class="link" href="#">Contact us</a></p>
+          </div>
+          <div class="location-links">
+            <h5>Locations</h5>
+            <p>
+              Los Angeles <br />
+              300 S. Raymond Ave #8
+              Pasadena, CA 91105
+              1.626.578.5040
+            </p>
+            <p>
+              New York<br />
+              576 Fifth Ave Suite 903
+              New York, NY 10036
+              1.646.374.2512 
+            </p>
+            <p>
+              Guadalajara<br />
+              576 Fifth Ave Suite 903
+              New York, NY 10036
+              1.646.374.2512 
+            </p>
+          </div>
+          <div class="subscribe-links">
+              <h5>Subscribe</h5>
+              <p>Receive monthly updates from ONE400: </p>
+              <input type="text"><button>Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+   <!-- FOOTER -->
 </div>
 
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
