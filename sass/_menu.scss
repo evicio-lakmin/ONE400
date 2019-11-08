@@ -4,6 +4,11 @@
    MENU FULLPAGE CSS
 ========================== */
 
+.main-navbar {
+  position: fixed;
+  z-index: 1005;
+}
+
 .panel {
   position: fixed;
   right: -100%; /*left or right and the width of your navigation panel*/
@@ -17,7 +22,7 @@
 }
 
 #menu{
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.95);
   z-index: 1000;
 }
 
@@ -29,7 +34,6 @@
   text-align: center;
   transition: all 0.4s ease;
   padding: 20px 0;
-  list-style: none;
 }
 
 #menu li a{
@@ -41,9 +45,8 @@
   padding: 20px 0;
 }
 
-#menu li:hover a{
-  // background: rgba(33, 33, 33, 0.9);
-  color: #1CA8FF;
+#menu li:hover{
+  background: rgba(33, 33, 33, 0.9);
 }
 
 .menu-link {
@@ -51,7 +54,7 @@ z-index: 999;
 display: block;
 position: fixed;
 top: 0;
-right: 72px;
+right: 25px;
 overflow: hidden;
 margin: 0;
 padding: 0;
@@ -145,24 +148,4 @@ background-color: #000;
 .menu-open span::after {
 -webkit-transition-delay: 0, 0.3s;
         transition-delay: 0, 0.3s;
-}
-
-
-/* Style the menu tab */
-.menu-container{
-  display: flex;
-
-  .menu-items{
-    flex: 5;
-  }
-  .menu-item-info{
-    flex: 6;
-    margin-top: 150px;
-  }
-}
-
-/* Style the tab content */
-.tabcontent {
-  padding: 20px 0;
-  display: none;
 }
