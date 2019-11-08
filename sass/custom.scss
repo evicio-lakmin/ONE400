@@ -9,6 +9,7 @@
 @import '_menu.scss';
 
 
+
 header {
     z-index: -1;
     position: fixed;
@@ -102,7 +103,7 @@ header {
     @media screen and (max-width: $break--M) {
       flex-direction: column;
     }
-    
+   
     .tab{
       height: 20vh;
       position: relative;
@@ -411,6 +412,10 @@ header {
     @extend .h5;
     font-family: $base-font-secondary;
   }
+  .inner-content {
+      width: 70%;
+
+  }
   .content-info {
     font-size: 12px;
     display: block;
@@ -449,9 +454,11 @@ header {
     .image {
       width: 30%;
       display: inline-block;
+
       @media screen and (max-width: $break--M) {
        display: none;
       }
+
       img { 
         vertical-align: sub;
       }

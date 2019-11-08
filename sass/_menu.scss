@@ -46,6 +46,7 @@
 }
 
 #menu li:hover{
+  color: #1CA8FF;
   background: rgba(33, 33, 33, 0.9);
 }
 
@@ -148,4 +149,24 @@ background-color: #000;
 .menu-open span::after {
 -webkit-transition-delay: 0, 0.3s;
         transition-delay: 0, 0.3s;
+}
+
+/* Style the menu tab */
+.menu-container{
+  display: flex;
+
+  .menu-items{
+    flex: 5;
+  }
+  .menu-item-info{
+    flex: 6;
+    margin-top: 150px;
+  }
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 20px 0;
+  display: none;
+
 }
