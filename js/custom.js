@@ -81,7 +81,7 @@ new fullpage('.fullpage', {
   
   onLeave: function(origin, nextIndex, direction) {
     if(origin.index == 1){
-      fullpage_api.setAllowScrolling(false, 'left, right');
+      //fullpage_api.setAllowScrolling(false, 'left, right');
     } else {
       // fullpage_api.setAllowScrolling(true);
     }
@@ -89,17 +89,17 @@ new fullpage('.fullpage', {
     if(origin.index == 2){ 
       // fullpage_api.setAllowScrolling(false);
      
-      fullpage_api.moveTo(3);
+    //  fullpage_api.moveTo(3);
     } else {
       
     }
     if(origin.index == 3){
     //alert();
-    fullpage_api.setAutoScrolling(false);
+    //fullpage_api.setAutoScrolling(false);
     // fullpage_api.setScrollBar(false);
-    
+
     } else {
-      fullpage_api.setAutoScrolling(true);
+     // fullpage_api.setAutoScrolling(true);
     }
    // console.log(nextIndex);
     // if(index == 1 && !sliding) {
