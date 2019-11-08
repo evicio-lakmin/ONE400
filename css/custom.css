@@ -929,10 +929,6 @@ img {
 /* ==========================
    MENU FULLPAGE CSS
 ========================== */
-.main-navbar {
-  position: fixed;
-  z-index: 1005; }
-
 .panel {
   position: fixed;
   right: -100%;
@@ -946,7 +942,7 @@ img {
   color: #000000; }
 
 #menu {
-  background: rgba(255, 255, 255, 0.95);
+  background: white;
   z-index: 1000; }
 
 #menu ul {
@@ -955,7 +951,8 @@ img {
 #menu li {
   text-align: center;
   transition: all 0.4s ease;
-  padding: 20px 0; }
+  padding: 20px 0;
+  list-style: none; }
 
 #menu li a {
   color: #000000;
@@ -966,14 +963,14 @@ img {
   padding: 20px 0; }
 
 #menu li:hover {
-  background: rgba(33, 33, 33, 0.9); }
+  color: #1CA8FF; }
 
 .menu-link {
   z-index: 999;
   display: block;
   position: fixed;
   top: 0;
-  right: 25px;
+  right: 72px;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -1058,6 +1055,64 @@ img {
   -webkit-transition-delay: 0, 0.3s;
   transition-delay: 0, 0.3s; }
 
+/* Style the menu tab */
+.menu-container {
+  display: flex; }
+  .menu-container .menu-items {
+    flex: 5; }
+  .menu-container .menu-item-info {
+    flex: 6;
+    margin-top: 150px; }
+
+/* Style the tab content */
+.tabcontent {
+  padding: 20px 0;
+  display: none; }
+
+.logo {
+  margin-top: 25px;
+  display: inline-block;
+  flex: 8 !important; }
+  .logo a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none; }
+
+.main-navbar {
+  position: fixed;
+  z-index: 1005;
+  width: 100%; }
+  .main-navbar .nav-container {
+    max-width: 100%;
+    margin-left: 150px;
+    margin-right: 90px;
+    display: flex; }
+    .main-navbar .nav-container > div {
+      flex: 1; }
+
+.search-area {
+  display: flex;
+  justify-content: flex-end; }
+
+.search-button {
+  position: fixed;
+  top: 31px; }
+  .search-button i {
+    font-size: 32px;
+    color: #fff; }
+
+/* Style the button that is used to open and close the collapsible content */
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Style the collapsible content. Note: hidden by default */
+.search-input {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  top: 85px; }
+
 header {
   z-index: -1;
   position: fixed;
@@ -1137,9 +1192,6 @@ header {
   width: 100%;
   display: flex;
   flex-direction: row; }
-  @media screen and (max-width: 768px) {
-    .service-rollovers {
-      flex-direction: column; } }
   .service-rollovers .tab {
     height: 20vh;
     position: relative;
@@ -1246,11 +1298,6 @@ header {
 
 .case-study-section {
   background-color: #FFFFFF; }
-  @media screen and (max-width: 768px) {
-    .case-study-section .fp-controlArrow {
-      display: none; }
-    .case-study-section .btn {
-      width: 100%; } }
   .case-study-section .slide {
     background-size: cover !important;
     background-position: center !important; }
@@ -1376,30 +1423,18 @@ header {
     padding-top: 5%;
     padding-bottom: 5%;
     line-height: 1em; }
-    @media screen and (max-width: 768px) {
-      .research-blocks h2 {
-        font-size: 30px; } }
   .research-blocks h5 {
     font-family: canada-type-gibson, sans-serif; }
+  .research-blocks .inner-content {
+    width: 70%; }
   .research-blocks .content-info {
     font-size: 12px;
     display: block;
     width: 100%;
     margin-bottom: 5%; }
-    @media screen and (max-width: 768px) {
-      .research-blocks .content-info {
-        border-bottom: 1px solid #cecece;
-        padding-bottom: 15%; } }
     .research-blocks .content-info a {
       color: #1ca8ff;
       text-decoration: none; }
-  .research-blocks .inner-content {
-    width: 70%; }
-    @media screen and (max-width: 768px) {
-      .research-blocks .inner-content {
-        width: 100%; }
-        .research-blocks .inner-content:last-child .content-info {
-          border-bottom: 0px; } }
   .research-blocks .content-bottom-block {
     display: flex;
     z-index: 99;
@@ -1410,9 +1445,6 @@ header {
     .research-blocks .content-bottom-block .image {
       width: 30%;
       display: inline-block; }
-      @media screen and (max-width: 768px) {
-        .research-blocks .content-bottom-block .image {
-          display: none; } }
       .research-blocks .content-bottom-block .image img {
         vertical-align: sub; }
   .research-blocks .post.content {
@@ -1436,11 +1468,6 @@ header {
       padding-top: 10%;
       padding-left: 10%;
       padding-right: 10%; }
-      @media screen and (max-width: 768px) {
-        .research-blocks .reasarch-left-block .inner-content {
-          width: 100%; }
-          .research-blocks .reasarch-left-block .inner-content p {
-            display: none; } }
   .research-blocks .reasarch-right-block .content-bottom-block {
     padding-top: 10%;
     padding-left: 10%;

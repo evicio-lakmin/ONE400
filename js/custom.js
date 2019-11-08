@@ -182,4 +182,3 @@ $('.selectbox').on("click", function(){
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
