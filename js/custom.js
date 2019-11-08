@@ -46,11 +46,11 @@ sliding     = false;
 //scroll plugin settings 
 new fullpage('.fullpage', {
   //options here
-  //autoScrolling:true,
+  autoScrolling:false,
   licenseKey: '0CE829D2-E63344BC-9BADE6C2-2831D733',
   slidesNavigation: true,
   css3: true,
-  //scrollBar: true,
+  scrollBar: false,
   normalScrollElements: '.research-section',
   fitToSection: false,
   fitToSectionDelay: 1000,
@@ -66,7 +66,7 @@ new fullpage('.fullpage', {
   afterSlideLoad: function( section, origin, destination, direction){
 		var loadedSlide = this;
     
-    console.log(section.index);
+    //console.log(section.index);
 		//first slide of the second section
 		// if(section.anchor == 'secondPage' && destination.index == 1){
 		// 	alert("First slide loaded");
@@ -79,10 +79,40 @@ new fullpage('.fullpage', {
 		// }
   },
   
-  onLeave: function(index, nextIndex, direction) {
+  onLeave: function(origin, nextIndex, direction) {
 
-    console.log(index);
-    console.log(nextIndex);
+    
+    if(origin.index == 1){
+
+      //fullpage_api.setAllowScrolling(false, 'left, right');
+    } else {
+      // fullpage_api.setAllowScrolling(true);
+    }
+    console.log(origin.index);
+    if(origin.index == 0){ 
+        // fullpage_api.setAllowScrolling(true);
+      // fullpage_api.setAllowScrolling(false);
+     
+    //  fullpage_api.moveTo(3);
+    }
+    if(origin.index == 2){ 
+      // fullpage_api.setAllowScrolling(false);
+     
+    //  fullpage_api.moveTo(3);
+    } else {
+      
+    }
+    if(origin.index == 3){
+    //alert();
+    //fullpage_api.moveSectionDown();
+    console.log(origin.index);
+    //fullpage_api.setAutoScrolling(false);
+    // fullpage_api.setScrollBar(false);
+
+    } else {
+     // fullpage_api.setAutoScrolling(true);
+    }
+   // console.log(nextIndex);
     // if(index == 1 && !sliding) {
 
     //     if(direction == 'down' && slideIndex < 1) {
@@ -165,20 +195,18 @@ $('.selectbox').on("click", function(){
  function showInfo(evt, cityName) {
   // Declare all variables
   var i, tabcontent, tablinks;
-
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-
   // Get all elements with class="tablinks" and remove the class "active"
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-
   // Show the current tab, and add an "active" class to the link that opened the tab
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
