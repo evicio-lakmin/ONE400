@@ -141,6 +141,18 @@ header {
         flex-direction: row;
         box-sizing: border-box;
         font-size: 21px;
+
+        a{
+          position: absolute;
+          bottom: 18px;
+          left: 28px;
+          color: #fff;
+          text-decoration: none;
+
+          &:hover{
+            text-decoration: underline;
+          }
+        }
       }
     }
   }

@@ -936,6 +936,14 @@ img {
   width: 100%;
   /*should match the above value*/ }
 
+.panel-logo {
+  margin-left: 150px;
+  margin-top: 25px;
+  color: #0567A3;
+  font-size: 30px;
+  position: absolute;
+  z-index: 1010; }
+
 .menu-link i {
   text-decoration: none;
   font-size: 40px;
@@ -948,21 +956,23 @@ img {
 #menu ul {
   margin-top: 150px; }
 
+.menu-gap {
+  padding-left: 14rem; }
+
 #menu li {
-  text-align: center;
   transition: all 0.4s ease;
-  padding: 20px 0;
+  padding: 0 0 20px;
   list-style: none; }
 
 #menu li a {
   color: #000000;
-  font-size: 35px;
+  font-size: 4rem;
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
   padding: 20px 0; }
 
-#menu li:hover {
+#menu li:hover a {
   color: #1CA8FF; }
 
 .menu-link {
@@ -1068,6 +1078,25 @@ img {
 .tabcontent {
   padding: 20px 0;
   display: none; }
+  .tabcontent .info-content {
+    display: inline-block;
+    float: left;
+    border-left: 2px solid #000;
+    padding-left: 2rem;
+    padding-right: 3rem; }
+    .tabcontent .info-content h3 {
+      font-size: 50px;
+      font-weight: 500; }
+    .tabcontent .info-content ul {
+      margin-top: 2rem !important;
+      padding: 0;
+      margin: 0; }
+      .tabcontent .info-content ul li {
+        text-align: left !important;
+        font-size: 30px; }
+    @media (max-width: 1025px) {
+      .tabcontent .info-content {
+        display: none; } }
 
 .logo {
   margin-top: 25px;
@@ -1230,6 +1259,14 @@ header {
       flex-direction: row;
       box-sizing: border-box;
       font-size: 21px; }
+      .service-rollovers .tab .inner a {
+        position: absolute;
+        bottom: 18px;
+        left: 28px;
+        color: #fff;
+        text-decoration: none; }
+        .service-rollovers .tab .inner a:hover {
+          text-decoration: underline; }
 
 .header-slider {
   position: absolute;
