@@ -41,8 +41,7 @@
   padding: 20px 0;
 }
 
-#menu li:hover a{
-  // background: rgba(33, 33, 33, 0.9);
+#menu li:hover{
   color: #1CA8FF;
 }
 
@@ -146,7 +145,6 @@ background-color: #000;
 -webkit-transition-delay: 0, 0.3s;
         transition-delay: 0, 0.3s;
 }
-
 
 /* Style the menu tab */
 .menu-container{
