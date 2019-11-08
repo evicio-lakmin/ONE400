@@ -18,6 +18,10 @@ function fullpage_hide($ele){
   }
 }
 
+
+var slideIndex  = 1,
+sliding     = false;
+
 //scroll plugin settings 
 new fullpage('.fullpage', {
   //options here
@@ -25,10 +29,11 @@ new fullpage('.fullpage', {
   licenseKey: '0CE829D2-E63344BC-9BADE6C2-2831D733',
   slidesNavigation: true,
   css3: true,
-  scrollBar: true,
+  //scrollBar: true,
   normalScrollElements: '.research-section',
   fitToSection: false,
   fitToSectionDelay: 1000,
+  scrollHorizontally: true,
   // scrollHorizontally: true,
   lazyLoad: true,
   fixedElements: 'header',
@@ -53,12 +58,36 @@ new fullpage('.fullpage', {
 		// }
   },
   
-  onLeave: function(origin, destination, direction){
-		//it won't scroll if the destination is the 3rd section
-		if(destination.index == 2){
-		//	return false;
-		}
-	}
+  onLeave: function(index, nextIndex, direction) {
+
+    console.log(index);
+    console.log(nextIndex);
+    // if(index == 1 && !sliding) {
+
+    //     if(direction == 'down' && slideIndex < 1) {
+
+    //         sliding = true;
+    //         $.fn.fullpage.moveSlideRight();
+    //         slideIndex++;
+    //         return false;
+
+    //     } else if(direction == 'up' && slideIndex > 1) {
+
+    //         sliding = true;
+    //         $.fn.fullpage.moveSlideLeft();
+    //         slideIndex--;
+    //         return false;
+
+    //     }
+
+    // } else if(sliding) {
+    //     return false;
+    // }
+  },
+
+  afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+      sliding = false;
+  }
 });
 
 
