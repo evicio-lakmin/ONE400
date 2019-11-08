@@ -10,6 +10,15 @@
   width: 100%; /*should match the above value*/
 }
 
+.panel-logo{  
+  margin-left: 150px;
+  margin-top: 25px;
+  color: #0567A3;
+  font-size: 30px;
+  position: absolute;
+  z-index: 1010;
+}
+
 .menu-link i {
   text-decoration: none;
   font-size: 40px;
@@ -25,23 +34,26 @@
   margin-top: 150px;
 }
 
+.menu-gap{
+  padding-left: 14rem;
+}
+
 #menu li{
-  text-align: center;
   transition: all 0.4s ease;
-  padding: 20px 0;
+  padding: 0 0 20px;
   list-style: none;
 }
 
 #menu li a{
   color: $black;
-  font-size: 35px;
+  font-size: 4rem;
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
   padding: 20px 0;
 }
 
-#menu li:hover{
+#menu li:hover a{
   color: #1CA8FF;
 }
 
@@ -163,4 +175,32 @@ background-color: #000;
 .tabcontent {
   padding: 20px 0;
   display: none;
+
+  .info-content{
+    display: inline-block;
+    float: left;
+    border-left: 2px solid #000;
+    padding-left: 2rem;
+    padding-right: 3rem;
+
+    h3{
+      font-size: 50px;
+      font-weight: 500;
+    }
+
+    ul{
+      margin-top: 2rem !important;
+      padding: 0;
+      margin: 0;
+
+      li{
+        text-align: left !important;
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: $screen--L) {
+      display: none;
+    }
+  }
 }
