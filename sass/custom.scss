@@ -7,7 +7,7 @@
 @import '_buttons.scss';
 @import '_base.scss';
 @import '_menu.scss';
-@import '_navbar.scss';
+
 
 
 header {
@@ -99,6 +99,11 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
+    
+    @media screen and (max-width: $break--M) {
+      flex-direction: column;
+    }
+   
     .tab{
       height: 20vh;
       position: relative;
@@ -234,6 +239,15 @@ header {
 
 .case-study-section {
   background-color: $white;
+  @media screen and (max-width: $break--M) {
+    .fp-controlArrow {
+      display: none;
+    }
+
+    .btn {
+      width:100%;
+    }
+  } 
   .slide {
     background-size: cover !important;
     background-position: center !important;
@@ -278,8 +292,8 @@ header {
       }
     }
   }
-}
 
+}
 .title-block {
   text-align: center;
   @include soft--ends(4em);
@@ -389,6 +403,10 @@ header {
     font-size: 42px;
     @include soft--ends(5%);
     line-height: 1em;
+
+    @media screen and (max-width: $break--M) {
+      font-size: 30px;
+    }
   }
   h5 {
     @extend .h5;
@@ -396,17 +414,36 @@ header {
   }
   .inner-content {
       width: 70%;
+
   }
   .content-info {
     font-size: 12px;
     display: block;
     width: 100%;
     margin-bottom: 5%;
+    @media screen and (max-width: $break--M) {
+      border-bottom: 1px solid #cecece;
+      padding-bottom: 15%;
+
+      
+    }
+
     a {
       color: $lightblue;
       text-decoration: none;
     }
   }
+  .inner-content {
+      width: 70%;
+      @media screen and (max-width: $break--M) {
+        width: 100%;
+
+        &:last-child .content-info {
+          border-bottom: 0px;
+        }
+      }
+  }
+
   .content-bottom-block {
     display: flex;
     z-index: 99;
@@ -417,6 +454,11 @@ header {
     .image {
       width: 30%;
       display: inline-block;
+
+      @media screen and (max-width: $break--M) {
+       display: none;
+      }
+
       img { 
         vertical-align: sub;
       }
@@ -445,6 +487,13 @@ header {
       // @include soft--ends(10%);
       padding-top: 10%;
       @include soft--sides(10%);
+
+      @media screen and (max-width: $break--M) {
+        width: 100%;
+        p{
+          display: none;
+        }
+      }
     }
   }
   .reasarch-right-block {
