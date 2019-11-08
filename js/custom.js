@@ -46,7 +46,7 @@ sliding     = false;
 //scroll plugin settings 
 new fullpage('.fullpage', {
   //options here
-  autoScrolling:true,
+  autoScrolling:false,
   licenseKey: '0CE829D2-E63344BC-9BADE6C2-2831D733',
   slidesNavigation: true,
   css3: true,
@@ -66,7 +66,7 @@ new fullpage('.fullpage', {
   afterSlideLoad: function( section, origin, destination, direction){
 		var loadedSlide = this;
     
-    console.log(section.index);
+    //console.log(section.index);
 		//first slide of the second section
 		// if(section.anchor == 'secondPage' && destination.index == 1){
 		// 	alert("First slide loaded");
@@ -80,12 +80,21 @@ new fullpage('.fullpage', {
   },
   
   onLeave: function(origin, nextIndex, direction) {
+
+    
     if(origin.index == 1){
+
       //fullpage_api.setAllowScrolling(false, 'left, right');
     } else {
       // fullpage_api.setAllowScrolling(true);
     }
     console.log(origin.index);
+    if(origin.index == 0){ 
+        // fullpage_api.setAllowScrolling(true);
+      // fullpage_api.setAllowScrolling(false);
+     
+    //  fullpage_api.moveTo(3);
+    }
     if(origin.index == 2){ 
       // fullpage_api.setAllowScrolling(false);
      
@@ -95,6 +104,8 @@ new fullpage('.fullpage', {
     }
     if(origin.index == 3){
     //alert();
+    //fullpage_api.moveSectionDown();
+    console.log(origin.index);
     //fullpage_api.setAutoScrolling(false);
     // fullpage_api.setScrollBar(false);
 
