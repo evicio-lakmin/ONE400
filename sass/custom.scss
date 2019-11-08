@@ -1,9 +1,7 @@
-
 @import '_variables.scss';
 @import '_mixins.scss'; 
 @import '_utilities.scss';
 @import '_grid.scss';
-//re-check buttons
 @import '_buttons.scss';
 @import '_base.scss';
 @import '_menu.scss';
@@ -16,7 +14,6 @@ header {
     top: 0;
     left:0px;
     right:0px;
-    @include soft--sides(20px);
     min-height: 50px;
     .logo a {
         color:$white;
@@ -99,17 +96,27 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
+    @media (max-width: $screen--M) {
+      flex-direction: column;
+    }
+
     .tab{
       height: 20vh;
       position: relative;
       flex:1;
       text-align: center;
       background-color: rgba(128, 128, 128, 0.2);
-      // @include soft--ends(75px);
       overflow: hidden;
       cursor: pointer;
       font-size: 21px;
       margin-right:10px;
+
+      @media (max-width: $screen--M) {
+        margin-right: 0;
+        margin-top: 10px;
+        flex: none;
+      }
+
       &:last-child{
         margin-right:0px;
       }
@@ -132,15 +139,21 @@ header {
         color: #fff;
         height: 100%;
         left: 0%;
-        text-align: center;
         position: absolute;
         transition: bottom 0.5s ease;
         width: 100%;
         @include soft--ends(30px);
-        @include soft--sides(15px);
+        @include soft--sides(28px);
         flex-direction: row;
         box-sizing: border-box;
         font-size: 21px;
+        text-align: left;
+        font-family: Gibson;
+        line-height: 1.3;
+
+        @media (max-width: $screen--XL) {
+          @include soft--ends(10px);
+        }
 
         a{
           position: absolute;
@@ -148,6 +161,15 @@ header {
           left: 28px;
           color: #fff;
           text-decoration: none;
+
+          @media (max-width: $screen--XL) {
+              bottom: 5px;            
+          }
+
+          i{
+            font-size: 14px;
+            margin-left: 12px;
+          }
 
           &:hover{
             text-decoration: underline;
@@ -173,6 +195,12 @@ header {
       .content {
         position: relative;
         height: 58vh;
+        @media (max-width: $screen--L) {
+          padding: 5%;
+        }
+        @media (max-width: $screen--M) {
+          display: none;
+        }
         .right-content {
             font-family: $base-font-secondary;
             position: absolute;
@@ -182,6 +210,9 @@ header {
             border-left: 2px solid;
             padding-left: 30px;
             line-height: 24px;
+            @media (max-width: $screen--L) {
+              display: none;
+            }
 
             a.link {
                 margin: 5% 0;
@@ -208,9 +239,6 @@ header {
       }
     }
   }
-
-
-
 
 .tab-navigation ul {
   padding: 0;
@@ -286,7 +314,6 @@ header {
       }
       span {
           display: block;
-          // margin: 3% 0;
       }
     }
   }
@@ -308,10 +335,13 @@ header {
   right: 15%;
   z-index: 1;
   margin: 0;
+
+  @media (max-width: $screen--L) {
+    display: none;
+  }
 }
 
 .how-can-we-help-section {
-
   .btn {
       margin-top: 10%;
       @media screen and (max-width: $break--M) {
@@ -325,8 +355,6 @@ header {
     width: 100%;
     margin-top: 35%;
     @include soft--sides(30px);
-
-
   }
 
   .left {
@@ -351,7 +379,6 @@ header {
     @extend .M6;
   }
 }
-
 
 .explore-one-400 {
   .left {
@@ -388,7 +415,6 @@ header {
         font-family: $base-font-secondary;
     }
   }
-  
 }
 
 .case-study-section, .research-section {
@@ -423,12 +449,16 @@ header {
     display: flex;
     z-index: 99;
     position: relative;
+    background-color: #f8f8f8;
     @media screen and (max-width: $break--M) {
       flex-direction: column;
     }
     .image {
       width: 30%;
-      display: inline-block;
+      display: inline-block;      
+      position: absolute;
+      bottom: 0px;
+      right: 0;
       img { 
         vertical-align: sub;
       }
@@ -454,15 +484,14 @@ header {
     .inner-content {
       width: 70%;
       background-color: $whiteDark;
-      // @include soft--ends(10%);
-      padding-top: 10%;
+      padding-top: 8%;
       @include soft--sides(10%);
     }
   }
   .reasarch-right-block {
     @extend .M5;
     .content-bottom-block {
-      padding-top:10%;
+      padding-top:0;
   
       @include soft--sides(10%);
       h2 {
@@ -615,10 +644,6 @@ ul.social-media-icons {
   }
 }
 
-
-
-
-
 .segment-dropdown {
   position: relative;
   display: flex;
@@ -635,6 +660,7 @@ ul.social-media-icons {
       position: absolute;
       right: 10px;
       top: 15px;
+      color: #1CA8FF;
     }
   }
   .dropdown-menu {
@@ -668,11 +694,8 @@ ul.social-media-icons {
     top: 120px;
     background-color: #d0d0d0;
     left: 0;
-    // padding: 15px;
   }
-  
 }
 
-
-
+// This should be import at last for overwrite others
 @import '_fullpage.scss';
