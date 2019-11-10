@@ -1,25 +1,3 @@
-
- // Main Menu Hover Effect Handling
- function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the link that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
 //this will make the scroll animation smooth
 smoothScroll.init();
 
@@ -31,7 +9,7 @@ $(document).ready(function() {
       alert('onclick');
     }
   });       
-  });
+});
 
 function fullpage_hide($ele){
   if($ele.hasClass('menu-open')){
@@ -39,10 +17,10 @@ function fullpage_hide($ele){
   }
 }
 
-
 var slideIndex  = 1,
 sliding     = false;
 
+// TODO: ........................
 //scroll plugin settings 
 new fullpage('.fullpage', {
   //options here
@@ -65,34 +43,18 @@ new fullpage('.fullpage', {
   },
   afterSlideLoad: function( section, origin, destination, direction){
 		var loadedSlide = this;
-    
-    //console.log(section.index);
-		//first slide of the second section
-		// if(section.anchor == 'secondPage' && destination.index == 1){
-		// 	alert("First slide loaded");
-		// }
-
-		// //second slide of the second section (supposing #secondSlide is the
-		// //anchor for the second slide)
-		// if(section.index == 1 && destination.anchor == 'secondSlide'){
-		// 	alert("Second slide loaded");
-		// }
   },
   
   onLeave: function(origin, nextIndex, direction) {
-
-    
     if(origin.index == 1){
-
-      //fullpage_api.setAllowScrolling(false, 'left, right');
+    //fullpage_api.setAllowScrolling(false, 'left, right');
     } else {
-      // fullpage_api.setAllowScrolling(true);
+    // fullpage_api.setAllowScrolling(true);
     }
     console.log(origin.index);
     if(origin.index == 0){ 
-        // fullpage_api.setAllowScrolling(true);
+      // fullpage_api.setAllowScrolling(true);
       // fullpage_api.setAllowScrolling(false);
-     
     //  fullpage_api.moveTo(3);
     }
     if(origin.index == 2){ 
@@ -103,7 +65,6 @@ new fullpage('.fullpage', {
       
     }
     if(origin.index == 3){
-    //alert();
     //fullpage_api.moveSectionDown();
     console.log(origin.index);
     //fullpage_api.setAutoScrolling(false);
@@ -112,42 +73,16 @@ new fullpage('.fullpage', {
     } else {
      // fullpage_api.setAutoScrolling(true);
     }
-   // console.log(nextIndex);
-    // if(index == 1 && !sliding) {
-
-    //     if(direction == 'down' && slideIndex < 1) {
-
-    //         sliding = true;
-    //         $.fn.fullpage.moveSlideRight();
-    //         slideIndex++;
-    //         return false;
-
-    //     } else if(direction == 'up' && slideIndex > 1) {
-
-    //         sliding = true;
-    //         $.fn.fullpage.moveSlideLeft();
-    //         slideIndex--;
-    //         return false;
-
-    //     }
-
-    // } else if(sliding) {
-    //     return false;
-    // }
   },
-
   afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
       sliding = false;
   }
 });
 
-
 //FullpageJs - slider is disabled on mobile devices 
 if (screen && screen.width < 768) {
   const activeSlder = fullpage_api.getActiveSlide();
   fullpage_api.setAutoScrolling(false);
-
-  
 }
 
 function disableScroll() { 
@@ -165,7 +100,6 @@ function enableScroll() {
   window.onscroll = function() {}; 
 } 
 
-
 // Fixing content height issues on home page reaseach block
 function setImageHeight(){
   $imageContent = $('.reasarch-right-block').find('img'); 
@@ -173,8 +107,6 @@ function setImageHeight(){
   $imageHeight = $imageContent.height(); 
   $Content.css("height", $imageHeight);
 }
-
-
 $('.fp-prev').append('<span class="fa fa-angle-left"></span>');
 $('.fp-next').append('<span class="fa fa-angle-right"></span>');
 
@@ -183,11 +115,27 @@ $('.fp-next').append('<span class="fa fa-angle-right"></span>');
 // });
 setImageHeight();
 
-
 //temporary disabled
 $('.selectbox').on("click", function(){
-
   // $(this).parent().toggleClass('active');
-
 });
+
+// Main Menu Hover Effect Handling
+function showInfo(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 

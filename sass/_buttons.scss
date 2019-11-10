@@ -1,19 +1,14 @@
-//
-// Buttons
-// --------------------------------------------------
-
-
-// Base styles
+// Buttons Base styles
 // --------------------------------------------------
 
 .btn {
   display: inline-block;
-  margin-bottom: 0; // For input.btn
+  margin-bottom: 0; 
   font-weight: $btn-font-weight;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  background-image: none; 
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 20px 30px;
@@ -22,16 +17,6 @@
   text-decoration: none;
   font-size: 16px;
   color: #fff;
-  // @include button-size($padding-base-vertical, $padding-base-horizontal, $base-font-size, $base-line-height, $border-radius-base);
-  //@include user-select(none);
-
-  &,
-  &:active,
-  &.active {
-    &:focus {
-     // @include tab-focus();
-    }
-  }
 
   &:hover,
   &:focus {
@@ -42,7 +27,6 @@
   &.active {
     outline: 0;
     background-image: none;
-   // @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
   }
 
   &.disabled,
