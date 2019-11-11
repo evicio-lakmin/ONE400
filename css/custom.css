@@ -1285,6 +1285,10 @@ header {
         min-width: auto;
         width: 100%;
         line-height: 50px; } }
+  .header-content a.link {
+    color: #FFFFFF;
+    margin: 5% 0;
+    display: block; }
   .header-content h5 {
     font-size: 18px;
     font-weight: 400;
@@ -1295,7 +1299,7 @@ header {
   bottom: 0px;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: 0;
   width: 100%;
   display: flex;
   flex-direction: row; }
@@ -1530,13 +1534,17 @@ header {
   margin: 0;
   height: 447px;
   overflow: hidden; }
+  @media screen and (min-width: 1440px) {
+    .featured-image {
+      max-width: 500px;
+      height: 547px; } }
   @media (max-width: 1025px) {
     .featured-image {
       display: none; } }
 
 .how-can-we-help-section {
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 5em;
+  padding-bottom: 5em;
   background-color: #0b3354;
   color: #FFFFFF; }
   .how-can-we-help-section .btn {
@@ -1724,10 +1732,18 @@ footer {
   footer .footer-rows .left-column span {
     width: 75%;
     display: block; }
+    @media screen and (max-width: 768px) {
+      footer .footer-rows .left-column span {
+        width: 100%; } }
+  footer .footer-rows .left-column .mobile-contact-no {
+    margin: 5% auto;
+    font-family: canada-type-gibson, sans-serif; }
   @media screen and (max-width: 768px) {
     footer .footer-rows .left-column {
       padding-left: 30px;
-      padding-right: 30px; } }
+      padding-right: 30px; }
+      footer .footer-rows .left-column .social-media-icons {
+        display: none; } }
   footer .footer-rows .right-column > div {
     padding-left: 30px;
     padding-right: 30px;
@@ -1764,8 +1780,54 @@ footer {
     padding: 0 10px;
     cursor: pointer;
     right: 0px; }
-  footer .location-links p {
-    line-height: 20px; }
+  footer .subscribe-links {
+    position: relative; }
+    footer .subscribe-links .fas {
+      position: absolute;
+      right: 30px;
+      top: 20px; }
+    @media screen and (max-width: 768px) {
+      footer .subscribe-links p, footer .subscribe-links .subscribe-serch {
+        display: none; }
+      footer .subscribe-links h5 {
+        display: block;
+        margin: 5% 0;
+        border-bottom: 1px solid #b5b5b5;
+        padding: 5% 0; } }
+  footer .location-links {
+    position: relative; }
+    footer .location-links .fas {
+      position: absolute;
+      right: 30px;
+      top: 20px; }
+    @media screen and (max-width: 768px) {
+      footer .location-links p {
+        display: none; }
+      footer .location-links h5 {
+        display: block;
+        margin: 5% 0;
+        border-bottom: 1px solid #b5b5b5;
+        padding: 5% 0; } }
+    footer .location-links p {
+      line-height: 20px; }
+  footer .contact-links {
+    position: relative; }
+    footer .contact-links .fas {
+      position: absolute;
+      right: 30px;
+      top: 20px; }
+    @media screen and (max-width: 768px) {
+      footer .contact-links p {
+        display: none; }
+      footer .contact-links h5 {
+        display: block;
+        margin: 5% 0;
+        border-bottom: 1px solid #b5b5b5;
+        padding: 5% 0; } }
+  @media screen and (max-width: 768px) {
+    footer ul.mobile-only.social-media-icons {
+      display: flex !important;
+      margin: 5% auto; } }
 
 ul.social-media-icons {
   display: flex;
@@ -1802,43 +1864,152 @@ ul.social-media-icons {
     margin: 5% 0 0;
     position: relative;
     width: auto;
-    min-width: 280px; }
+    min-width: 360px; }
+    @media screen and (max-width: 768px) {
+      .segment-dropdown .selectbox {
+        width: 100%;
+        min-width: auto; } }
     .segment-dropdown .selectbox i.fa {
       position: absolute;
       right: 10px;
       top: 15px;
       color: #1CA8FF; }
+    .segment-dropdown .selectbox span {
+      display: inline-flex; }
+      .segment-dropdown .selectbox span h5 {
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid #FFFFFF;
+        /* The typwriter cursor */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: 0 auto;
+        /* Gives that scrolling effect as the typing happens */
+        animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite; }
   .segment-dropdown .dropdown-menu {
     display: none; }
+    .segment-dropdown .dropdown-menu:before {
+      content: "";
+      display: block;
+      width: 0px;
+      height: 0px;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid #ffffff;
+      position: absolute;
+      top: -15px;
+      left: 50px;
+      right: 0;
+      text-align: center;
+      margin: auto; }
     .segment-dropdown .dropdown-menu ul {
       padding: 0;
       margin: 0;
-      list-style: none; }
+      list-style: none;
+      text-align: center; }
       .segment-dropdown .dropdown-menu ul li {
         display: inline-block;
-        width: 50%;
-        padding: 0;
-        float: left; }
+        width: 45%;
+        padding: 5px;
+        border-bottom: 1px solid #d8d8d8;
+        margin: 5px 2%;
+        white-space: normal; }
+        @media screen and (max-width: 768px) {
+          .segment-dropdown .dropdown-menu ul li {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0%; } }
         .segment-dropdown .dropdown-menu ul li img {
           width: 50px; }
         .segment-dropdown .dropdown-menu ul li a {
-          font-size: 16px;
+          color: #000000;
+          text-decoration: none;
           display: flex;
-          font-family: canada-type-gibson, sans-serif; }
+          font-family: canada-type-gibson, sans-serif;
+          justify-content: space-between; }
+          .segment-dropdown .dropdown-menu ul li a p {
+            font-size: 16px; }
   .segment-dropdown.active .dropdown-menu {
     display: block; }
   .segment-dropdown .contentwrapper {
     position: absolute;
-    top: 120px;
+    top: 140px;
     width: 50%;
-    background-color: #d0d0d0;
-    left: 0; }
+    background-color: #FFFFFF;
+    left: -35px; }
+    @media screen and (max-width: 768px) {
+      .segment-dropdown .contentwrapper {
+        width: 100%;
+        left: 0;
+        top: 80px; } }
+
+.copyrights {
+  width: 100%;
+  background-color: #000000;
+  display: block;
+  color: #FFFFFF;
+  padding: 15px;
+  font-size: 12px;
+  font-family: canada-type-gibson, sans-serif; }
+  .copyrights .sublinks {
+    display: inline-block; }
+    @media screen and (max-width: 768px) {
+      .copyrights .sublinks {
+        text-align: center;
+        line-height: 20px;
+        margin-bottom: 5%; } }
+    .copyrights .sublinks a {
+      font-size: 12px;
+      margin-right: 5px;
+      margin-left: 5px; }
+      .copyrights .sublinks a:first-child {
+        margin-left: 0px; }
+  .copyrights span {
+    font-size: 12px;
+    float: right;
+    line-height: 1; }
+    @media screen and (max-width: 768px) {
+      .copyrights span {
+        float: none;
+        display: block;
+        margin: 5px auto;
+        text-align: center; } }
+
+.featured-image2 {
+  position: absolute;
+  bottom: 5%;
+  width: 35%;
+  right: 12%;
+  z-index: 1;
+  margin: 0;
+  height: auto;
+  overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .featured-image2 {
+      display: none; } }
+
+@media screen and (max-width: 768px) {
+  .fp-slides {
+    overflow: initial !important; } }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: #FFFFFF; } }
 
 html.fp-enabled,
 .fp-enabled body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  overflow-x: hidden !important;
   /*Avoid flicker on slides transitions for mobile phones #336 */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 

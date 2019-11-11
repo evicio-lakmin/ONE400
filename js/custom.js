@@ -1,23 +1,6 @@
 //this will make the scroll animation smooth
 smoothScroll.init();
 
-//menu full page slide
-$(document).ready(function() {
-  $('.menu-link').menuFullpage({
-    side:"right",
-    callbackAfter: function() {
-      alert('onclick');
-    }
-  });       
-});
-
-function fullpage_hide($ele){
-  if($ele.hasClass('menu-open')){
-      alert();
-  }
-}
-
-
 
 if($(window).width() > 768){ 
 
@@ -29,27 +12,18 @@ if($(window).width() > 768){
     autoScrolling:true,
     slidesNavigation: true,
     css3: true,
+    dragAndMove: false,
     scrollBar: false,
-    normalScrollElements: '.research-section',
+    normalScrollElements: '.home-top-content, .research-section, .become-a-click-block, .copyrights',
     fitToSection: false,
-    fitToSectionDelay: 1000,
-    lazyLoad: true,
+    lazyLoad: false,
+    fadingEffect: true,
     fixedElements: 'header',
-    // scrollHorizontally: true
-  
-    afterResponsive: function(isResponsive){
-      alert("Is responsive: " + isResponsive);
-    },
     afterSlideLoad: function( section, origin, destination, direction){
       var loadedSlide = this;
+      console.log(section);
     },
-    afterLoad: function(origin, destination, direction){
-      if(origin.index == 1){ 
-        //   fullpage_api.setAllowScrolling(true);
-          // fullpage_api.setAllowScrolling(false);
-        //  fullpage_api.moveTo(3);
-        }
-    },
+
     onLeave: function(origin, nextIndex, direction) {
 
       console.log(origin.index);
@@ -57,25 +31,25 @@ if($(window).width() > 768){
       console.log(direction);
       
       if(origin.index == 0){
-        //fullpage_api.setAllowScrolling(false, 'left, right');
+        fullpage_api.setAutoScrolling(false);
       } else {
       // fullpage_api.setAllowScrolling(true);
       }
       /* console.log(origin.index); */
-      if(origin.index == 1){ 
-        fullpage_api.setAutoScrolling(true);
+      if(origin.index == 1 & direction == "up" ){ 
+       // fullpage_api.setAutoScrolling(true);
         // fullpage_api.setAllowScrolling(false);
       //  fullpage_api.moveTo(3);
       }
       if(origin.index == 2){ 
-         fullpage_api.setAutoScrolling(false);
+       //  fullpage_api.setAutoScrolling(false);
       } else {
         
       }
       if(origin.index == 3){
       //fullpage_api.moveSectionDown();
       /* console.log(origin.index); */
-       fullpage_api.setAutoScrolling(true);
+     //  fullpage_api.setAutoScrolling(true);
       // fullpage_api.setScrollBar(false);
   
       } else {
@@ -100,6 +74,23 @@ if($(window).width() > 768){
     fixedElements: 'header'
   });
 }
+
+//menu full page slide
+$(document).ready(function() {
+  $('.menu-link').menuFullpage({
+    side:"right",
+    callbackAfter: function() {
+      alert('onclick');
+    }
+  });       
+});
+
+function fullpage_hide($ele){
+  if($ele.hasClass('menu-open')){
+      alert();
+  }
+}
+
 
 function disableScroll() { 
   // Get the current page scroll position 
