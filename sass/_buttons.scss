@@ -49,7 +49,7 @@ a.link {
   @include font-size($base-font-size);
   font-family: $base-font-secondary;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
   i {
     margin-left: 10px;
     color:$lightblue;

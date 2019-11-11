@@ -17,73 +17,88 @@ function fullpage_hide($ele){
   }
 }
 
-var slideIndex  = 1,
-sliding     = false;
 
-// TODO: ........................
-//scroll plugin settings 
-new fullpage('.fullpage', {
-  //options here
-  licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
-  scrollHorizontally: true,
-  autoScrolling:false,
-  slidesNavigation: true,
-  css3: true,
-  scrollBar: false,
-  normalScrollElements: '.research-section',
-  fitToSection: false,
-  fitToSectionDelay: 1000,
-  
-  // scrollHorizontally: true,
-  lazyLoad: true,
-  fixedElements: 'header',
-  // scrollHorizontally: true
 
-  afterResponsive: function(isResponsive){
-		alert("Is responsive: " + isResponsive);
-  },
-  afterSlideLoad: function( section, origin, destination, direction){
-		var loadedSlide = this;
-  },
+if($(window).width() > 768){ 
+
+  //scroll plugin settings 
+  new fullpage('.fullpage', {
+    //options here
+    licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
+    scrollHorizontally: true,
+    autoScrolling:true,
+    slidesNavigation: true,
+    css3: true,
+    scrollBar: false,
+    normalScrollElements: '.research-section',
+    fitToSection: false,
+    fitToSectionDelay: 1000,
+    lazyLoad: true,
+    fixedElements: 'header',
+    // scrollHorizontally: true
   
-  onLeave: function(origin, nextIndex, direction) {
-    if(origin.index == 1){
-    //fullpage_api.setAllowScrolling(false, 'left, right');
-    } else {
-    // fullpage_api.setAllowScrolling(true);
-    }
-    /* console.log(origin.index); */
-    if(origin.index == 0){ 
-      // fullpage_api.setAllowScrolling(true);
-      // fullpage_api.setAllowScrolling(false);
-    //  fullpage_api.moveTo(3);
-    }
-    if(origin.index == 2){ 
-      // fullpage_api.setAllowScrolling(false);
-     
-    //  fullpage_api.moveTo(3);
-    } else {
+    afterResponsive: function(isResponsive){
+      alert("Is responsive: " + isResponsive);
+    },
+    afterSlideLoad: function( section, origin, destination, direction){
+      var loadedSlide = this;
+    },
+    afterLoad: function(origin, destination, direction){
+      if(origin.index == 1){ 
+        //   fullpage_api.setAllowScrolling(true);
+          // fullpage_api.setAllowScrolling(false);
+        //  fullpage_api.moveTo(3);
+        }
+    },
+    onLeave: function(origin, nextIndex, direction) {
+
+      console.log(origin.index);
+      console.log(nextIndex.index);
+      console.log(direction);
       
+      if(origin.index == 0){
+        //fullpage_api.setAllowScrolling(false, 'left, right');
+      } else {
+      // fullpage_api.setAllowScrolling(true);
+      }
+      /* console.log(origin.index); */
+      if(origin.index == 1){ 
+        fullpage_api.setAutoScrolling(true);
+        // fullpage_api.setAllowScrolling(false);
+      //  fullpage_api.moveTo(3);
+      }
+      if(origin.index == 2){ 
+         fullpage_api.setAutoScrolling(false);
+      } else {
+        
+      }
+      if(origin.index == 3){
+      //fullpage_api.moveSectionDown();
+      /* console.log(origin.index); */
+       fullpage_api.setAutoScrolling(true);
+      // fullpage_api.setScrollBar(false);
+  
+      } else {
+       // fullpage_api.setAutoScrolling(true);
+      }
     }
-    if(origin.index == 3){
-    //fullpage_api.moveSectionDown();
-    /* console.log(origin.index); */
-    //fullpage_api.setAutoScrolling(false);
-    // fullpage_api.setScrollBar(false);
-
-    } else {
-     // fullpage_api.setAutoScrolling(true);
-    }
-  },
-  afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
-      sliding = false;
-  }
-});
-
-//FullpageJs - slider is disabled on mobile devices 
-if (screen && screen.width < 768) {
-  const activeSlder = fullpage_api.getActiveSlide();
-  fullpage_api.setAutoScrolling(false);
+  });
+} else {
+  //scroll plugin settings 
+  new fullpage('.fullpage', {
+    //options here
+    licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
+    scrollHorizontally: false,
+    autoScrolling:false,
+    slidesNavigation: false,
+    css3: false,
+    scrollBar: false,
+    normalScrollElements: '.research-section',
+    fitToSection: false,
+    fitToSectionDelay: 1000,
+    lazyLoad: true,
+    fixedElements: 'header'
+  });
 }
 
 function disableScroll() { 
@@ -116,9 +131,8 @@ $('.fp-next').append('<span class="fa fa-angle-right"></span>');
 // });
 setImageHeight();
 
-//temporary disabled
 $('.selectbox').on("click", function(){
-  // $(this).parent().toggleClass('active');
+   $(this).parent().toggleClass('active');
 });
 
 // Main Menu Hover Effect Handling
