@@ -24,15 +24,16 @@ sliding     = false;
 //scroll plugin settings 
 new fullpage('.fullpage', {
   //options here
+  licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
+  scrollHorizontally: true,
   autoScrolling:false,
-  licenseKey: '0CE829D2-E63344BC-9BADE6C2-2831D733',
   slidesNavigation: true,
   css3: true,
   scrollBar: false,
   normalScrollElements: '.research-section',
   fitToSection: false,
   fitToSectionDelay: 1000,
-  scrollHorizontally: true,
+  
   // scrollHorizontally: true,
   lazyLoad: true,
   fixedElements: 'header',
@@ -51,7 +52,7 @@ new fullpage('.fullpage', {
     } else {
     // fullpage_api.setAllowScrolling(true);
     }
-    console.log(origin.index);
+    /* console.log(origin.index); */
     if(origin.index == 0){ 
       // fullpage_api.setAllowScrolling(true);
       // fullpage_api.setAllowScrolling(false);
@@ -66,7 +67,7 @@ new fullpage('.fullpage', {
     }
     if(origin.index == 3){
     //fullpage_api.moveSectionDown();
-    console.log(origin.index);
+    /* console.log(origin.index); */
     //fullpage_api.setAutoScrolling(false);
     // fullpage_api.setScrollBar(false);
 
