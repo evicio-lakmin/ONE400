@@ -10,12 +10,16 @@
 
 .panel-logo{  
   margin-left: 5%;
-  margin-top: 25px;
+  margin-top: 30px;
   color: #0567A3;
   font-size: 30px;
   position: absolute;
   z-index: 1010;
   font-family: Gibson;
+
+  img{
+    width: 122px;
+  }
 }
 
 .menu-link i {
@@ -26,7 +30,7 @@
 
 #menu{
   background: rgba(255, 255, 255, 1);
-  z-index: 1000;
+  z-index: 100;
 }
 
 #menu ul{
@@ -63,7 +67,7 @@
 }
 
 .menu-link {
-z-index: 999;
+z-index: 1001;
 display: block;
 position: fixed;
 top: 0;
