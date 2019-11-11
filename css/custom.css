@@ -996,12 +996,14 @@ img {
 
 .panel-logo {
   margin-left: 5%;
-  margin-top: 25px;
+  margin-top: 30px;
   color: #0567A3;
   font-size: 30px;
   position: absolute;
   z-index: 1010;
   font-family: Gibson; }
+  .panel-logo img {
+    width: 122px; }
 
 .menu-link i {
   text-decoration: none;
@@ -1010,7 +1012,7 @@ img {
 
 #menu {
   background: white;
-  z-index: 1000; }
+  z-index: 100; }
 
 #menu ul {
   margin-top: 150px; }
@@ -1041,7 +1043,7 @@ img {
   color: #1CA8FF; }
 
 .menu-link {
-  z-index: 999;
+  z-index: 1001;
   display: block;
   position: fixed;
   top: 0;
@@ -1173,22 +1175,19 @@ img {
         display: none; } }
 
 .logo {
-  margin-top: 25px;
   display: inline-block;
-  flex: 8 !important; }
+  flex: 8 !important;
+  transition: all 1s; }
   .logo a {
-    color: #fff;
-    font-size: 30px;
-    text-decoration: none;
-    font-family: Gibson;
-    text-shadow: 5px 1px 11px rgba(0, 0, 0, 0.22); }
+    position: fixed;
+    top: 30px;
+    z-index: 5; }
     .logo a img {
       width: 122px; }
 
 .main-navbar {
-  position: fixed;
-  z-index: 1005;
-  width: 100%; }
+  width: 100%;
+  z-index: 2; }
   .main-navbar .nav-container {
     max-width: 100%;
     margin-left: 5%;
@@ -1199,11 +1198,12 @@ img {
 
 .search-area {
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  z-index: 5; }
 
 .search-button {
   position: fixed;
-  top: 31px; }
+  top: 30px; }
   .search-button i {
     font-size: 32px;
     color: #fff; }
