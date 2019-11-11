@@ -12,7 +12,7 @@ gulp.task('default', () =>
 function webP() {
   return (
     gulp
-    .src('assets/images/.jpg')
+    .src('assets/images/*.jpg')
     .pipe(webp())
     .pipe(gulp.dest('assets/webP'))
   );

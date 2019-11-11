@@ -773,13 +773,6 @@ footer {
       }
   }
   }
-  ul.mobile-only.social-media-icons {
-    @media screen and (max-width: $break--M){
-      display:flex !important;
-      margin: 5% auto;
-    }
-  }
-}
 
 
 ul.social-media-icons {
@@ -808,6 +801,14 @@ ul.social-media-icons {
       }
     }
   }
+}
+ul.mobile-only.social-media-icons {
+  @media screen and (max-width: $break--M){
+    display:flex !important;
+    margin: 5% auto;
+  }
+  display: none;
+}
 }
 
 .segment-dropdown {
