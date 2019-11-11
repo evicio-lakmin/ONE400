@@ -13,7 +13,9 @@ $name--XL: XL;
 
 $break--S:  480px;
 $break--M:  768px;
+$break--LL: 1280px;
 $break--L:  1024px;
+$break--XM: 992px;
 $break--XL: 1440px;
 
 $screen--S:  $break--S + 1;
@@ -63,3 +65,5 @@ $line-height-small:         1.5 !default;
 $border-radius-base:        4px !default;
 $border-radius-large:       6px !default;
 $border-radius-small:       3px !default;
+ 
+  

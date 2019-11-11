@@ -51,8 +51,72 @@ h6, .h6 {
 }
 .container {
   width: 100%;
-  max-width: 1170px;
+  /* max-width: 1185px; */
+  /* padding: 0 15px; */
+  margin: 0 auto;
+  padding: 0 15em !important;
+
+  @media screen and (max-width: $break--XL) { 
+   /*  max-width: 1024px; */
+   padding: 0 5em !important;
+   
+  }
+
+  @media screen and (max-width: $break--LL) { 
+    /* max-width: 960px; */
+  }
+
+  @media screen and (max-width: $break--L) { 
+   /*  max-width: 768px; */
+  }
+
+  @media screen and (max-width: $break--M) { 
+    padding: 0 20px !important;
+  }
+
 }
+
+.pd-l{
+  padding-left: 15em !important;;
+  @media screen and (max-width: $break--XL) { 
+    padding-left: 5em !important;
+  }
+
+  @media screen and (max-width: $break--M) { 
+    padding-left: 20px !important;
+  }
+}
+.pd-l{
+  padding-right: 15em !important;;
+  @media screen and (max-width: $break--XL) { 
+    padding-right: 5em !important;;
+    
+  }
+  @media screen and (max-width: $break--M) { 
+    padding-right: 20px !important;
+  }
+}
+.pd-l-tab{
+  padding-left: 9em !important;
+  @media screen and (max-width: $break--XL) { 
+    padding-left: 1.4em !important;
+  }
+  @media screen and (max-width: $break--M) { 
+    padding-left: 20px !important;
+  }
+}
+
+.pd-r-tab{
+  padding-right: 9em !important;
+  @media screen and (max-width: $break--XL) { 
+    padding-right: 1.4em !important;
+  }
+  @media screen and (max-width: $break--M) { 
+    padding-right: 20px !important;
+  }
+  
+}
+
 
 img{
   width:100%;
@@ -63,8 +127,15 @@ img{
 }
 .title {
   font-size: 60px;
+  @media (max-width: $screen--M) {
+    font-size: 40px;
+   
+  }
 }
 
+.d-block{
+  display: block !important;
+}
 
 .mobile-only {
   display: none;
