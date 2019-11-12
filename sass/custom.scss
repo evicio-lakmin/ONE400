@@ -652,7 +652,9 @@ footer {
       }
       .mobile-contact-no {
         margin:5% auto;
-        font-family: $base-font-secondary;
+        font-family: $base-font-primary;
+        font-size: 24px;
+        font-weight: 700;
       }
       @media screen and (max-width: $break--M){
         @include soft--sides(30px);
@@ -835,7 +837,7 @@ ul.mobile-only.social-media-icons {
       color: #1CA8FF;
     }
 
-    span {
+    div {
       display: inline-flex;
       h5 {
         overflow: hidden; /* Ensures the content is not revealed until the animation */
