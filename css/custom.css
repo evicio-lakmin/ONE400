@@ -793,7 +793,7 @@
   padding-left: 30px;
   padding-right: 30px;
   min-width: 200px;
-  font-family: canada-type-gibson, sans-serif;
+  font-family: Gibson, sans-serif;
   text-decoration: none;
   font-size: 16px;
   color: #fff; }
@@ -815,7 +815,7 @@
 
 a.link {
   font-size: 15px;
-  font-family: canada-type-gibson, sans-serif;
+  font-family: Gibson, sans-serif;
   cursor: pointer;
   text-decoration: none !important; }
   a.link i {
@@ -851,11 +851,19 @@ input[type="button"].btn-block {
     color: #FFFFFF;
     background-color: #dcdcdc; }
 
+@font-face {
+  font-family: Freight-Tex-Pro;
+  src: url("assets/fonts/FreightTexPro/FreightTexPro.otf") format("opentype"); }
+
+@font-face {
+  font-family: Gibson, sans-serif;
+  src: url("assets/fonts/Gibson/Gibson-Regular.otf") format("opentype"); }
+
 html, body {
   width: 100%;
   height: 100%;
   margin: 0px;
-  font-family: freight-text-pro, serif; }
+  font-family: Freight-Tex-Pro; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -868,7 +876,7 @@ table,
 span {
   font-size: 15px;
   line-height: 24px;
-  font-family: canada-type-gibson, sans-serif;
+  font-family: Gibson, sans-serif;
   font-weight: 300;
   font-style: normal; }
 
@@ -880,7 +888,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-family: freight-text-pro, serif; }
+  font-family: Freight-Tex-Pro; }
 
 h1, .h1 {
   font-size: 42px; }
@@ -1376,7 +1384,7 @@ header {
   .header-content h5 {
     font-size: 18px;
     font-weight: 400;
-    font-family: canada-type-gibson, sans-serif; }
+    font-family: Gibson, sans-serif; }
 
 .service-rollovers {
   position: absolute;
@@ -1446,7 +1454,7 @@ header {
       flex-direction: row;
       box-sizing: border-box;
       text-align: left;
-      font-family: canada-type-gibson, sans-serif; }
+      font-family: Gibson, sans-serif; }
       @media (max-width: 1441px) {
         .service-rollovers .tab .inner {
           padding-top: 15px;
@@ -1460,7 +1468,7 @@ header {
         left: 65px;
         color: #fff;
         text-decoration: none;
-        font-family: canada-type-gibson, sans-serif; }
+        font-family: Gibson, sans-serif; }
         @media (max-width: 1441px) {
           .service-rollovers .tab .inner a {
             bottom: 15px;
@@ -1492,7 +1500,7 @@ header {
       .header-slider .slide .content {
         /* display: none; */ } }
     .header-slider .slide .content .right-content {
-      font-family: canada-type-gibson, sans-serif;
+      font-family: Gibson, sans-serif;
       position: absolute;
       width: 20%;
       right: 15px;
@@ -1607,7 +1615,7 @@ header {
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: canada-type-gibson, sans-serif; }
+    font-family: Gibson, sans-serif; }
 
 .featured-image {
   position: absolute;
@@ -1643,7 +1651,7 @@ header {
   .how-can-we-help-section .left h6 {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-family: canada-type-gibson, sans-serif;
+    font-family: Gibson, sans-serif;
     font-size: 21px;
     font-weight: 200;
     line-height: 36px; }
@@ -1665,7 +1673,7 @@ header {
 .explore-one-400 h6 {
   margin-top: 5%;
   margin-bottom: 5%;
-  font-family: canada-type-gibson, sans-serif;
+  font-family: Gibson, sans-serif;
   font-size: 21px;
   font-weight: 200;
   line-height: 36px; }
@@ -1686,7 +1694,7 @@ header {
     margin: 5% 0;
     font-size: 16px;
     font-weight: 500;
-    font-family: canada-type-gibson, sans-serif; }
+    font-family: Gibson, sans-serif; }
 
 .case-study-section, .research-section {
   background-color: #FFFFFF; }
@@ -1699,7 +1707,7 @@ header {
     padding-bottom: 5%;
     line-height: 1em; }
   .research-blocks h5 {
-    font-family: canada-type-gibson, sans-serif; }
+    font-family: Gibson, sans-serif; }
   .research-blocks .inner-content {
     /* width: 70%; */ }
   .research-blocks .content-info {
@@ -1794,9 +1802,9 @@ header {
   .become-a-click-block h2 {
     margin: 0 0 20px;
     font-size: 36px;
-    font-family: freight-text-pro, serif; }
+    font-family: Freight-Tex-Pro; }
   .become-a-click-block h4 {
-    font-family: canada-type-gibson, sans-serif;
+    font-family: Gibson, sans-serif;
     margin-bottom: 3%;
     font-size: 24px;
     font-weight: 100;
@@ -1821,7 +1829,9 @@ footer {
         width: 100%; } }
   footer .footer-rows .left-column .mobile-contact-no {
     margin: 5% auto;
-    font-family: canada-type-gibson, sans-serif; }
+    font-family: Freight-Tex-Pro;
+    font-size: 24px;
+    font-weight: 700; }
   @media screen and (max-width: 768px) {
     footer .footer-rows .left-column {
       padding-left: 30px;
@@ -1835,7 +1845,7 @@ footer {
     footer .footer-rows .right-column > div h5 {
       font-weight: bold;
       font-size: 16px;
-      font-family: canada-type-gibson, sans-serif; }
+      font-family: Gibson, sans-serif; }
   footer .footer-rows .subscribe-serch {
     display: flex;
     position: relative; }
@@ -1959,9 +1969,9 @@ footer {
       right: 10px;
       top: 15px;
       color: #1CA8FF; }
-    .segment-dropdown .selectbox span {
+    .segment-dropdown .selectbox div {
       display: inline-flex; }
-      .segment-dropdown .selectbox span h5 {
+      .segment-dropdown .selectbox div h5 {
         overflow: hidden;
         /* Ensures the content is not revealed until the animation */
         border-right: 0.15em solid #FFFFFF;
@@ -2010,7 +2020,7 @@ footer {
           color: #000000;
           text-decoration: none;
           display: flex;
-          font-family: canada-type-gibson, sans-serif;
+          font-family: Gibson, sans-serif;
           justify-content: space-between; }
           .segment-dropdown .dropdown-menu ul li a p {
             font-size: 16px; }
@@ -2035,7 +2045,7 @@ footer {
   color: #FFFFFF;
   padding: 15px;
   font-size: 12px;
-  font-family: canada-type-gibson, sans-serif; }
+  font-family: Gibson, sans-serif; }
   .copyrights .sublinks {
     display: inline-block; }
     @media screen and (max-width: 768px) {
