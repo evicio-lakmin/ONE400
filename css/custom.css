@@ -1738,6 +1738,7 @@ header {
           .research-blocks .content-bottom-block .image img {
             display: none; } }
   .research-blocks .post.content {
+    height: 100vh !important;
     color: #fff;
     z-index: 9;
     position: relative;
@@ -1788,7 +1789,8 @@ header {
   right: 0;
   top: 0;
   bottom: 0;
-  background-size: cover !important; }
+  background-size: cover !important;
+  background: url(../assets/images/backgound-research.jpg); }
 
 .become-a-click-block {
   background-color: #FFFFFF;

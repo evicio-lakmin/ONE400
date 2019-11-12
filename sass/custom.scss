@@ -539,6 +539,7 @@ header {
     }
   }
   .post.content {
+      height: 100vh !important;
       color: #fff;
       z-index: 9;
       position: relative;
@@ -601,6 +602,7 @@ header {
   top: 0;
   bottom: 0;
   background-size: cover !important;
+  background: url(../assets/images/backgound-research.jpg);
 }
  
 .become-a-click-block {
