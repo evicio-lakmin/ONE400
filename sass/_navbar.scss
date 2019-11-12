@@ -102,14 +102,14 @@
     outline: none;
     border: none;
     color: black;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 0 80px 0 50px;
     transition: all .8s;
     opacity: 0;
     z-index: 5;
-    font-weight: bolder;
+    font-weight: 400;
     font-size: 1.8rem;
-    font-family: Gibson;
+    font-family: $base-font-secondary;
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
     &:hover {
       cursor: pointer;
@@ -142,7 +142,7 @@
     &::placeholder {
       color: black;
       opacity: 0.8;
-      font-weight: bolder;
+      font-weight: 400;
     }
   }
 }

@@ -853,11 +853,11 @@ input[type="button"].btn-block {
 
 @font-face {
   font-family: Freight-Tex-Pro;
-  src: url("assets/fonts/FreightTexPro/FreightTexPro.otf") format("opentype"); }
+  src: url("../assets/fonts/FreightTextPro/FreightTexPro.otf") format("opentype"); }
 
 @font-face {
   font-family: Gibson, sans-serif;
-  src: url("assets/fonts/Gibson/Gibson-Regular.otf") format("opentype"); }
+  src: url("../assets/fonts/Gibson/Gibson-Regular.otf") format("opentype"); }
 
 html, body {
   width: 100%;
@@ -888,7 +888,8 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-family: Freight-Tex-Pro; }
+  font-family: Freight-Tex-Pro;
+  letter-spacing: 1px; }
 
 h1, .h1 {
   font-size: 42px; }
@@ -1273,14 +1274,14 @@ img {
     outline: none;
     border: none;
     color: black;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 0 80px 0 50px;
     transition: all .8s;
     opacity: 0;
     z-index: 5;
-    font-weight: bolder;
+    font-weight: 400;
     font-size: 1.8rem;
-    font-family: Gibson;
+    font-family: Gibson, sans-serif;
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4); }
     .search-container .search-input:hover {
       cursor: pointer; }
@@ -1308,7 +1309,7 @@ img {
     .search-container .search-input::placeholder {
       color: black;
       opacity: 0.8;
-      font-weight: bolder; }
+      font-weight: 400; }
 
 header {
   z-index: -1;
@@ -1391,7 +1392,7 @@ header {
   bottom: 0px;
   left: 0;
   right: 0;
-  z-index: 0;
+  z-index: 99;
   width: 100%;
   display: flex;
   flex-direction: row; }
@@ -1676,7 +1677,8 @@ header {
   font-family: Gibson, sans-serif;
   font-size: 21px;
   font-weight: 200;
-  line-height: 36px; }
+  line-height: 36px;
+  color: #4A4A4A; }
 
 .explore-one-400 h2 {
   margin-top: 5px;
@@ -1708,8 +1710,8 @@ header {
     line-height: 1em; }
   .research-blocks h5 {
     font-family: Gibson, sans-serif; }
-  .research-blocks .inner-content {
-    /* width: 70%; */ }
+  .research-blocks .inner-content p {
+    color: #4A4A4A; }
   .research-blocks .content-info {
     font-size: 12px;
     display: block;
@@ -2058,7 +2060,9 @@ footer {
     .copyrights .sublinks a {
       font-size: 12px;
       margin-right: 5px;
-      margin-left: 5px; }
+      margin-left: 5px;
+      text-decoration: none;
+      color: #FFFFFF; }
       .copyrights .sublinks a:first-child {
         margin-left: 0px; }
   .copyrights span {
@@ -2268,7 +2272,7 @@ html.fp-enabled,
   height: 4px;
   width: 4px;
   border: 0;
-  background: #fff;
+  background: #0567a3;
   left: 50%;
   top: 50%;
   margin: -2px 0 0 -2px;
