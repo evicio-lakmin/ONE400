@@ -813,6 +813,9 @@
   display: block;
   width: 100%; }
 
+.btn-has-icon .fas {
+  float: right; }
+
 a.link {
   font-size: 15px;
   font-family: Gibson, sans-serif;
@@ -888,8 +891,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-family: Freight-Tex-Pro;
-  letter-spacing: 1px; }
+  font-family: Freight-Tex-Pro; }
 
 h1, .h1 {
   font-size: 42px; }
@@ -1369,7 +1371,7 @@ header {
   position: relative;
   height: calc(100% - 50%); }
   .header-content h3.title {
-    width: 55%;
+    width: 50%;
     min-width: 662px;
     line-height: 72px;
     margin-bottom: 20px; }
@@ -1385,14 +1387,18 @@ header {
   .header-content h5 {
     font-size: 18px;
     font-weight: 400;
-    font-family: Gibson, sans-serif; }
+    font-family: Gibson, sans-serif;
+    width: 40%; }
+    @media (max-width: 769px) {
+      .header-content h5 {
+        width: 100%; } }
 
 .service-rollovers {
   position: absolute;
   bottom: 0px;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: 0;
   width: 100%;
   display: flex;
   flex-direction: row; }
@@ -1499,6 +1505,7 @@ header {
         }  */ }
     @media (max-width: 769px) {
       .header-slider .slide .content {
+        height: 38vh;
         /* display: none; */ } }
     .header-slider .slide .content .right-content {
       font-family: Gibson, sans-serif;
@@ -1563,6 +1570,9 @@ header {
 
 .case-study-section {
   background-color: #FFFFFF; }
+  @media screen and (max-width: 768px) {
+    .case-study-section .fp-controlArrow {
+      display: none; } }
   .case-study-section .slide {
     background-size: cover !important;
     background-position: center !important; }
@@ -1604,6 +1614,8 @@ header {
         margin-top: 5%;
         margin-bottom: 5%; }
       .case-study-section .inner-content .content a.link {
+        margin-top: 5%;
+        margin-bottom: 5%;
         color: #fff; }
       .case-study-section .inner-content .content span {
         display: block; }
@@ -1666,37 +1678,44 @@ header {
   .how-can-we-help-section .right {
     text-align: center; }
 
-.explore-one-400 .left .image {
-  display: block; }
-  .explore-one-400 .left .image img {
-    vertical-align: middle; }
-
-.explore-one-400 h6 {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  font-family: Gibson, sans-serif;
-  font-size: 21px;
-  font-weight: 200;
-  line-height: 36px;
-  color: #4A4A4A; }
-
-.explore-one-400 h2 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 36px; }
-
-.explore-one-400 .right {
-  background-color: #f8f8f8;
-  padding-top: 7.5%;
-  padding-left: 10%;
-  padding-right: 10%;
-  box-sizing: border-box; }
-  .explore-one-400 .right a.link {
-    display: block;
-    margin: 5% 0;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: Gibson, sans-serif; }
+.explore-one-400 {
+  background-color: #f8f8f8; }
+  @media screen and (max-width: 768px) {
+    .explore-one-400 {
+      padding-top: 10%;
+      padding-bottom: 10%; } }
+  .explore-one-400 .left .image {
+    display: block; }
+    .explore-one-400 .left .image img {
+      vertical-align: middle; }
+  .explore-one-400 h6 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: Gibson, sans-serif;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 36px;
+    color: #4A4A4A; }
+  .explore-one-400 h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 36px; }
+  .explore-one-400 .right {
+    padding-top: 7.5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box; }
+    .explore-one-400 .right a.link {
+      display: block;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: Gibson, sans-serif; }
+      @media screen and (max-width: 768px) {
+        .explore-one-400 .right a.link {
+          margin-top: 15%;
+          margin-bottom: 15%; } }
 
 .case-study-section, .research-section {
   background-color: #FFFFFF; }
@@ -1709,9 +1728,20 @@ header {
     padding-bottom: 5%;
     line-height: 1em; }
   .research-blocks h5 {
+    font-weight: 400;
     font-family: Gibson, sans-serif; }
+  .research-blocks a.link {
+    color: #FFFFFF; }
   .research-blocks .inner-content p {
     color: #4A4A4A; }
+    @media screen and (max-width: 768px) {
+      .research-blocks .inner-content p {
+        display: none; } }
+  .research-blocks .inner-content .btn-secondary.desktop-only, .research-blocks .inner-content .btn-secondary.become-a-click-block {
+    display: inline-block; }
+    .research-blocks .inner-content .btn-secondary.desktop-only .fas, .research-blocks .inner-content .btn-secondary.become-a-click-block .fas {
+      float: right;
+      margin: 0 0 0  20px; }
   .research-blocks .content-info {
     font-size: 12px;
     display: block;
@@ -1765,14 +1795,28 @@ header {
       padding-bottom: 8%; }
       @media screen and (max-width: 768px) {
         .research-blocks .reasarch-left-block .inner-content {
-          width: 100%; } }
+          width: 100%;
+          border-bottom: 1px solid #dcdcdc; } }
+    @media screen and (max-width: 768px) {
+      .research-blocks .reasarch-left-block .image.mobile-only {
+        z-index: 9;
+        position: relative; } }
   .research-blocks .reasarch-right-block .content-bottom-block {
     padding-top: 0;
     padding-left: 10%;
     padding-right: 10%; }
+    @media screen and (max-width: 768px) {
+      .research-blocks .reasarch-right-block .content-bottom-block {
+        padding-left: 20px;
+        padding-right: 20px; }
+        .research-blocks .reasarch-right-block .content-bottom-block a.link.mobile-only {
+          margin: 15% 0px; } }
     .research-blocks .reasarch-right-block .content-bottom-block h2 {
       margin-top: 20px;
       margin-bottom: 20px; }
+  @media screen and (max-width: 768px) {
+    .research-blocks .reasarch-right-block .image {
+      display: none; } }
 
 .overlay {
   position: absolute;
@@ -1839,12 +1883,11 @@ footer {
   @media screen and (max-width: 768px) {
     footer .footer-rows .left-column {
       padding-left: 30px;
-      padding-right: 30px; }
+      padding-right: 30px;
+      padding: 0 !important; }
       footer .footer-rows .left-column .social-media-icons {
         display: none; } }
   footer .footer-rows .right-column > div {
-    padding-left: 30px;
-    padding-right: 30px;
     overflow: hidden; }
     footer .footer-rows .right-column > div h5 {
       font-weight: bold;
@@ -1889,7 +1932,6 @@ footer {
         display: none; }
       footer .subscribe-links h5 {
         display: block;
-        margin: 5% 0;
         border-bottom: 1px solid #b5b5b5;
         padding: 5% 0; } }
   footer .location-links {
@@ -1903,7 +1945,6 @@ footer {
         display: none; }
       footer .location-links h5 {
         display: block;
-        margin: 5% 0;
         border-bottom: 1px solid #b5b5b5;
         padding: 5% 0; } }
     footer .location-links p {
@@ -1919,7 +1960,6 @@ footer {
         display: none; }
       footer .contact-links h5 {
         display: block;
-        margin: 5% 0;
         border-bottom: 1px solid #b5b5b5;
         padding: 5% 0; } }
   footer ul.social-media-icons {
@@ -1984,7 +2024,8 @@ footer {
         /* Keeps the content on a single line */
         margin: 0 auto;
         /* Gives that scrolling effect as the typing happens */
-        animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite; }
+        animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        width: 100%; }
   .segment-dropdown .dropdown-menu {
     display: none; }
     .segment-dropdown .dropdown-menu:before {
@@ -2091,7 +2132,10 @@ footer {
 
 @media screen and (max-width: 768px) {
   .fp-slides {
-    overflow: initial !important; } }
+    overflow: initial !important;
+    margin-top: 25%;
+    float: left;
+    width: 100%; } }
 
 @keyframes typing {
   from {
@@ -2261,7 +2305,7 @@ html.fp-enabled,
 .fp-slidesNav ul li:hover a.active span {
   height: 12px;
   width: 12px;
-  margin: -6px 0 0 -6px;
+  background: #0567a3;
   border-radius: 100%; }
 
 #fp-nav ul li a span,
@@ -2269,10 +2313,10 @@ html.fp-enabled,
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  height: 4px;
-  width: 4px;
+  height: 12px;
+  width: 12px;
   border: 0;
-  background: #0567a3;
+  background: #FFFFFF;
   left: 50%;
   top: 50%;
   margin: -2px 0 0 -2px;
@@ -2283,9 +2327,8 @@ html.fp-enabled,
 
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span {
-  width: 10px;
-  height: 10px;
-  margin: -5px 0px 0px -5px; }
+  width: 11px;
+  height: 11px; }
 
 #fp-nav ul li .fp-tooltip {
   position: absolute;

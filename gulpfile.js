@@ -3,18 +3,21 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 const webp = require('gulp-webp');
- 
-gulp.task('default', () =>
-    gulp.src('src/image.jpg')
-        .pipe(webp())
-        .pipe(gulp.dest('dist'))
-);
-function webP() {
+
+function webpjpg() {
   return (
     gulp
     .src('assets/images/*.jpg')
     .pipe(webp())
-    .pipe(gulp.dest('assets/webP'))
+    .pipe(gulp.dest('assets/webp'))
+  );
+}
+function webppng() {
+  return (
+    gulp
+    .src('assets/images/*.png')
+    .pipe(webp())
+    .pipe(gulp.dest('assets/webp'))
   );
 }
 
@@ -34,6 +37,7 @@ function watch(){
 
 exports.style = style; 
 exports.watch = watch;
-exports.webP = webP;
+exports.webpjpg = webpjpg;
+exports.webppng = webppng;
 
-exports.default = gulp.parallel(style, watch, webP);
+exports.default = gulp.parallel(style, watch, webpjpg, webppng);

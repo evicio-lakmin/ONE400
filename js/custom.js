@@ -21,7 +21,8 @@ if($(window).width() > 768){
     fixedElements: 'header',
     afterSlideLoad: function( section, origin, destination, direction){
       var loadedSlide = this;
-      console.log(section);
+      // console.log(section);
+    
     },
 
     onLeave: function(origin, nextIndex, direction) {
@@ -36,8 +37,8 @@ if($(window).width() > 768){
       // fullpage_api.setAllowScrolling(true);
       }
       /* console.log(origin.index); */
-      if(origin.index == 1 & direction == "up" ){ 
-       // fullpage_api.setAutoScrolling(true);
+      if(origin.index ==2 & direction == "up" ){ 
+        fullpage_api.setAutoScrolling(true);
         // fullpage_api.setAllowScrolling(false);
       //  fullpage_api.moveTo(3);
       }
@@ -58,16 +59,19 @@ if($(window).width() > 768){
     }
   });
 } else {
+
+
+  $('.header-slider').addClass('fp-auto-height');
+
   //scroll plugin settings 
   new fullpage('.fullpage', {
     //options here
     licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
-    scrollHorizontally: false,
+    scrollHorizontally: true,
     autoScrolling:false,
-    slidesNavigation: false,
-    css3: false,
+    slidesNavigation: true,
+    css3: true,
     scrollBar: false,
-    normalScrollElements: '.research-section',
     fitToSection: false,
     fitToSectionDelay: 1000,
     lazyLoad: true,
@@ -122,9 +126,18 @@ $('.fp-next').append('<span class="fa fa-angle-right"></span>');
 // });
 setImageHeight();
 
-$('.selectbox').on("click", function(){
-   $(this).parent().toggleClass('active');
+
+$('body').on("click", function(){
+  if($('.selectbox').parent().hasClass('active')){
+    $('.selectbox').parent().removeClass('active');
+  }
 });
+
+$('.selectbox').on("click", function(e){
+  e.stopPropagation();
+  $(this).parent().toggleClass('active');
+});
+
 
 // Main Menu Hover Effect Handling
 function showInfo(evt, cityName) {
@@ -145,3 +158,14 @@ function showInfo(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+function expandList($element) {
+  console.log($element);
+  $($element).parent('div').find('p').toggle();
+  $($element).parent('div').find('.subscribe-serch').toggle();
+
+  
+}
+
+function slideTab($num){
+  fullpage_api.moveTo(1, $num - 1);
+}
