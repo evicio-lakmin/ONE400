@@ -111,12 +111,9 @@
         </div>
         <!-- Mobile Main Menu -->
         <div class="mobile-only">
-          <header class="nav-top mobile-only">
-              <!-- <span class="hamburger material-icons" id="ham">menu</span> -->
-              <a class="mob-menu-ham" id="ham">
-                  <span></span>
-              </a>
-              
+          <header class="nav-top mobile-only">            
+            <div class="mob-logo"><a href="#"><img src="assets/images/nav-logo.png" alt=""></a></div> 
+            <a class="mob-menu-ham" id="ham"><span></span></a>    
           </header>
           <nav class="nav-drill">
             <ul class="nav-items nav-level-1">
@@ -124,28 +121,58 @@
                 <a class="nav-link nav-expand-link" href="#">Services</a>
                 <ul class="nav-items nav-expand-content">
                   <li class="nav-item nav-expand">
-                    <a class="nav-link nav-expand-link" href="#">
+                      <input id="collapsible1" class="toggle" type="checkbox">
+                      <label for="collapsible1" class="nav-link-collapse nav-expand-link">
                         CORE SEVICES
-                    </a>
-                    <ul class="nav-items nav-expand-content">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">
-                          CORE SEVICES
-                        </a>
-                      </li>
-                    </ul>
+                        <i class="fas fa-plus mobile-only " aria-hidden="true"></i>
+                      </label>
+                      <div class="collapsible-content">
+                        <ul>
+                            <li class="nav-sub-link">
+                                <a href="#">Strategy + Consulting</a>
+                            </li>
+                            <li class="nav-sub-link">
+                                <a href="#">Brand + Experience Design</a>
+                            </li>
+                            <li class="nav-sub-link">
+                                <a href="#">Technology</a>
+                            </li>
+                            <li class="nav-sub-link">
+                                <a href="#">Marketing </a>
+                            </li>
+                        </ul>
+                      </div>
+                      <ul class="nav-items nav-expand-content"></ul>
                   </li>
                   <li class="nav-item nav-expand">
-                    <a class="nav-link nav-expand-link" href="#">
-                        SERVICE BY SEGMENT
-                    </a>
-                    <ul class="nav-items nav-expand-content">
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">
-                            SERVICE BY SEGMENT
-                          </a>
-                        </li>
-                      </ul>
+                      <input id="collapsible2" class="toggle" type="checkbox">
+                      <label for="collapsible2" class="nav-link-collapse nav-expand-link">
+                          SERVICE BY SEGMENT
+                        <i class="fas fa-plus mobile-only " aria-hidden="true"></i>
+                      </label>
+                      <div class="collapsible-content">
+                        <ul>
+                            <li class="nav-sub-link">
+                                <a href="#">Solo + Small Firm</a>
+                            </li>
+                            <li class="nav-sub-link">
+                                <a href="#">Mid-Size + Large Firm</a>
+                            </li>
+                            <li class="nav-sub-link">
+                                <a href="#">Class Action</a>
+                            </li>
+                            <li class="nav-sub-link">
+                                <a href="#">Legal Tech Organization </a>
+                            </li>
+                            <li class="nav-sub-link">
+                                <a href="#">Bar Association </a>
+                            </li>
+                            <li class="nav-sub-link">
+                                <a href="#">Legal Support Professionals </a>
+                            </li>
+                        </ul>
+                      </div>
+                      <ul class="nav-items nav-expand-content"></ul>
                   </li>
                 </ul>
               </li>
