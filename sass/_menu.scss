@@ -273,7 +273,7 @@
 }
 
 #menu{
-  background: rgba(255, 255, 255, 1);
+  background: $whiteDark;
   z-index: 100;
 }
 
@@ -352,6 +352,7 @@ outline: none;
   height: 4px;
   border-radius: 2px;
   background: white;
+  box-shadow: 0px 1px 4px #000;
   -webkit-transition: background 0 0.3s;
           transition: background 0 0.3s;
 }
@@ -366,6 +367,7 @@ outline: none;
   border-radius: 2px;
   background-color: #fff;
   content: "";
+  box-shadow: 0px 1px 4px #000;
   -webkit-transition-duration: 0.3s, 0.3s;
           transition-duration: 0.3s, 0.3s;
   -webkit-transition-delay: 0.3s, 0;
@@ -373,46 +375,49 @@ outline: none;
 }
 
 .menu-link span::before {
-top: -11px;
--webkit-transition-property: top, -webkit-transform;
-        transition-property: top, transform;
+  top: -11px;
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
 }
 
 .menu-link span::after {
-bottom: -11px;
--webkit-transition-property: bottom, -webkit-transform;
-        transition-property: bottom, transform;
+  bottom: -11px;
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
 }
 
 /* active state, i.e. menu open */
 .menu-open {
-background-color: transparent;
+  background-color: transparent;
 }
 
 .menu-open span {
-background: none;
-}
+  background: none;
+  box-shadow: none;
+} 
 
 .menu-open span::before {
 top: 0;
 background-color: #000;
+box-shadow: none;
 -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
         transform: rotate(45deg);
 }
 
 .menu-open span::after {
-bottom: 0;
-background-color: #000;
--webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg);
+  bottom: 0;
+  background-color: #000;
+  box-shadow: none;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .menu-open span::before,
 .menu-open span::after {
--webkit-transition-delay: 0, 0.3s;
-        transition-delay: 0, 0.3s;
+  -webkit-transition-delay: 0, 0.3s;
+          transition-delay: 0, 0.3s;
 }
 
 /* Style the menu tab */
@@ -453,7 +458,10 @@ background-color: #000;
 
       li{
         text-align: left !important;
-        font-size: 30px;
+        font-size: 30px;        
+        font-family: $base-font-secondary;
+        color: $default-font-color;
+        line-height: 1.3;
       }
     }
 
