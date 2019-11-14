@@ -1948,7 +1948,10 @@ header {
     font-weight: 400;
     font-family: Gibson, sans-serif; }
   .research-blocks a.link {
-    color: #000000; }
+    color: #FFFFFF; }
+    @media screen and (max-width: 768px) {
+      .research-blocks a.link {
+        color: #000000; } }
   .research-blocks .inner-content p {
     color: #4A4A4A; }
     @media screen and (max-width: 768px) {

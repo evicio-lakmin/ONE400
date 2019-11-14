@@ -1,12 +1,7 @@
-//this will make the scroll animation smooth
-smoothScroll.init();
-
-
 if($(window).width() > 768){ 
 
   //scroll plugin settings 
   new fullpage('.fullpage', {
-    //options here
     licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
     scrollHorizontally: true,
     autoScrolling:true,
@@ -14,64 +9,16 @@ if($(window).width() > 768){
     css3: false,
     dragAndMove: false,
     scrollBar: false,
-    normalScrollElements: '.home-top-content, .research-section, .become-a-click-block, .copyrights',
+    //normalScrollElements: '.home-top-content, .research-section, .become-a-click-block, .copyrights',
     fitToSection: false,
     lazyLoad: false,
     fadingEffect: true,
-    fixedElements: 'header',
-    afterSlideLoad: function( section, origin, destination, direction){
-      var loadedSlide = this;
-      // console.log(section);
-    
-    },
-
-    onLeave: function(origin, nextIndex, direction) {
-
-      console.log(origin.index);
-      console.log(nextIndex.index);
-      console.log(direction);
-      
-      if(origin.index == 0){
-        fullpage_api.setAutoScrolling(true);
-      } else {
-      // fullpage_api.setAllowScrolling(true);
-      }
-      /* console.log(origin.index); */
-      if(origin.index ==0 & direction == "down" ){ 
-        fullpage_api.setAutoScrolling(false);
-        // fullpage_api.setAllowScrolling(false);
-      //  fullpage_api.moveTo(3);
-      }
-      /* console.log(origin.index); */
-      if(origin.index ==1 & direction == "up" ){ 
-       // fullpage_api.setAutoScrolling(true);
-        // fullpage_api.setAllowScrolling(false);
-       //fullpage_api.moveTo(2);
-      }
-      if(origin.index == 2){ 
-       //  fullpage_api.setAutoScrolling(false);
-      } else {
-        
-      }
-      if(origin.index == 3){
-      //fullpage_api.moveSectionDown();
-      /* console.log(origin.index); */
-     //  fullpage_api.setAutoScrolling(true);
-      // fullpage_api.setScrollBar(false);
-  
-      } else {
-       // fullpage_api.setAutoScrolling(true);
-      }
-    }
+    fixedElements: 'header'
   });
 } else {
-
-
   $('.header-slider').addClass('fp-auto-height');
-
   //scroll plugin settings 
   new fullpage('.fullpage', {
-    //options here
     licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
     scrollHorizontally: true,
     autoScrolling:false,
@@ -92,17 +39,7 @@ $(document).ready(function() {
     callbackAfter: function() {
       alert('onclick');
     }
-  });    
-  
-  
-  // $('.contactmodalopen').menuFullpage({
-  //   menu: "#contact",
-  //   activeBtn: "menu-open",
-  //   side:"right",
-  //   callbackAfter: function() {
-  //     alert('onclick');
-  //   }
-  // });   
+  });     
 });
 
 function fullpage_hide($ele){
@@ -110,26 +47,6 @@ function fullpage_hide($ele){
       alert();
   }
 }
-
-
-
-
-
-function disableScroll() { 
-  // Get the current page scroll position 
-  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
-
-      // if any scroll is attempted, set this to the previous value 
-      window.onscroll = function() { 
-          window.scrollTo(scrollLeft, scrollTop); 
-      }; 
-} 
-
-function enableScroll() { 
-  window.onscroll = function() {}; 
-} 
-
 // Fixing content height issues on home page reaseach block
 function setImageHeight(){
   $imageContent = $('.reasarch-right-block').find('img'); 
@@ -140,11 +57,7 @@ function setImageHeight(){
 $('.fp-prev').append('<span class="fa fa-angle-left"></span>');
 $('.fp-next').append('<span class="fa fa-angle-right"></span>');
 
-// $("#contactModal").modal({
-//   fadeDuration: 100
-// });
 setImageHeight();
-
 
 $('body').on("click", function(){
   if($('.selectbox').parent().hasClass('active')){
@@ -178,11 +91,8 @@ function showInfo(evt, cityName) {
 }
 
 function expandList($element) {
-  console.log($element);
   $($element).parent('div').find('p').toggle();
   $($element).parent('div').find('.subscribe-serch').toggle();
-
-  
 }
 
 function slideTab($num){
@@ -209,9 +119,6 @@ ham.addEventListener('click', function() {
 	document.body.classList.toggle('nav-is-toggled')
 })
 // END: Mobile main menu handling
-
-
-
 $('.modal-open').on('click', function(e){
   e.preventDefault();
    $('.contact-modal').toggleClass('open-modal-active');
