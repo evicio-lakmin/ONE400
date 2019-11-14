@@ -43,7 +43,7 @@ header {
     article {
       width: 70%;
       margin: auto;
-      color: #424242;
+      color: $grayDark;
       @media screen and (max-width: $break--M) { 
         width: 100%;
         @include push--ends(30px);
@@ -798,7 +798,6 @@ footer {
     }
       h5 {
           display: block;
-          // margin: 5% 0;
           border-bottom: 1px solid #b5b5b5;
           padding: 5% 0;
       }
@@ -819,7 +818,6 @@ footer {
       }
       h5 {
           display: block;
-          // margin: 5% 0;
           border-bottom: 1px solid #b5b5b5;
           padding: 5% 0;
       }
@@ -842,16 +840,11 @@ footer {
       }
       h5 {
           display: block;
-          // margin: 5% 0;
           border-bottom: 1px solid #b5b5b5;
           padding: 5% 0;
       }
   }
   }
-
-
-
-
 }
 
 ul.social-media-icons {
@@ -871,9 +864,10 @@ ul.social-media-icons {
       padding: 2px;
       text-align: center;
       text-decoration: none;
-      display: block;
       background: $twilightblue;
       color: #fff;
+      display: flex;
+      align-items: center;
       i {
         flex: 1;
         font-size: 14px;
@@ -1098,15 +1092,20 @@ ul.mobile-only.social-media-icons {
     address {
       font-family: $base-font-secondary;
       width: calc(50% - 3px);
-        display: inline-block;
-        margin: 2% auto;
-        padding: 0;
-        font-style: inherit;
-        font-size: 15px;
+      display: inline-block;
+      margin: 2% auto;
+      padding: 0;
+      font-style: inherit;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    h2{
+      font-size: 4rem;
     }
     h5 {
-      // font-size:16px;
-      width: 75%;
+      font-size: 40px;
+      font-weight: 500;
+      width: 80%;
       @media screen and (max-width: $break--M){
         width: 100%;
         margin: 10% auto;
@@ -1127,7 +1126,7 @@ ul.mobile-only.social-media-icons {
       input {
         width: 100%;
         border: 0;
-        background-color: #efefef;
+        background-color: $white;
         margin: 0 0 20px 0;
         display: block;
         padding: 15px;
@@ -1136,7 +1135,7 @@ ul.mobile-only.social-media-icons {
       textarea {
         width: 100%;
         min-height: 200px;
-        background-color: #efefef;
+        background-color: $white;
         border: 0;
         display: block;
         padding: 15px;
