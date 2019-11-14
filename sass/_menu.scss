@@ -1,11 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=Fira+Sans:300,400';
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
-
-
-$primary-color: #20b49c;
-$primary-font: "Fira Sans", Arial, sans-serif;
-
-$link-color: $primary-color;
+/* ==========================
+  Mobile Nav Menu CSS
+========================== */
 
 .nav-top {
 	display: flex;
@@ -15,24 +10,38 @@ $link-color: $primary-color;
 	padding: 10px 20px;
 	width: 50px;
 	height: 50px;
-  // background-color: $whiteDark;
   left: auto;
-	
-	.hamburger {
-		margin-left: auto;
-		color: $black;
-		cursor: pointer;
-	}
+  right: 26px;
+  top: 2vh;
+
+  .mob-logo{
+    position: fixed;
+    top: 27px;
+    left: 20px;
+    img{
+      width: 122px;
+    }
+  }
+}
+
+.go-back-icon{
+  position: relative;
+  left: -10px;
+  margin-left: -14px;
+}
+
+.d-none{
+  display: none;
 }
 
 .mob-menu-ham{
   span {
     display: block;
     position: absolute;
-    top: 20px;
-    left: 8px;
-    right: 8px;
-    height: 4px;
+    top: 24px;
+    left: 5px;
+    right: 5px;
+    height: 3px;
     border-radius: 2px;
     background: white;
     -webkit-transition: background 0 0.3s;
@@ -43,7 +52,7 @@ $link-color: $primary-color;
         display: block;
         left: 0;
         width: 100%;
-        height: 4px;
+        height: 3px;
         border-radius: 2px;
         background-color: #fff;
         content: "";
@@ -70,6 +79,8 @@ $link-color: $primary-color;
   .mob-menu-ham{
     span{
       background: none;
+      left: 10px;
+      right: 10px;
       &::before {
         top: 0;
         background-color: #000;
@@ -90,6 +101,9 @@ $link-color: $primary-color;
       }
     }
   }
+  .mob-logo{
+    display: none;
+  }
 }
 
 .nav-drill {
@@ -105,15 +119,6 @@ $link-color: $primary-color;
 		visibility: visible;
 	}
 }
-
-// ---------------------------
-// important stuff starts here
-
-$nav-width: 100%;
-$nav-padding: 0.875em 1em;
-$nav-icon-font: 'Material Icons';
-$nav-icon-arrow-right: 'chevron_right';
-$nav-icon-arrow-left: 'chevron_left';
 
 .nav {
 	&-drill {
@@ -140,15 +145,10 @@ $nav-icon-arrow-left: 'chevron_left';
 	
 	&-item {    
     padding: 0 40px !important;
-		// &:not(:last-child) {
-    //   border-bottom: solid 1px $nav-level-border-color;
-		// }
 	}
 	
 	&-link {
 		display: block;
-		padding: $nav-padding;
-		color: $link-color;
 		font-size: 1rem;
     line-height: 1.5em;
     font-size: 40px !important;
@@ -171,9 +171,7 @@ $nav-icon-arrow-left: 'chevron_left';
 			
 			.nav-item {
         padding: 0 40px !important;
-				&:not(:last-child) {
-          border-bottom: solid 1px $nav-level-border-color;
-				}
+        border-bottom: solid 1px $nav-level-border-color;
 			}
 
 			.nav-link {
@@ -182,33 +180,57 @@ $nav-icon-arrow-left: 'chevron_left';
         font-weight: 400 !important;
         color: $black !important;
         padding: 40px 0 !important;
-			}
+      }
 
+      input[type='checkbox'] {
+        display: none;
+      }
+
+      .collapsible-content {
+        max-height: 0px;
+        overflow: hidden;      
+        transition: max-height .25s ease-in-out;
+
+        ul{
+          padding: 0;
+          .nav-sub-link {
+            padding-bottom: 40px !important;
+            a{
+              padding: 40px 0 !important;
+              font-size: 20px !important;
+              font-family: $base-font-secondary;    
+              text-transform: unset !important;
+              font-weight: 400 !important;
+            }
+          }
+        }
+      }
+
+      .toggle:checked + .nav-link-collapse + .collapsible-content {
+        max-height: 1000px;
+      }
+      
+      .nav-link-collapse {
+        font-family: $base-font-secondary;
+        font-size: 20px !important;
+        font-weight: 400 !important;
+        color: $black !important;
+        padding: 40px 0 !important;
+        display: flex;
+      }
+      
 			.nav-back-link {
 				display: flex;
 				align-items: center;
-				// background-color: $primary-color !important;
         color: $white;
         padding: 0 !important;
         height: 10vh;
-				
-				// &::before {
-				// 	content: $nav-icon-arrow-left;
-				// 	margin-right: 0.5em;
-				// 	font-family: $nav-icon-font;
-				// }
 			}
 		}
 		
 		&-link {
 			display: flex;
 			justify-content: space-between;
-			
-			// &::after {
-			// 	content: $nav-icon-arrow-right;
-			// 	flex: 0 1 auto;
-			// 	font-family: $nav-icon-font;
-			// }
 		}
 		
 		&.active {
