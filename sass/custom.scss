@@ -240,7 +240,6 @@ header {
       display: none;
     }
     .slide {
-
       .content {
         position: relative;
         height: 58vh;
@@ -327,12 +326,8 @@ header {
   }
 }
 
-
 .case-study-section {
   background-color: $white;
-
-
- 
   @media screen and (max-width: $break--M) {
     .fp-controlArrow {
       display: none;
@@ -355,9 +350,7 @@ header {
       @media screen and (max-width: $break--M) {
         padding-left: 40px;
         padding-right: 40px;
-        
       }
-
     }
     .content {
       /* margin-top: 25%; */
@@ -610,8 +603,6 @@ header {
       @media screen and (max-width: $break--M) {
         width: 100%;
         border-bottom: 1px solid $gray;
-
-        
       }
       
     }
@@ -648,7 +639,6 @@ header {
     }
       
     }
-
   }
 }
 
@@ -795,15 +785,14 @@ footer {
     @media screen and (max-width: $break--M){
       p, .subscribe-serch {
         display: none;
-    }
+      }
       h5 {
           display: block;
           // margin: 5% 0;
           border-bottom: 1px solid #b5b5b5;
           padding: 5% 0;
       }
-  }
-   
+    }
   }
   .location-links {
     position: relative;  
@@ -823,7 +812,7 @@ footer {
           border-bottom: 1px solid #b5b5b5;
           padding: 5% 0;
       }
-  }
+    }
     p {
       line-height: 20px;
     }
@@ -846,12 +835,8 @@ footer {
           border-bottom: 1px solid #b5b5b5;
           padding: 5% 0;
       }
+    }
   }
-  }
-
-
-
-
 }
 
 ul.social-media-icons {
@@ -1147,12 +1132,9 @@ ul.mobile-only.social-media-icons {
         @media screen and (max-width: $break--M){
           width: 100%;
         }
-        
       }
-
     } 
   }
-  
 }
 
 // This should be import at last for overwrite others
