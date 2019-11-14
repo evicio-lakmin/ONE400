@@ -103,8 +103,6 @@ $(document).ready(function() {
   //     alert('onclick');
   //   }
   // });   
-
-  
 });
 
 function fullpage_hide($ele){
