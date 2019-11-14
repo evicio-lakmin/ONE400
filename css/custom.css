@@ -1171,20 +1171,20 @@ img {
   font-size: 40px;
   color: #000000; }
 
-#menu {
+#menu, #contact {
   background: white;
   z-index: 100; }
 
-#menu ul.desktop {
+#menu ul.desktop, #contact ul.desktop {
   margin-top: 150px; }
   @media (max-width: 1025px) {
-    #menu ul.desktop {
+    #menu ul.desktop, #contact ul.desktop {
       margin-top: 100px; } }
 
 .menu-gap {
   padding-left: 20%; }
 
-#menu li {
+#menu li, #contact li {
   transition: all 0.4s ease;
   padding: 0 0 20px;
   list-style: none; }
@@ -1304,6 +1304,21 @@ img {
   .menu-container .menu-item-info {
     flex: 6;
     margin-top: 150px; }
+
+.open-modal-active {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  transition: right 600ms ease 0s;
+  right: 0px; }
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px; }
 
 /* Style the tab content */
 .tabcontent {
@@ -1675,15 +1690,11 @@ header {
         border-bottom: 1px solid;
         display: inline-block; }
   .header-slider .slide .tab-navigation {
-    display: none;
-    opacity: 0;
-    transition: 1s;
-    transition-delay: 1s; }
+    opacity: 0; }
   .header-slider .slide.active .tab-navigation {
     display: block;
     opacity: 1;
-    transition: 1s;
-    transition-delay: 1s; }
+    transition: 1s; }
 
 .tab-navigation ul {
   padding: 0;
@@ -2109,35 +2120,37 @@ footer {
         display: block;
         border-bottom: 1px solid #b5b5b5;
         padding: 5% 0; } }
-  footer ul.social-media-icons {
-    display: flex;
-    list-style: none;
-    max-width: 180px;
-    padding: 0;
-    margin: 15% 0;
-    width: 100%; }
-    footer ul.social-media-icons li {
-      flex: 1; }
-      footer ul.social-media-icons li a {
-        border: 0px solid;
-        border-radius: 100%;
-        width: 25px;
-        height: 25px;
-        padding: 2px;
-        text-align: center;
-        text-decoration: none;
-        display: block;
-        background: #0b3354;
-        color: #fff; }
-        footer ul.social-media-icons li a i {
-          flex: 1;
-          font-size: 14px; }
-  footer ul.mobile-only.social-media-icons {
-    display: none; }
-    @media screen and (max-width: 768px) {
-      footer ul.mobile-only.social-media-icons {
-        display: flex !important;
-        margin: 5% auto; } }
+
+ul.social-media-icons {
+  display: flex;
+  list-style: none;
+  max-width: 180px;
+  padding: 0;
+  margin: 15% 0;
+  width: 100%; }
+  ul.social-media-icons li {
+    flex: 1; }
+    ul.social-media-icons li a {
+      border: 0px solid;
+      border-radius: 100%;
+      width: 25px;
+      height: 25px;
+      padding: 2px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      background: #0b3354;
+      color: #fff; }
+      ul.social-media-icons li a i {
+        flex: 1;
+        font-size: 14px; }
+
+ul.mobile-only.social-media-icons {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    ul.mobile-only.social-media-icons {
+      display: flex !important;
+      margin: 5% auto; } }
 
 .segment-dropdown {
   position: relative;
@@ -2295,6 +2308,45 @@ footer {
     border-color: transparent; }
   50% {
     border-color: #FFFFFF; } }
+
+.contact-modal .inner-content {
+  display: flex;
+  width: 100%;
+  margin: 10% auto;
+  padding: 0% 10%; }
+
+.contact-modal .content-left {
+  font-family: Gibson, sans-serif;
+  flex: 5; }
+  .contact-modal .content-left address {
+    font-family: Gibson, sans-serif;
+    width: calc(50% - 3px);
+    display: inline-block;
+    margin: 2% auto;
+    padding: 0;
+    font-style: inherit;
+    font-size: 15px; }
+  .contact-modal .content-left .location-links {
+    margin: 5% auto; }
+
+.contact-modal .content-right {
+  flex: 6; }
+  .contact-modal .content-right .form input {
+    width: 100%;
+    border: 0;
+    background-color: #efefef;
+    margin: 0 0 20px 0;
+    display: block;
+    padding: 15px; }
+  .contact-modal .content-right .form textarea {
+    width: 100%;
+    min-height: 200px;
+    background-color: #efefef;
+    border: 0;
+    display: block;
+    padding: 15px; }
+  .contact-modal .content-right .form .btn {
+    margin: 5% auto; }
 
 html.fp-enabled,
 .fp-enabled body {

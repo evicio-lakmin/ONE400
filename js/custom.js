@@ -11,7 +11,7 @@ if($(window).width() > 768){
     scrollHorizontally: true,
     autoScrolling:true,
     slidesNavigation: true,
-    css3: true,
+    css3: false,
     dragAndMove: false,
     scrollBar: false,
     normalScrollElements: '.home-top-content, .research-section, .become-a-click-block, .copyrights',
@@ -32,15 +32,21 @@ if($(window).width() > 768){
       console.log(direction);
       
       if(origin.index == 0){
-        fullpage_api.setAutoScrolling(false);
+        fullpage_api.setAutoScrolling(true);
       } else {
       // fullpage_api.setAllowScrolling(true);
       }
       /* console.log(origin.index); */
-      if(origin.index ==2 & direction == "up" ){ 
-        fullpage_api.setAutoScrolling(true);
+      if(origin.index ==0 & direction == "down" ){ 
+        fullpage_api.setAutoScrolling(false);
         // fullpage_api.setAllowScrolling(false);
       //  fullpage_api.moveTo(3);
+      }
+      /* console.log(origin.index); */
+      if(origin.index ==1 & direction == "up" ){ 
+       // fullpage_api.setAutoScrolling(true);
+        // fullpage_api.setAllowScrolling(false);
+       //fullpage_api.moveTo(2);
       }
       if(origin.index == 2){ 
        //  fullpage_api.setAutoScrolling(false);
@@ -86,7 +92,19 @@ $(document).ready(function() {
     callbackAfter: function() {
       alert('onclick');
     }
-  });       
+  });    
+  
+  
+  // $('.contactmodalopen').menuFullpage({
+  //   menu: "#contact",
+  //   activeBtn: "menu-open",
+  //   side:"right",
+  //   callbackAfter: function() {
+  //     alert('onclick');
+  //   }
+  // });   
+
+  
 });
 
 function fullpage_hide($ele){
@@ -94,6 +112,9 @@ function fullpage_hide($ele){
       alert();
   }
 }
+
+
+
 
 
 function disableScroll() { 
@@ -189,3 +210,15 @@ ham.addEventListener('click', function() {
 	document.body.classList.toggle('nav-is-toggled')
 })
 // END: Mobile main menu handling
+
+
+
+$('.modal-open').on('click', function(e){
+  e.preventDefault();
+   $('.contact-modal').toggleClass('open-modal-active');
+});
+
+$('.modal-close').on('click', function(e){
+  e.preventDefault();
+   $('.contact-modal').removeClass('open-modal-active');
+});

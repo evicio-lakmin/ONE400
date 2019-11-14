@@ -276,17 +276,17 @@ header {
         }
       }
       .tab-navigation {
-        display: none;
+        // display: none;
         opacity: 0;
-        transition: 1s;
-        transition-delay: 1s;
+        // transition: 1s;
+        // transition-delay: 1s;
       }
       &.active{
         .tab-navigation {
           display: block;
           opacity: 1;
           transition: 1s;
-          transition-delay: 1s;
+          //transition-delay: 1s;
         }
       }
     }
@@ -850,6 +850,10 @@ footer {
   }
 
 
+
+
+}
+
 ul.social-media-icons {
   display: flex;
   list-style: none;
@@ -884,8 +888,6 @@ ul.mobile-only.social-media-icons {
   }
   display: none;
 }
-}
-
 .segment-dropdown {
   position: relative;
   display: flex;
@@ -1066,6 +1068,61 @@ ul.mobile-only.social-media-icons {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: $white; }
+}
+
+
+
+// contact modal
+
+.contact-modal {
+  .inner-content {
+    display: flex;
+    width: 100%;
+    margin: 10% auto;
+    padding: 0% 10%;
+  }
+  
+  .content-left {
+    font-family: $base-font-secondary;
+    flex: 5;
+    address {
+      font-family: $base-font-secondary;
+      width: calc(50% - 3px);
+        display: inline-block;
+        margin: 2% auto;
+        padding: 0;
+        font-style: inherit;
+        font-size: 15px;
+    }
+    
+    .location-links {margin: 5% auto;}
+  }
+  
+  .content-right {
+    flex: 6;
+    .form {
+      input {
+        width: 100%;
+        border: 0;
+        background-color: #efefef;
+        margin: 0 0 20px 0;
+        display: block;
+        padding: 15px;
+      }
+      textarea {
+        width: 100%;
+        min-height: 200px;
+        background-color: #efefef;
+        border: 0;
+        display: block;
+        padding: 15px;
+      } 
+      .btn {
+        margin: 5% auto;
+      }
+    } 
+  }
+  
 }
 
 // This should be import at last for overwrite others

@@ -96,7 +96,7 @@
                       <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                           Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</li>
                     </ul>
-                  </div>WERTYUIO;FDSSCVBNM,BBVVHFTFXSXFVBHGYTYFGJC <VGTDT16789P0-JNJMBNHG></VGTDT16789P0-JNJMBNHG>
+                  </div>
               </div>
               <!-- Contact Us -->
               <div id="ContactUs" class="tabcontent">
@@ -200,7 +200,7 @@
                 <div class="right-content">
                     Business leaders turn to ONE400 for guidance as they build the successful organizations of tomorrow.
                     <br>
-                    <a href="" class="link">Contact us</a>
+                    <a href="#" class="contactmodalopen link">Contact us</a>
                   </div>
                   <div class="segment-dropdown">
                       <div class="selectbox">
@@ -233,6 +233,11 @@
                       </div>
                     </div>
                     <div class="featured-image">
+                      <picture>
+                          <source srcset="assets/webp/slider2.webp" type="image/webp">
+                          <source srcset="assets/images/slider2.png"pngtype="image/png"> 
+                          <img src="assets/images/slider2,png" alt="Alt Text!">
+                        </picture>
                       <img src="assets/webp/ONE400_technology.webp" alt="">
                     </div>
               </div>
@@ -255,7 +260,11 @@
             <h5>Counsel for Creators goal is to reinvent the law firm experience for creative businesses of all sizes.</h5>
             <a class="link" href="#">View the case study<i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             <div class="featured-image2">
-              <img src="assets/webp/slider2.webp" alt="">
+                <picture>
+                    <source srcset="assets/webp/slider2.webp" type="image/webp">
+                    <source srcset="assets/images/slider2.png"pngtype="image/png"> 
+                    <img src="assets/images/slider2,png" alt="Alt Text!">
+                  </picture>
             </div>
           </div>
         </div>
@@ -277,7 +286,11 @@
                   <a class="link" href="#">Read the article<i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                    
                       <div class="featured-image2">
-                        <img src="assets/webp/slider3.webp" alt="">
+                          <picture>
+                              <source srcset="assets/webp/slider3.webp" type="image/webp">
+                              <source srcset="assets/images/slider3.png"pngtype="image/png"> 
+                              <img src="assets/images/slider3,png" alt="Alt Text!">
+                            </picture>
                       </div>
                 </div>
           </div>
@@ -298,7 +311,11 @@
         <h5>Read on to see our predictions for the future of legal tech.</h5>
         <a class="link" href="#">Read the article<i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         <div class="featured-image">
-          <img src="assets/webp/ONE400_technology.webp" alt="">
+            <picture>
+                <source srcset="assets/webp/ONE400_technology.webp" type="image/webp">
+                <source srcset="assets/images/ONE400_technology.png"pngtype="image/png"> 
+                <img src="assets/images/ONE400_technology,png" alt="Alt Text!">
+              </picture>
         </div>
       </div>
     </div>
@@ -547,7 +564,7 @@
             <h2 class="text-center">How can we help you?</h2>
             <h6 class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h6>
         </div>
-        <div class="right"> <a href="#contactModal" rel="modal:open" class="btn btn-primary">Contact Us</a> </div>
+        <div class="right"> <a href="#"  class="btn modal-open contactmodalopen btn-primary">Contact Us</a> </div>
       </div>
     </div>
   </section>
@@ -626,67 +643,97 @@
    <!-- FOOTER -->
 </div>
 <!-- Modal HTML embedded directly into document -->
-<!-- TEMPORARY -->
-<div id="contactModal" class="modal contact-modal">
-    <div class="inner-content">
-      <div class="content-left">
-          <h2>Let’s Connect</h2>
-          <h5>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</h5>
-          <div class="location-links">
-              <h5 >Locations</h5>
-              <address>
-                Los Angeles <br />
-                300 S. Raymond Ave #8 <br />
-                Pasadena, CA 91105 <br />
-                1.626.578.5040
-              </address>
-              <address>
-                New York<br />
-                576 Fifth Ave Suite 903 <br />
-                New York, NY 10036 <br />
-                1.646.374.2512 
-              </address> 
-              <address>
-                Guadalajara<br />
-                576 Fifth Ave Suite 903 <br />
-                New York, NY 10036 <br />
-                1.646.374.2512 
-              </address>
+<div id="contact" class="contact-modal panel">
+    <div class="modal-overlay absolute w-full h-full bg-white opacity-95"></div>
+    <div class="menu-container">
+      <div class="panel-logo"><a href="#"><img src="assets/images/nav-logo_b.png" alt=""></a></div>
+      <!-- Main Menu Items -->
+     
+      <div class="inner-content">
+          <div class="content-left">
+              <h2>Let’s Connect</h2>
+              <h5>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</h5>
+              <div class="location-links">
+                  <!-- <h5 >Locations</h5> -->
+                  <address>
+                    <strong>Los Angeles</strong> <br />
+                    300 S. Raymond Ave #8 <br />
+                    Pasadena, CA 91105 <br />
+                    1.626.578.5040
+                  </address>
+                  <address>
+                      <strong>New York</strong><br />
+                    576 Fifth Ave Suite 903 <br />
+                    New York, NY 10036 <br />
+                    1.646.374.2512 
+                  </address> 
+                  <address>
+                      <strong>Guadalajara</strong><br />
+                    576 Fifth Ave Suite 903 <br />
+                    New York, NY 10036 <br />
+                    1.646.374.2512 
+                  </address>
+                </div>
+                <ul class="social-media-icons">
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+          </div>
+          <div class="content-right">
+              <div class="modal-close">
+                  <i class="fa fa-close"></i>
+                </div>
+            <div class="form">
+                <form class="contact100-form validate-form">
+                  <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+                    <input class="input100" type="text" name="name" placeholder="Full Name">
+                    <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
+                    <input class="input100" type="text" name="email" placeholder="E-mail">
+                    <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
+                    <input class="input100" type="text" name="phone" placeholder="Phone">
+                    <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Please enter your message">
+                    <textarea class="input100" name="message" placeholder="Your Message"></textarea>
+                    <span class="focus-input100"></span>
+                    </div>
+                    <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn btn btn-primary">
+                    <span>
+                    <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                    Send
+                    </span>
+                    </button>
+                  </div>
+                </form>
             </div>
-      </div>
-      <div class="content-right">
-        <div class="form">
-            <form class="contact100-form validate-form">
-              <div class="wrap-input100 validate-input" data-validate="Please enter your name">
-                <input class="input100" type="text" name="name" placeholder="Full Name">
-                <span class="focus-input100"></span>
-                </div>
-                <div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
-                <input class="input100" type="text" name="email" placeholder="E-mail">
-                <span class="focus-input100"></span>
-                </div>
-                <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
-                <input class="input100" type="text" name="phone" placeholder="Phone">
-                <span class="focus-input100"></span>
-                </div>
-                <div class="wrap-input100 validate-input" data-validate="Please enter your message">
-                <textarea class="input100" name="message" placeholder="Your Message"></textarea>
-                <span class="focus-input100"></span>
-                </div>
-                <div class="container-contact100-form-btn">
-                <button class="contact100-form-btn">
-                <span>
-                <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-                Send
-                </span>
-                </button>
-              </div>
-            </form>
+          </div>
         </div>
+      
+      <!-- Mobile Main Menu -->
+      <div class="mobile-only">
+        <header class="nav-top mobile-only">
+            <!-- <span class="hamburger material-icons" id="ham">menu</span> -->
+            <a class="mob-menu-ham" id="ham">
+                <span></span>
+            </a>
+            
+        </header>
+        
+
+       
       </div>
-    </div>
-    <a href="#" rel="modal:close">Close</a>
+      <!-- END: Mobile Main Menu -->
+    </div>   
   </div>
+<!-- TEMPORARY -->
+
 <script src="js/jquery.min.js"></script>
 <script src="assets/js/menuFullpage.min.js"></script>
 <script src="js/fullpage.extensions.min.js"></script>
