@@ -12,7 +12,7 @@
 <body>
 <!-- Main NavBar -->
 <nav class="main-navbar">   
-  <div class="nav-container">
+  <div class="nav-container desktop-only">
     <div class="logo"><a href="#"><img src="assets/images/nav-logo.png" alt=""></a></div>       
     <div class="search-area">
       <div class="search-container">
@@ -32,9 +32,9 @@
       <div class="menu-container">
         <div class="panel-logo"><a href="#"><img src="assets/images/nav-logo_b.png" alt=""></a></div>
         <!-- Main Menu Items -->
-        <div class="menu-items menu-tab">
+        <div class="menu-items menu-tab desktop-only">
             <nav>
-                <ul class="menu-gap">
+                <ul class="menu-gap desktop">
                       <li><a data-scroll href="#" class="tablinks active" onmouseover="showInfo(event, 'Services')">Services</a></li>
                       <li><a data-scroll href="#" class="tablinks" onmouseover="showInfo(event, 'Work')">Work</a></li>
                       <li><a data-scroll href="#" class="tablinks" onmouseover="showInfo(event, 'Insights')">Insights</a></li>
@@ -109,6 +109,62 @@
                   </div>
               </div>
         </div>
+        <!-- Mobile Main Menu -->
+        <div class="mobile-only">
+          <header class="nav-top mobile-only">
+              <!-- <span class="hamburger material-icons" id="ham">menu</span> -->
+              <a class="mob-menu-ham" id="ham">
+                  <span></span>
+              </a>
+              
+          </header>
+          <nav class="nav-drill">
+            <ul class="nav-items nav-level-1">
+              <li class="nav-item nav-expand">
+                <a class="nav-link nav-expand-link" href="#">Services</a>
+                <ul class="nav-items nav-expand-content">
+                  <li class="nav-item nav-expand">
+                    <a class="nav-link nav-expand-link" href="#">
+                        CORE SEVICES
+                    </a>
+                    <ul class="nav-items nav-expand-content">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          CORE SEVICES
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item nav-expand">
+                    <a class="nav-link nav-expand-link" href="#">
+                        SERVICE BY SEGMENT
+                    </a>
+                    <ul class="nav-items nav-expand-content">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            SERVICE BY SEGMENT
+                          </a>
+                        </li>
+                      </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Insights</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- END: Mobile Main Menu -->
       </div>   
     </div>
 </div>
