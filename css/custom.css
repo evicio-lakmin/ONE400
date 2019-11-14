@@ -1216,8 +1216,11 @@ img {
   z-index: 100; }
 
 #contact {
-  background: white;
-  z-index: 999; }
+  background: #f8f8f8;
+  z-index: 1010; }
+  @media (max-width: 769px) {
+    #contact {
+      overflow-y: auto; } }
 
 #menu ul.desktop, #contact ul.desktop {
   margin-top: 150px; }
@@ -2193,9 +2196,10 @@ ul.social-media-icons {
       padding: 2px;
       text-align: center;
       text-decoration: none;
-      display: block;
       background: #0b3354;
-      color: #fff; }
+      color: #fff;
+      display: flex;
+      align-items: center; }
       ul.social-media-icons li a i {
         flex: 1;
         font-size: 14px; }
@@ -2388,9 +2392,14 @@ ul.mobile-only.social-media-icons {
     margin: 2% auto;
     padding: 0;
     font-style: inherit;
-    font-size: 15px; }
+    font-size: 1rem;
+    line-height: 1.4; }
+  .contact-modal .content-left h2 {
+    font-size: 4rem; }
   .contact-modal .content-left h5 {
-    width: 75%; }
+    font-size: 40px;
+    font-weight: 500;
+    width: 80%; }
     @media screen and (max-width: 768px) {
       .contact-modal .content-left h5 {
         width: 100%;
@@ -2406,7 +2415,7 @@ ul.mobile-only.social-media-icons {
   .contact-modal .content-right .form input {
     width: 100%;
     border: 0;
-    background-color: #efefef;
+    background-color: #FFFFFF;
     margin: 0 0 20px 0;
     display: block;
     padding: 15px;
@@ -2414,7 +2423,7 @@ ul.mobile-only.social-media-icons {
   .contact-modal .content-right .form textarea {
     width: 100%;
     min-height: 200px;
-    background-color: #efefef;
+    background-color: #FFFFFF;
     border: 0;
     display: block;
     padding: 15px;
