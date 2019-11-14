@@ -1212,7 +1212,7 @@ img {
   color: #000000; }
 
 #menu {
-  background: white;
+  background: #f8f8f8;
   z-index: 100; }
 
 #contact {
@@ -1286,6 +1286,7 @@ img {
   height: 4px;
   border-radius: 2px;
   background: white;
+  box-shadow: 0px 1px 4px #000;
   -webkit-transition: background 0 0.3s;
   transition: background 0 0.3s; }
 
@@ -1299,6 +1300,7 @@ img {
   border-radius: 2px;
   background-color: #fff;
   content: "";
+  box-shadow: 0px 1px 4px #000;
   -webkit-transition-duration: 0.3s, 0.3s;
   transition-duration: 0.3s, 0.3s;
   -webkit-transition-delay: 0.3s, 0;
@@ -1319,11 +1321,13 @@ img {
   background-color: transparent; }
 
 .menu-open span {
-  background: none; }
+  background: none;
+  box-shadow: none; }
 
 .menu-open span::before {
   top: 0;
   background-color: #000;
+  box-shadow: none;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
@@ -1331,6 +1335,7 @@ img {
 .menu-open span::after {
   bottom: 0;
   background-color: #000;
+  box-shadow: none;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg); }
@@ -1384,7 +1389,10 @@ img {
       margin: 0; }
       .tabcontent .info-content ul li {
         text-align: left !important;
-        font-size: 30px; }
+        font-size: 30px;
+        font-family: Gibson, sans-serif;
+        color: #4A4A4A;
+        line-height: 1.3; }
     @media (max-width: 1441px) {
       .tabcontent .info-content h3 {
         font-size: 2rem; }
@@ -1457,7 +1465,8 @@ img {
       height: 2px;
       background: white;
       transform: rotate(45deg);
-      transition: all .5s; }
+      transition: all .5s;
+      box-shadow: 0px 0px 1px #000; }
     .search-container .search-icon::after {
       content: "";
       position: absolute;
@@ -1470,7 +1479,8 @@ img {
       height: 25px;
       border-radius: 50%;
       border: 2px solid white;
-      transition: all .5s; }
+      transition: all .5s;
+      box-shadow: 0px 0px 3px #000; }
   .search-container .search-input {
     position: absolute;
     margin: auto;
@@ -1513,7 +1523,8 @@ img {
         border: none;
         background: white;
         border-radius: 0%;
-        transform: rotate(-45deg); }
+        transform: rotate(-45deg);
+        box-shadow: 0px 0px 1px #000; }
     .search-container .search-input::placeholder {
       color: black;
       opacity: 0.8;
