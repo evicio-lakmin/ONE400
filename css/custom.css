@@ -1213,7 +1213,8 @@ img {
 
 #menu {
   background: #f8f8f8;
-  z-index: 100; }
+  z-index: 100;
+  transition: all 1s cubic-bezier(0, 0, 0.52, 0.93) 0s !important; }
 
 #contact {
   background: #f8f8f8;
@@ -1947,7 +1948,7 @@ header {
     font-weight: 400;
     font-family: Gibson, sans-serif; }
   .research-blocks a.link {
-    color: #FFFFFF; }
+    color: #000000; }
   .research-blocks .inner-content p {
     color: #4A4A4A; }
     @media screen and (max-width: 768px) {
@@ -2353,6 +2354,7 @@ ul.mobile-only.social-media-icons {
   .fp-slides {
     overflow: initial !important;
     margin-top: 25%;
+    padding-bottom: 40%;
     float: left;
     width: 100%; } }
 

@@ -275,6 +275,7 @@
 #menu{
   background: $whiteDark;
   z-index: 100;
+  transition: all 1s cubic-bezier(0, 0, 0.52, 0.93) 0s !important;
 }
 #contact{
   background: $whiteDark;

@@ -523,7 +523,7 @@ header {
     font-family: $base-font-secondary;
   }
   a.link {
-    color :$white;
+    color :$black;
   }
   .inner-content {
       p{
@@ -1038,6 +1038,7 @@ ul.mobile-only.social-media-icons {
   @media screen and (max-width: $break--M){
     overflow: initial !important;
     margin-top:25%;
+    padding-bottom: 40%;
     float: left;
     width: 100%;
   }
