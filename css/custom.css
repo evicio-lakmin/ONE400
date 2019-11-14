@@ -1211,9 +1211,13 @@ img {
   font-size: 40px;
   color: #000000; }
 
-#menu, #contact {
+#menu {
   background: white;
   z-index: 100; }
+
+#contact {
+  background: white;
+  z-index: 999; }
 
 #menu ul.desktop, #contact ul.desktop {
   margin-top: 150px; }
@@ -2351,9 +2355,17 @@ ul.mobile-only.social-media-icons {
 
 .contact-modal .inner-content {
   display: flex;
+  position: relative;
   width: 100%;
   margin: 10% auto;
-  padding: 0% 10%; }
+  padding: 0% 10%;
+  z-index: 9999; }
+  @media screen and (max-width: 768px) {
+    .contact-modal .inner-content {
+      flex-direction: column;
+      margin: 20% auto 10% auto; }
+      .contact-modal .inner-content .social-media-icons {
+        display: none; } }
 
 .contact-modal .content-left {
   font-family: Gibson, sans-serif;
@@ -2366,8 +2378,17 @@ ul.mobile-only.social-media-icons {
     padding: 0;
     font-style: inherit;
     font-size: 15px; }
+  .contact-modal .content-left h5 {
+    width: 75%; }
+    @media screen and (max-width: 768px) {
+      .contact-modal .content-left h5 {
+        width: 100%;
+        margin: 10% auto; } }
   .contact-modal .content-left .location-links {
     margin: 5% auto; }
+    @media screen and (max-width: 768px) {
+      .contact-modal .content-left .location-links {
+        display: none; } }
 
 .contact-modal .content-right {
   flex: 6; }
@@ -2377,16 +2398,21 @@ ul.mobile-only.social-media-icons {
     background-color: #efefef;
     margin: 0 0 20px 0;
     display: block;
-    padding: 15px; }
+    padding: 15px;
+    font-family: Gibson, sans-serif; }
   .contact-modal .content-right .form textarea {
     width: 100%;
     min-height: 200px;
     background-color: #efefef;
     border: 0;
     display: block;
-    padding: 15px; }
+    padding: 15px;
+    font-family: Gibson, sans-serif; }
   .contact-modal .content-right .form .btn {
     margin: 5% auto; }
+    @media screen and (max-width: 768px) {
+      .contact-modal .content-right .form .btn {
+        width: 100%; } }
 
 html.fp-enabled,
 .fp-enabled body {
