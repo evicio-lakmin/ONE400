@@ -173,7 +173,8 @@ function slideTab($num){
 // Mobile main menu handling
 const navExpand = [].slice.call(document.querySelectorAll('.nav-expand'))
 const backLink = `<li class="nav-item">
-	<a class="nav-link nav-back-link" href="javascript:;">
+  <a class="nav-link nav-back-link" href="javascript:;">
+    <i class="fas fa-chevron-left go-back-icon"></i>
     Services
 	</a>
 </li>`
