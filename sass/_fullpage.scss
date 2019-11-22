@@ -1,4 +1,12 @@
 // FULL PAGE - Temporary SASS
+#fullpage,
+.section,
+body,
+.fp-tableCell,
+html {
+    height: 100%
+}
+
  html.fp-enabled,
  .fp-enabled body {
      margin: 0;
@@ -22,7 +30,7 @@
      display: block;
  }
  .fp-slides {
-     z-index:1;
+    //  z-index:1;
      height: 100%;
      overflow: hidden;
      position: relative;
@@ -53,16 +61,20 @@
      z-index: 4;
      top: 50%;
      cursor: pointer;
-     width: 30px;
-     height: 30px;
+     width: 40px;
+     height: 40px;
      @include text-align();
      margin-top: -38px;
+     background-color: rgba(0, 0, 0, 0.5);
+     
     &.fp-prev {
-        left: 15px;
+        left: 0px;
         .fa {
             pointer-events: none;
             color: $white;
             font-size: 30px;
+            margin-top: 5px;
+            cursor: pointer;
         }
     }
     &.fp-next {
@@ -70,8 +82,10 @@
             pointer-events: none;
             color: $white;
             font-size: 30px;
+            margin-top: 5px;
+            cursor: pointer;
         }
-        right: 15px;
+        right: 0px;
     }
  }
  .fp-scrollable {
@@ -116,6 +130,9 @@
  }
  .fp-slidesNav.fp-bottom {
      bottom: 17px;
+     @media screen and (max-width: $break--M) {
+        bottom: -20px;
+      }
  }
  .fp-slidesNav.fp-top {
      top: 17px;
