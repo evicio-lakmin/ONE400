@@ -138,7 +138,7 @@ header {
       overflow: hidden;
       cursor: pointer;
       font-size: 21px;
-      margin-right:5px;
+      margin-right: 3px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -170,7 +170,7 @@ header {
       }
 
       span {
-        font-size: 17.5px;
+        font-size: 18px;
         @media (max-width: $screen--XL) {
         font-size: 15px;
         }
@@ -202,19 +202,6 @@ header {
         box-sizing: border-box;
         text-align: left;
         font-family: $base-font-secondary;
-        span {
-          font-size: 13px;
-          p {
-              line-height: 21px;
-              margin: 0;
-              font-weight: 300;
-          }
-          a.link {
-            font-size: 11px;
-            display: flex;
-            flex-basis: auto;
-          }
-        }
         
         
 
@@ -285,13 +272,11 @@ header {
             line-height: 24px;
             font-weight: lighter;
             min-width: 290px;
-            padding: 15px 30px;
             @media (max-width: $screen--L) {
               display: none;
             }
 
             a.link {
-                font-size: 13px;
                 margin: 5% 0;
                 color: $lightblue;
                 text-transform: uppercase;
@@ -391,16 +376,15 @@ header {
       }
       
       h1 {
-        font-size: 45px;
-        line-height: 45px;
-        width: 75%;
+        font-size: 42px;
+        line-height: 42px;
         @media screen and (max-width: $break--M) {
           font-size: 36px;
           @include push--ends(10%);
         }
       }
       small {
-        font-size: 20px;
+        font-size: 21px;
         margin-bottom: 5%;
         display: block;
         font-family: $base-font-secondary;
@@ -431,10 +415,9 @@ header {
     font-weight: 400;
     @include text-transform();
     @include flush--ends();
-    font-size: 25px;
     font-family: $base-font-secondary;
     @media screen and (max-width: $break--M) {
-     //font-size: 30px;
+     font-size: 30px;
     }
   }
 }
@@ -478,17 +461,17 @@ header {
     h6 {
       @include push--ends(0px);
       font-family: $base-font-secondary;
-      font-size: 25px;
+      font-size: 21px;
       font-weight: 200;
       line-height: 36px;
-      width: 90%;
+      width: 85%;
       @media screen and (max-width: $break--M) {
         @include push--ends(2em);
         width: 100%;
       }
     }
     h2 {
-      font-size: 45px;
+      font-size: 42px;
       margin-bottom:1em;
       @media screen and (max-width: $break--M) {
         font-size: 36px;
@@ -526,20 +509,20 @@ header {
   h6 {
     @include push--ends(5%);
     font-family: $base-font-secondary;
-    font-size: 16px;
+    font-size: 21px;
     font-weight: 200;
-    line-height: 25px;
+    line-height: 36px;
     color: $default-font-color;
     @media screen and (max-width: $break--M) {
       margin-bottom: 2em;
       font-size: 16px;
       font-weight: 200;
-      line-height: 25px;
+      line-height: 30px;
     }
   }
   h2 {
     @include push--ends(5px);
-    font-size: 35px;
+    font-size: 36px;
     @media screen and (max-width: $break--M) {
       margin-top: 1em;
     }
@@ -553,7 +536,7 @@ header {
       a.link {
         display: block;
         @include push--ends(5%);
-        
+        font-size: 16px;
         font-weight: 400;
         font-family: $base-font-secondary;
         @media screen and (max-width: $break--M) {
@@ -570,10 +553,8 @@ header {
 .research-blocks {
   background-color: $whiteDark;
   h2 {
-    font-size: 35px;
-    // @include soft--ends(5% 2%);
-    margin-top:5%;
-    margin-bottom: 2%;
+    font-size: 42px;
+    @include soft--ends(5%);
     line-height: 1em;
     @media screen and (max-width: $break--M) {
       font-size: 36px;
@@ -581,7 +562,7 @@ header {
   }
   h5 {
     font-weight: 400;
-   font-size: 20px;
+    @extend .h5;
     font-family: $base-font-secondary;
   }
   a.link {
@@ -632,10 +613,6 @@ header {
       position: absolute;
       bottom: 0px;
       right: 0;
-      @media screen and (max-width: $break--M) {
-        width: 35%;
-      }
-      // top: -80px;
       img { 
         vertical-align: sub;
         @media screen and (max-width: $break--M) {
@@ -645,7 +622,7 @@ header {
     }
   }
   .post.content {
-      // height: 100vh !important;
+      height: 100vh !important;
       color: #fff;
       z-index: 9;
       position: relative;
@@ -661,9 +638,6 @@ header {
       span {
         font-size: 12px;
       }
-      h2 { 
-        font-size: 45px;
-      }
   }
   @extend .row;
   .reasarch-left-block {
@@ -675,7 +649,7 @@ header {
       width: 70%;
       background-color: $whiteDark;
       padding-top: 10%;
-      padding-bottom: 10%;
+      padding-bottom: 12%;
       @media screen and (max-width: $break--M) {
         width: 100%;
         border-bottom: 1px solid $gray;
@@ -706,10 +680,7 @@ header {
         }
       }
       h2 {
-        margin-top: 12%;
-        margin-bottom: 20px;
-        // @include push--ends(20px);
-        width: 70%;
+        @include push--ends(20px);
       }
     }
 
@@ -741,7 +712,7 @@ header {
   top: 0;
   bottom: 0;
   background-size: cover !important;
-  background: url(../assets/images/backgound-research.jpg) center;
+  background: url(../assets/images/backgound-research.jpg);
 }
  
 .become-a-click-block {
@@ -755,14 +726,11 @@ header {
       @media screen and (max-width: $break--XL){
         width:75%;
       }
-      @media screen and (min-width: $break--XL){
-        width: 60%;
-      }
   }
 
   h2 {
     margin:0 0 20px;
-    font-size: 45px;
+    font-size: 42px;
     font-family: $base-font-primary;
   }
 
@@ -770,7 +738,7 @@ header {
     font-family: $base-font-secondary;
     margin-top:1em;
     margin-bottom:1em;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 100;
     width: 75%;
     @include push--auto();
@@ -980,6 +948,8 @@ ul.mobile-only.social-media-icons {
   display: flex;
   z-index: 9;
   .selectbox {
+    display: flex;
+    align-items: center;
     border: 1px solid #fff;
     cursor: pointer;
     padding: 15px 20px;
@@ -996,14 +966,12 @@ ul.mobile-only.social-media-icons {
     i.fa {
       position: absolute;
       right: 20px;
-      top: 20px;
       color: #1CA8FF;
     }
 
     div {
       display: inline-flex;
       h5 {
-        font-size: 15px;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         border-right: .15em solid $white; /* The typwriter cursor */
         white-space: nowrap; /* Keeps the content on a single line */
@@ -1093,7 +1061,7 @@ ul.mobile-only.social-media-icons {
   display: block;
   color:$white;
   padding: 15px;
-  font-size: 10px;
+  font-size: 12px;
   font-family: $base-font-secondary;
   .sublinks{
     display:inline-block;
@@ -1103,7 +1071,7 @@ ul.mobile-only.social-media-icons {
       margin-bottom: 5%;
     }
     a {
-       font-size: 10px;
+       font-size: 12px;
       margin-right: 5px;
       margin-left: 5px;
       text-decoration: none;
@@ -1114,7 +1082,7 @@ ul.mobile-only.social-media-icons {
     }
   } 
   span{ 
-    font-size: 10px;
+    font-size: 12px;
     float: right;
     line-height: 12px;
 
