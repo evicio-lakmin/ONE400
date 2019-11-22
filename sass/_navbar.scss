@@ -66,16 +66,15 @@
       content: "";
       position: absolute;
       margin: auto;
-      top: 22px;
+      top: 18px;
       right: 0;
       bottom: 0;
-      left: 22px;
-      width: 12px;
+      left: 14px;
+      width: 8px;
       height: 2px;
       background: white;
       transform: rotate(45deg);
       transition: all .5s;
-      box-shadow: 0px 0px 1px #000;
     }
     &::after {
       content: "";
@@ -85,12 +84,11 @@
       right: 0;
       bottom: 0;
       left: -5px;
-      width: 25px;
-      height: 25px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       border: 2px solid white;
       transition: all .5s;
-      box-shadow: 0px 0px 3px #000;
     }
   }
   .search-input {
