@@ -1,3 +1,8 @@
+$(window).load(function() {
+  // Animate loader off screen
+  $(".se-pre-con").fadeOut("slow");
+});
+
 if($(window).width() > 768){ 
 
   //scroll plugin settings 
@@ -11,9 +16,37 @@ if($(window).width() > 768){
     scrollBar: false,
     //normalScrollElements: '.home-top-content, .research-section, .become-a-click-block, .copyrights',
     fitToSection: false,
-    lazyLoad: false,
+    lazyLoad: true,
     fadingEffect: true,
-    fixedElements: 'header'
+    fixedElements: 'header',
+    afterSlideLoad: function(section, origin, destination, direction){
+      console.log(origin.index);
+      console.log(direction)
+      if(origin.index == 2 && direction =='right'){
+        fullpage_api.setAutoScrolling(false);
+        // fullpage_api.moveTo(0, 0);
+      }
+    },
+    onLeave: function(origin, destination, direction){
+      var leavingSection = this;
+  
+      //after leaving section 2
+      if(origin.index == 1 && direction =='down'){
+        // alert("Going to section 3!");
+      }
+  
+      else if(origin.index == 1 && direction == 'up'){
+        fullpage_api.setAutoScrolling(true);
+        fullpage_api.moveTo(0, 0);
+      }
+    },
+    afterLoad: function(origin, destination, direction){
+      // console.log(direction);
+      // console.log(origin.index);
+      // if(direction == "down" && origin.index == 0){
+      //   fullpage_api.moveTo(0, 0);
+      // }
+    }
   });
 } else {
   $('.header-slider').addClass('fp-auto-height');
@@ -47,13 +80,8 @@ function fullpage_hide($ele){
       alert();
   }
 }
-// Fixing content height issues on home page reaseach block
-function setImageHeight(){
-  $imageContent = $('.reasarch-right-block').find('img'); 
-  $Content = $('.reasarch-left-block').find('.content');
-  $imageHeight = $imageContent.height(); 
-  $Content.css("height", $imageHeight);
-}
+
+
 $('.fp-prev').append('<span class="fa fa-angle-left"></span>');
 $('.fp-next').append('<span class="fa fa-angle-right"></span>');
 
@@ -70,6 +98,13 @@ $('.selectbox').on("click", function(e){
   $(this).parent().toggleClass('active');
 });
 
+// Fixing content height issues on home page reaseach block
+function setImageHeight(){
+  $imageContent = $('.reasarch-right-block').find('img'); 
+  $Content = $('.reasarch-left-block').find('.content');
+  $imageHeight = $imageContent.height(); 
+  $Content.css("height", $imageHeight);
+}
 
 // Main Menu Hover Effect Handling
 function showInfo(evt, cityName) {

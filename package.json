@@ -21,8 +21,6 @@
     "gulp-sass": "^4.0.2"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-minify": "^3.1.0",
-    "gulp-webp": "^4.0.1"
+    "gulp": "^4.0.2"
   }
 }

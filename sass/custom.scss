@@ -138,7 +138,7 @@ header {
       overflow: hidden;
       cursor: pointer;
       font-size: 21px;
-      margin-right:5px;
+      margin-right:3px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -980,6 +980,8 @@ ul.mobile-only.social-media-icons {
   display: flex;
   z-index: 9;
   .selectbox {
+    display: flex;
+    align-items: center;
     border: 1px solid #fff;
     cursor: pointer;
     padding: 15px 20px;
