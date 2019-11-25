@@ -6,6 +6,7 @@
 @import '_base.scss';
 @import '_menu.scss';
 @import '_navbar.scss';
+@import '_animate.scss';
 
 
 header {
@@ -19,9 +20,10 @@ header {
         color:$white;
         text-decoration: none;
     }
-    
 }
-
+.fullpage-wrapper {
+  height: 100%;
+}
 // home top content starts
 .block.home-top-content {
   @include text-align();
@@ -41,9 +43,12 @@ header {
         margin: 15px 0;
     }
     article {
-      width: 70%;
+      width: 60%;
       margin: auto;
       color: $grayDark;
+      @media screen and (max-width: $break--XL) { 
+        width: 70%;
+      }
       @media screen and (max-width: $break--M) { 
         width: 100%;
         @include push--ends(30px);
@@ -55,16 +60,21 @@ header {
       width: 25%;
       top: 0;
     }
+    @media screen and (max-width: $break--M) { 
+      margin-top: 4em;
+    }
   }
+
 }
 
   .video-fullpage {
       height: 100vh;
       width: 100%;
+      
       z-index: 0;
       position: relative;
       top: 0;
-      .video-player {
+      .video-player, .videoplayer {
         position: absolute;
         right: 0;
         bottom: 0;
@@ -93,6 +103,7 @@ header {
       display: block;
     }
     h5 {
+      line-height: 28px;
       font-size: 18px;
       font-weight: 400;
       font-family: $base-font-secondary;
@@ -108,7 +119,7 @@ header {
     bottom:0px;
     left:0;
     right:0;
-    z-index: 0;
+    z-index: 1;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -127,7 +138,7 @@ header {
       overflow: hidden;
       cursor: pointer;
       font-size: 21px;
-      margin-right:10px;
+      margin-right:3.5px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -159,7 +170,7 @@ header {
       }
 
       span {
-        font-size: 18px;
+        font-size: 17.5px;
         @media (max-width: $screen--XL) {
         font-size: 15px;
         }
@@ -191,6 +202,19 @@ header {
         box-sizing: border-box;
         text-align: left;
         font-family: $base-font-secondary;
+        span {
+          font-size: 13px;
+          p {
+              line-height: 21px;
+              margin: 0;
+              font-weight: 300;
+          }
+          a.link {
+            font-size: 11px;
+            display: flex;
+            flex-basis: auto;
+          }
+        }
         
         
 
@@ -212,12 +236,12 @@ header {
           @media (max-width: $screen--XL) {
             bottom: 15px;
               left: 43px;    
-              line-height: 1;    
+              line-height: 15px;    
           }
 
           i{
             font-size: 14px;
-            margin-left: 12px;
+            // margin-left: 12px;
           }
 
           &:hover{
@@ -254,18 +278,20 @@ header {
             font-family: $base-font-secondary;
             position: absolute;
             width: 20%;
-            right: 15px;
+            right: 5em;
             top: 5%;    
             border-left: 2px solid;
             padding-left: 30px;
             line-height: 24px;
             font-weight: lighter;
             min-width: 290px;
+            padding: 15px 30px;
             @media (max-width: $screen--L) {
               display: none;
             }
 
             a.link {
+                font-size: 13px;
                 margin: 5% 0;
                 color: $lightblue;
                 text-transform: uppercase;
@@ -294,6 +320,10 @@ header {
 .tab-navigation ul {
   padding: 0;
   margin-bottom: 24px;
+
+  @media screen and (max-width: $break--M) { 
+    display: none;
+  }
   li {
     cursor: pointer;
     padding: 0;
@@ -317,7 +347,7 @@ header {
       position: absolute;
       bottom: 0;
       color: #4493f7;
-      font-size: 12px;
+      font-size: 9px;
       font-weight: 700;
       display: none;
       width: 200%;
@@ -361,29 +391,37 @@ header {
       @media screen and (max-width: $break--M) {
         width: 100%;
         /* margin-top: 35%; */
-        @include soft--sides(20px);
+       // @include soft--sides(20px);
       }
       
       h1 {
-        font-size: 42px;
-        line-height: 42px;
+        font-size: 45px;
+        line-height: 45px;
+        width: 75%;
         @media screen and (max-width: $break--M) {
-          font-size: 40px;
-          line-height: 40px;
+          font-size: 36px;
+          @include push--ends(10%);
         }
       }
       small {
-        font-size: 21px;
+        font-size: 20px;
         margin-bottom: 5%;
         display: block;
+        font-family: $base-font-secondary;
       }
 
       a.btn {
-        @include push--ends(5%);
+        @include push--ends(10%);
+        opacity: 0.9;
+        @media screen and (max-width: $break--M) {
+          @include push--ends(20%);
+          width: 100%;
+        }
       }
       a.link {
           @include push--ends(5%);
           color: #fff;
+
       }
       span {
           display: block;
@@ -396,9 +434,14 @@ header {
   text-align: center;
   @include soft--ends(4em);
   h2 {
+    font-weight: 400;
     @include text-transform();
     @include flush--ends();
+    font-size: 25px;
     font-family: $base-font-secondary;
+    @media screen and (max-width: $break--M) {
+     //font-size: 30px;
+    }
   }
 }
 .featured-image {
@@ -412,8 +455,8 @@ header {
   overflow: hidden;
 
   @media screen and (min-width: $break--XL) {
-    max-width: 500px;
-    height: 547px;
+    max-width: 560px;
+    height: 630px;
   }
 
   @media (max-width: $screen--L) {
@@ -441,21 +484,32 @@ header {
     h6 {
       @include push--ends(0px);
       font-family: $base-font-secondary;
-      font-size: 21px;
+      font-size: 25px;
       font-weight: 200;
       line-height: 36px;
-
+      width: 90%;
       @media screen and (max-width: $break--M) {
         @include push--ends(2em);
+        width: 100%;
       }
     }
     h2 {
-      @include push--ends(5px);
+      font-size: 45px;
+      margin-bottom:1em;
+      @media screen and (max-width: $break--M) {
+        font-size: 36px;
+      } 
     }
   }
   .right {
     text-align: center;
     @extend .M6;
+    .btn {
+      min-width: 300px;
+      @media screen and (max-width: $break--M) {
+        min-width: 100%;
+      }
+    }
   }
 }
 
@@ -478,14 +532,23 @@ header {
   h6 {
     @include push--ends(5%);
     font-family: $base-font-secondary;
-    font-size: 21px;
+    font-size: 16px;
     font-weight: 200;
-    line-height: 36px;
+    line-height: 25px;
     color: $default-font-color;
+    @media screen and (max-width: $break--M) {
+      margin-bottom: 2em;
+      font-size: 16px;
+      font-weight: 200;
+      line-height: 25px;
+    }
   }
   h2 {
     @include push--ends(5px);
-    font-size: 36px;
+    font-size: 35px;
+    @media screen and (max-width: $break--M) {
+      margin-top: 1em;
+    }
   }
   .right {
     
@@ -496,7 +559,7 @@ header {
       a.link {
         display: block;
         @include push--ends(5%);
-        font-size: 16px;
+        
         font-weight: 400;
         font-family: $base-font-secondary;
         @media screen and (max-width: $break--M) {
@@ -513,21 +576,22 @@ header {
 .research-blocks {
   background-color: $whiteDark;
   h2 {
-    font-size: 42px;
-    @include soft--ends(5%);
+    font-size: 35px;
+    // @include soft--ends(5% 2%);
+    margin-top:5%;
+    margin-bottom: 2%;
     line-height: 1em;
+    @media screen and (max-width: $break--M) {
+      font-size: 36px;
+    }
   }
   h5 {
     font-weight: 400;
-    @extend .h5;
+   font-size: 20px;
     font-family: $base-font-secondary;
   }
   a.link {
     color :$white;
-    @media screen and (max-width: $break--M) {
-      
-      color :$black;
-    }
     
   }
   .inner-content {
@@ -556,12 +620,19 @@ header {
       color: $lightblue;
       text-decoration: none;
     }
+    span {
+      font-size: 12px;
+    }
   }
   .content-bottom-block {
     display: flex;
     z-index: 99;
     position: relative;
     background-color: #f8f8f8;
+
+    .btn {
+      min-width: 286px;
+    }
     @media screen and (max-width: $break--M) {
       flex-direction: column;
     }
@@ -571,6 +642,10 @@ header {
       position: absolute;
       bottom: 0px;
       right: 0;
+      @media screen and (max-width: $break--M) {
+        width: 35%;
+      }
+      // top: -80px;
       img { 
         vertical-align: sub;
         @media screen and (max-width: $break--M) {
@@ -580,7 +655,7 @@ header {
     }
   }
   .post.content {
-      height: 100vh !important;
+      // height: 100vh !important;
       color: #fff;
       z-index: 9;
       position: relative;
@@ -593,6 +668,12 @@ header {
         @include soft--ends(5em);
         height: auto !important;
       }
+      span {
+        font-size: 12px;
+      }
+      h2 { 
+        font-size: 45px;
+      }
   }
   @extend .row;
   .reasarch-left-block {
@@ -603,8 +684,8 @@ header {
     .inner-content {
       width: 70%;
       background-color: $whiteDark;
-      padding-top: 8%;
-      padding-bottom: 8%;
+      padding-top: 10%;
+      padding-bottom: 10%;
       @media screen and (max-width: $break--M) {
         width: 100%;
         border-bottom: 1px solid $gray;
@@ -631,10 +712,14 @@ header {
         @include soft--sides(20px);
         a.link.mobile-only {
             margin: 15% 0px;
+            color: $black;
         }
       }
       h2 {
-        @include push--ends(20px);
+        margin-top: 12%;
+        margin-bottom: 20px;
+        // @include push--ends(20px);
+        width: 70%;
       }
     }
 
@@ -666,29 +751,36 @@ header {
   top: 0;
   bottom: 0;
   background-size: cover !important;
-  background: url(../assets/images/backgound-research.jpg);
+  background: url(../assets/images/backgound-research.jpg) center;
 }
  
 .become-a-click-block {
   background-color: $white;
   text-align: center;
-  @include soft--ends(4em);
+  @include soft--ends(5em);
   @extend .desktop-only;
   .content {
       width:45%;
       @include push--auto();
+      @media screen and (max-width: $break--XL){
+        width:75%;
+      }
+      @media screen and (min-width: $break--XL){
+        width: 60%;
+      }
   }
 
   h2 {
     margin:0 0 20px;
-    font-size: 36px;
+    font-size: 45px;
     font-family: $base-font-primary;
   }
 
   h4 {
     font-family: $base-font-secondary;
-    margin-bottom: 3%;
-    font-size: 24px;
+    margin-top:1em;
+    margin-bottom:1em;
+    font-size: 25px;
     font-weight: 100;
     width: 75%;
     @include push--auto();
@@ -704,23 +796,27 @@ footer {
       max-width: 125px;
       display: block;
       margin-bottom: 5%;
+      @media screen and (max-width: $break--M){
+        max-width: 175px;
+      }
   }
   .footer-rows {
     @extend .row; 
     .left-column {
       @extend .M4;
       span {
-        width:75%;
+        width:65%;
         display: block;
         @media screen and (max-width: $break--M){
           width:100%;
         }
       }
       .mobile-contact-no {
-        margin:5% auto;
-        font-family: $base-font-primary;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-family: $base-font-secondary;
         font-size: 24px;
-        font-weight: 700;
+        font-weight: 400;
       }
       @media screen and (max-width: $break--M){
         @include soft--sides(30px);
@@ -747,7 +843,11 @@ footer {
     }
     .subscribe-serch{
       display: flex;
+      width:70%;
       position: relative;
+      @media screen and (max-width: $break--M){
+          width:100%;
+      }
     }
   }
   p{
@@ -755,17 +855,18 @@ footer {
   }
   a.link {
     color: $lightblue;
-    font-weight: 700;
+    font-weight: 400;
     display: block;
   }
   input[type="text"] {
     border: 0;
-    background-color: lightgray;
+    background-color: #efefef;
     height: 35px;
     padding: 2px 10px 0 10px;
     color: #0b3354;
-    font-weight: 600;
+    font-weight: 400;
     width: 100%;
+    font-size: 12px;
   }
 
   button {
@@ -872,17 +973,28 @@ ul.social-media-icons {
 ul.mobile-only.social-media-icons {
   @media screen and (max-width: $break--M){
     display:flex !important;
-    margin: 5% auto;
+    margin-top: 15%;
+    margin-bottom: 0%;
+    margin-left:auto;
+    margin-right:auto;
+
+    li a {
+      width: 30px;
+      height: 30px;
+    }
   }
   display: none;
 }
 .segment-dropdown {
   position: relative;
   display: flex;
+  z-index: 9;
   .selectbox {
+    display: flex;
+    align-items: center;
     border: 1px solid #fff;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 15px 20px;
     font-size: 14px;
     margin: 5% 0 0;
     position: relative;
@@ -895,14 +1007,15 @@ ul.mobile-only.social-media-icons {
     
     i.fa {
       position: absolute;
-      right: 10px;
-      top: 15px;
+      right: 20px;
+      top: 20px;
       color: #1CA8FF;
     }
 
     div {
       display: inline-flex;
       h5 {
+        font-size: 15px;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         border-right: .15em solid $white; /* The typwriter cursor */
         white-space: nowrap; /* Keeps the content on a single line */
@@ -992,7 +1105,7 @@ ul.mobile-only.social-media-icons {
   display: block;
   color:$white;
   padding: 15px;
-  font-size: 12px;
+  font-size: 10px;
   font-family: $base-font-secondary;
   .sublinks{
     display:inline-block;
@@ -1002,7 +1115,7 @@ ul.mobile-only.social-media-icons {
       margin-bottom: 5%;
     }
     a {
-       font-size: 12px;
+       font-size: 10px;
       margin-right: 5px;
       margin-left: 5px;
       text-decoration: none;
@@ -1013,9 +1126,9 @@ ul.mobile-only.social-media-icons {
     }
   } 
   span{ 
-    font-size: 12px;
+    font-size: 10px;
     float: right;
-    line-height: 1;
+    line-height: 12px;
 
     @media screen and (max-width: $break--M){
       float: none;
@@ -1092,7 +1205,7 @@ ul.mobile-only.social-media-icons {
       padding: 0;
       font-style: inherit;
       font-size: 1rem;
-      line-height: 1.4;
+      line-height: 24px;
     }
     h2{
       font-size: 4rem;
@@ -1145,6 +1258,20 @@ ul.mobile-only.social-media-icons {
     } 
   }
 }
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+  background:  #fff;
+  overflow: hidden;
+}
+
 
 // This should be import at last for overwrite others
 @import '_fullpage.scss';

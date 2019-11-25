@@ -11,9 +11,9 @@
   background-image: none; 
   border: 1px solid transparent;
   white-space: nowrap;
-  @include soft--ends(20px);
-  @include soft--sides(30px);
-  min-width: 200px;
+  @include soft--ends(23px);
+  @include soft--sides(50px);
+  min-width: 270px;
   font-family: $base-font-secondary;
   text-decoration: none;
   font-size: 16px;

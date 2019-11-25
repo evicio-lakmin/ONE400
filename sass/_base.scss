@@ -1,12 +1,19 @@
 @font-face {
   font-family: $base-font-primary;
-  src: url("../assets/fonts/FreightTextPro/FreightTexPro.otf") format("opentype");
+  src:  url("../assets/fonts/FreightTextPro/FreightTexPro.otf") format("opentype"),
+        url('../assets/fonts/FreightTextPro/FreightTextProBook-Regular.ttf')  format('truetype'),
+        url('../assets/fonts/FreightTextPro/FreightTextProBook-Regular.woff')  format('woff');
 }
 
 @font-face {
   font-family: $base-font-secondary;
-  src: url("../assets/fonts/Gibson/Gibson-Regular.otf") format("opentype");
+  src:  url('../assets/fonts/Gibson/Gibson-Regular.eot'), /* IE9 Compat Modes */
+        url("../assets/fonts/Gibson/Gibson-Regular.otf") format("opentype"), 
+        url('../assets/fonts/Gibson/Gibson-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../assets/fonts/Gibson/Gibson-Regular.woff')  format('woff'),  /* Pretty Modern Browsers */
+        url('../assets/fonts/Gibson/Gibson-Regular.woff2')  format('woff2'); /* Super Modern Browsers */
 }
+
 
 html,body {
   width:100%;
@@ -14,6 +21,7 @@ html,body {
   margin: 0px;
   font-family: $base-font-primary; 
 }
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -51,7 +59,7 @@ h3, .h3  {
   @include font-size(30px); 
 } 
 h4, .h4 {
-  @include font-size(24px);
+  @include font-size(25px);
 }
 h5, .h5{
   @include font-size(16px);
@@ -81,7 +89,7 @@ h6, .h6 {
   }
 
   @media screen and (max-width: $break--M) { 
-    padding: 0 20px !important;
+    padding: 0 30px !important;
   }
 
 }
@@ -93,8 +101,8 @@ h6, .h6 {
   }
 
   @media screen and (max-width: $break--M) { 
-    padding-left: 20px !important;
-  }
+    padding-left: 30px !important;
+  } 
 }
 .pd-l{
   padding-right: 15em !important;;
@@ -103,7 +111,7 @@ h6, .h6 {
     
   }
   @media screen and (max-width: $break--M) { 
-    padding-right: 20px !important;
+    padding-right: 30px !important;
   }
 }
 .pd-l-tab{
@@ -112,7 +120,7 @@ h6, .h6 {
     padding-left: 1.4em !important;
   }
   @media screen and (max-width: $break--M) { 
-    padding-left: 20px !important;
+    padding-left: 30px !important;
   }
 }
 
@@ -135,7 +143,7 @@ img{
   box-sizing: border-box;
 }
 .title {
-  font-size: 60px;
+  font-size: 65px;
   @media (max-width: $screen--M) {
     font-size: 40px;
    
@@ -147,7 +155,7 @@ img{
 }
 
 .mobile-only {
-  display: none;
+  display: none !important;
   visibility: hidden;
 
   @media screen and (max-width: $break--M) { 
