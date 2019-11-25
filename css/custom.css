@@ -788,8 +788,8 @@
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 23px;
+  padding-bottom: 23px;
   padding-left: 50px;
   padding-right: 50px;
   min-width: 270px;
@@ -4243,7 +4243,7 @@ header {
     overflow: hidden;
     cursor: pointer;
     font-size: 21px;
-    margin-right: 3px;
+    margin-right: 3.5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4305,7 +4305,8 @@ header {
           padding-bottom: 15px;
           padding-left: 2em;
           padding-right: 2em;
-          line-height: 1.3; } }
+          /* line-height: 1.3; */
+         } }
       .service-rollovers .tab .inner a {
         position: absolute;
         bottom: 18px;
@@ -4330,7 +4331,9 @@ header {
   left: 0;
   right: 0;
   height: 100%;
-  background-color: rgba(2, 2, 2, 0.5); }
+  opacity: 0.73;
+  background-color: #061b2b;
+ }
   .header-slider .fp-controlArrow, .header-slider .fp-slidesNav {
     display: none; }
   .header-slider .slide .content {
@@ -4399,7 +4402,7 @@ header {
       position: absolute;
       bottom: 0;
       color: #4493f7;
-      font-size: 12px;
+      font-size: 9px;
       font-weight: 700;
       display: none;
       width: 200%;
@@ -4625,6 +4628,8 @@ header {
     z-index: 99;
     position: relative;
     background-color: #f8f8f8; }
+    .research-blocks .content-bottom-block .btn {
+      min-width: 286px; }
     @media screen and (max-width: 768px) {
       .research-blocks .content-bottom-block {
         flex-direction: column; } }
