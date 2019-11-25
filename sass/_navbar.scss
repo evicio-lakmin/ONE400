@@ -68,9 +68,9 @@
       margin: auto;
       top: 18px;
       right: 0;
-      bottom: 0;
-      left: 14px;
-      width: 8px;
+      bottom: 3px;
+      left: 13px;
+      width: 10px;
       height: 2px;
       background: white;
       transform: rotate(45deg);
@@ -84,8 +84,8 @@
       right: 0;
       bottom: 0;
       left: -5px;
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
       border: 2px solid white;
       transition: all .5s;
@@ -124,7 +124,7 @@
     &:focus ~ .search-icon {
       z-index: 6;
       &::before {
-        top: 0;
+        top: 2px;
         left: 0;
         width: 25px;
       }
