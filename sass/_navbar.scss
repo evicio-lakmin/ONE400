@@ -66,8 +66,9 @@
       content: "";
       position: absolute;
       margin: auto;
-      top: 18px;
+      top: 22px;
       right: 0;
+
       bottom: 3px;
       left: 13px;
       width: 10px;
@@ -75,6 +76,7 @@
       background: white;
       transform: rotate(45deg);
       transition: all .5s;
+      box-shadow: 0px 0px 1px #000;
     }
     &::after {
       content: "";
@@ -89,6 +91,7 @@
       border-radius: 50%;
       border: 2px solid white;
       transition: all .5s;
+      box-shadow: 0px 0px 3px #000;
     }
   }
   .search-input {

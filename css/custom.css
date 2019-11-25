@@ -788,8 +788,8 @@
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 23px;
+  padding-bottom: 23px;
   padding-left: 50px;
   padding-right: 50px;
   min-width: 270px;
@@ -4243,7 +4243,7 @@ header {
     overflow: hidden;
     cursor: pointer;
     font-size: 21px;
-    margin-right: 5px;
+    margin-right: 3.5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4305,7 +4305,8 @@ header {
           padding-bottom: 15px;
           padding-left: 2em;
           padding-right: 2em;
-          line-height: 1.3; } }
+          /* line-height: 1.3; */
+         } }
       .service-rollovers .tab .inner a {
         position: absolute;
         bottom: 18px;
@@ -4317,10 +4318,9 @@ header {
           .service-rollovers .tab .inner a {
             bottom: 15px;
             left: 43px;
-            line-height: 1; } }
+            line-height: 15px; } }
         .service-rollovers .tab .inner a i {
-          font-size: 14px;
-          margin-left: 12px; }
+          font-size: 14px; }
         .service-rollovers .tab .inner a:hover {
           text-decoration: underline; }
 
@@ -4331,7 +4331,9 @@ header {
   left: 0;
   right: 0;
   height: 100%;
-  background-color: rgba(2, 2, 2, 0.5); }
+  opacity: 0.73;
+  background-color: #061b2b;
+ }
   .header-slider .fp-controlArrow, .header-slider .fp-slidesNav {
     display: none; }
   .header-slider .slide .content {
@@ -4376,6 +4378,9 @@ header {
 .tab-navigation ul {
   padding: 0;
   margin-bottom: 24px; }
+  @media screen and (max-width: 768px) {
+    .tab-navigation ul {
+      display: none; } }
   .tab-navigation ul li {
     cursor: pointer;
     padding: 0;
@@ -4397,7 +4402,7 @@ header {
       position: absolute;
       bottom: 0;
       color: #4493f7;
-      font-size: 12px;
+      font-size: 9px;
       font-weight: 700;
       display: none;
       width: 200%;
@@ -4448,7 +4453,8 @@ header {
         font-family: Gibson, sans-serif; }
       .case-study-section .inner-content .content a.btn {
         margin-top: 10%;
-        margin-bottom: 10%; }
+        margin-bottom: 10%;
+        opacity: 0.9; }
         @media screen and (max-width: 768px) {
           .case-study-section .inner-content .content a.btn {
             margin-top: 20%;
@@ -4622,6 +4628,8 @@ header {
     z-index: 99;
     position: relative;
     background-color: #f8f8f8; }
+    .research-blocks .content-bottom-block .btn {
+      min-width: 286px; }
     @media screen and (max-width: 768px) {
       .research-blocks .content-bottom-block {
         flex-direction: column; } }
@@ -4897,6 +4905,8 @@ ul.mobile-only.social-media-icons {
   display: flex;
   z-index: 9; }
   .segment-dropdown .selectbox {
+    display: flex;
+    align-items: center;
     border: 1px solid #fff;
     cursor: pointer;
     padding: 15px 20px;
@@ -5305,8 +5315,8 @@ html.fp-enabled,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span {
-  height: 12px;
-  width: 12px;
+  height: 9.4px;
+  width: 9.4px;
   background: #0567a3;
   border-radius: 100%; }
 
@@ -5315,8 +5325,8 @@ html.fp-enabled,
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  height: 12px;
-  width: 12px;
+  height: 9.4px;
+  width: 9.4px;
   border: 0;
   background: #FFFFFF;
   left: 50%;
@@ -5329,8 +5339,8 @@ html.fp-enabled,
 
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span {
-  width: 11px;
-  height: 11px; }
+  width: 9.4px;
+  height: 9.4px; }
 
 #fp-nav ul li .fp-tooltip {
   position: absolute;
