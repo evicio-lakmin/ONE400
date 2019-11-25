@@ -4313,10 +4313,9 @@ header {
           .service-rollovers .tab .inner a {
             bottom: 15px;
             left: 43px;
-            line-height: 1; } }
+            line-height: 15px; } }
         .service-rollovers .tab .inner a i {
-          font-size: 14px;
-          margin-left: 12px; }
+          font-size: 14px; }
         .service-rollovers .tab .inner a:hover {
           text-decoration: underline; }
 
@@ -4372,6 +4371,9 @@ header {
 .tab-navigation ul {
   padding: 0;
   margin-bottom: 24px; }
+  @media screen and (max-width: 768px) {
+    .tab-navigation ul {
+      display: none; } }
   .tab-navigation ul li {
     cursor: pointer;
     padding: 0;
@@ -4444,7 +4446,8 @@ header {
         font-family: Gibson, sans-serif; }
       .case-study-section .inner-content .content a.btn {
         margin-top: 10%;
-        margin-bottom: 10%; }
+        margin-bottom: 10%;
+        opacity: 0.9; }
         @media screen and (max-width: 768px) {
           .case-study-section .inner-content .content a.btn {
             margin-top: 20%;
@@ -5302,8 +5305,8 @@ html.fp-enabled,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span {
-  height: 12px;
-  width: 12px;
+  height: 9.4px;
+  width: 9.4px;
   background: #0567a3;
   border-radius: 100%; }
 
@@ -5312,8 +5315,8 @@ html.fp-enabled,
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  height: 12px;
-  width: 12px;
+  height: 9.4px;
+  width: 9.4px;
   border: 0;
   background: #FFFFFF;
   left: 50%;
@@ -5326,8 +5329,8 @@ html.fp-enabled,
 
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span {
-  width: 11px;
-  height: 11px; }
+  width: 9.4px;
+  height: 9.4px; }
 
 #fp-nav ul li .fp-tooltip {
   position: absolute;
