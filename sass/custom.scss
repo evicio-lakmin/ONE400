@@ -236,12 +236,12 @@ header {
           @media (max-width: $screen--XL) {
             bottom: 15px;
               left: 43px;    
-              line-height: 1;    
+              line-height: 15px;    
           }
 
           i{
             font-size: 14px;
-            margin-left: 12px;
+            // margin-left: 12px;
           }
 
           &:hover{
@@ -320,6 +320,10 @@ header {
 .tab-navigation ul {
   padding: 0;
   margin-bottom: 24px;
+
+  @media screen and (max-width: $break--M) { 
+    display: none;
+  }
   li {
     cursor: pointer;
     padding: 0;
@@ -408,6 +412,7 @@ header {
 
       a.btn {
         @include push--ends(10%);
+        opacity: 0.9;
         @media screen and (max-width: $break--M) {
           @include push--ends(20%);
           width: 100%;
