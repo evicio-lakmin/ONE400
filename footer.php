@@ -18,6 +18,15 @@
           <span class="logo-footer"><a href="https://one-400.com/ "><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="ONE400 Logo"></a></span>
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</span>
           <span class="mobile-contact-no mobile-only number">(626) 578.5040</span>
+           <div class="subscribe-links">
+              <h5 onclick="expandList(this)">Subscribe</h5>
+              <i class="fas mobile-only fa-plus"></i>
+             <!--  <p>Receive monthly updates<br> from ONE400: </p> -->
+              <div class="subscribe-serch">
+                <input type="text" placeholder="Your email address"><button>Submit</button>
+              </div>
+          </div>
+        
           <ul class="social-media-icons">
               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -31,7 +40,7 @@
             <h5 onclick="expandList(this)">Contact</h5>
             <i class="fas mobile-only fa-plus"></i>
             <p>Interested in becoming a client? <a class="link" href="#">Let’s connect</a></p>
-            <p>Curious about working at ONE400? <a class="link" href="#">View openings</a></p>
+            <p>Curious about working at <br>  ONE400? <a class="link" href="#">View openings</a></p>
             <p>Other inquiries <a class="link" href="#">Contact us</a></p>
           </div>
           <div class="location-links">
@@ -56,20 +65,36 @@
               1.646.374.2512 
             </p>
           </div>
-          <div class="subscribe-links">
-              <h5 onclick="expandList(this)">Subscribe</h5>
-              <i class="fas mobile-only fa-plus"></i>
-              <p>Receive monthly updates<br> from ONE400: </p>
-              <div class="subscribe-serch">
-                <input type="text" placeholder="Your email address"><button>Submit</button>
-              </div>
+          <div class="link-section">
+            <h5 onclick="expandList(this)">Services</h5>
+            <i class="fas mobile-only fa-plus"></i>
+            <ul>
+              <li><a href="#">Strategy + Consulting</a></li>
+              <li><a href="#">Brand + Design</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Digital Marketing </a></li>
+            </ul>
           </div>
-          <ul class="mobile-only social-media-icons">
+          <div class="link-section">
+            <h5 onclick="expandList(this)">Segments</h5>
+            <i class="fas mobile-only fa-plus"></i>
+            <ul>
+              <li><a href="#">Solo + Small Firms</a></li>
+              <li><a href="#">Mid-Size + Large Firms</a></li>
+              <li><a href="#">Class Action Firms</a></li>
+              <li><a href="#">Legal Tech Organizations</a></li>
+              <li><a href="#">Bar Associations</a></li>
+              <li><a href="#">Legal Support Professionals</a></li>
+            </ul>
+          </div> 
+
+            <ul class="mobile-only social-media-icons">
               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
               <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
               <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             </ul>
+         
         </div>
       </div>
     </div>
