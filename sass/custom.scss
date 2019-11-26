@@ -566,7 +566,9 @@ header {
   }
   .right {
     
-    padding-top:7.5%;
+    display: flex;  
+    flex-direction: column; 
+    justify-content: center;
     @include soft--sides(10%);
     @extend .M6;
     box-sizing: border-box;
@@ -617,10 +619,14 @@ header {
       }
 
       .btn-secondary.desktop-only {
-        display: inline-block;
+        max-width: 270px; 
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        padding: 0;
         .fas {
-            float: right;
-            margin: 0 0 0  20px;
+            margin: 0 0 0  10px;  
+            font-size: 0.9rem;
         }
       }
     
@@ -648,7 +654,7 @@ header {
     }
 
     .btn {
-      min-width: 286px;
+      min-width: 270px;
     }
 
     .image {
@@ -772,13 +778,14 @@ header {
 .become-a-click-block {
   background-color: $white;
   text-align: center;
-  @include soft--ends(5em);
+  padding-top: 105px; 
+  padding-bottom: 95px;
   @extend .desktop-only;
   .content {
       width:45%;
       @include push--auto();
       @media screen and (max-width: $break--XL){
-        width:75%;
+       width:80%;
       }
       @media screen and (min-width: $break--XL){
         width: 60%;
@@ -786,20 +793,20 @@ header {
   }
 
   h2 {
-    margin:0 0 20px;
+    margin:0 0 42px;
     font-size: 45px;
     font-family: $base-font-primary;
+    line-height: 1.11;
   }
 
   h4 {
     font-family: $base-font-secondary;
-    margin-top:1em;
-    margin-bottom:1em;
+    margin-bottom: 68px;
     font-size: 25px;
-    font-weight: 100;
-    width: 75%;
-    @include push--auto();
-    line-height: 1.4em;
+    font-weight: normal;  
+    width: 60%; 
+    @include push--auto();  
+    line-height: 1.4;
   }
 }
 
