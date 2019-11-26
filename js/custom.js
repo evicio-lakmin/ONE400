@@ -1,6 +1,10 @@
 $(window).load(function() {
   // Animate loader off screen
+  
+  setImageHeight();
+  console.log("image height added");
   $(".se-pre-con").fadeOut("slow");
+
 });
 
 if($(window).width() > 768){ 
@@ -95,7 +99,6 @@ function fullpage_hide($ele){
 $('.fp-prev').append('<span class="fa fa-angle-left"></span>');
 $('.fp-next').append('<span class="fa fa-angle-right"></span>');
 
-setImageHeight();
 
 $('body').on("click", function(){
   if($('.selectbox').parent().hasClass('active')){
