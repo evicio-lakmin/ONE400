@@ -7,7 +7,7 @@ function style() {
   return (
       gulp
         .src("sass/*.scss")
-        .pipe(sass())
+        .pipe(sass({outputStyle: 'compressed'}))
         .on("error", sass.logError)
         .pipe(gulp.dest("css"))
   );

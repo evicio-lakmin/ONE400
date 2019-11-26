@@ -1,6 +1,7 @@
 <?php
 
 /* Template Name: Home */
+
 get_header();
 
 ?>
@@ -15,6 +16,7 @@ get_header();
         <video class="videoplayer" autoplay muted  loop id="myVideo">
           <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/backgrounds/one400.mov" type="video/mp4">
         </video>
+        <div class="video-background"></div>
       </section>
   </header>
   <!-- Main Slider -->
@@ -271,7 +273,7 @@ get_header();
                   <h1>A modern redesign for a sophisticated brand</h1>
                   <a class="btn btn-primary" href="#">View the case study</a>
                   <span>
-                    <a class="link" href="">View all featured case studies <i class="fas fa-arrow-right"></i> </a>
+                    <a class="link" href="#">View all featured case studies <i class="fas fa-arrow-right"></i> </a>
                   </span>
               </div>
           </div>
@@ -293,7 +295,7 @@ get_header();
             <h1>A modern redesign for a sophisticated brand</h1>
             <a class="btn btn-primary" href="#">View the case study</a>
             <span>
-              <a class="link" href="">View all featured case studies <i class="fas fa-arrow-right"></i> </a>
+              <a class="link" href="#">View all featured case studies <i class="fas fa-arrow-right"></i> </a>
             </span>
           </div>
         </div>
@@ -315,7 +317,7 @@ get_header();
               <h1>A modern redesign for a sophisticated brand</h1>
               <a class="btn btn-primary" href="#">View the case study</a>
               <span>
-                <a class="link" href="">View all featured case studies <i class="fas fa-arrow-right"></i> </a>
+                <a class="link" href="#">View all featured case studies <i class="fas fa-arrow-right"></i> </a>
               </span>
             </div>
           </div>
@@ -337,7 +339,7 @@ get_header();
               <h1>A modern redesign for a sophisticated brand</h1>
               <a class="btn btn-primary" href="#">View the case study</a>
               <span> 
-                <a class="link" href="">View all featured case studies <i class="fas fa-arrow-right"></i></a>
+                <a class="link" href="#">View all featured case studies <i class="fas fa-arrow-right"></i></a>
               </span>
             </div>
           </div>
