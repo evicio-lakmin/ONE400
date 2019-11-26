@@ -414,7 +414,7 @@ get_header();
                 <div class="content-info">
                     <span>10.21.19 </span> |  <span>Article in <a href="#">News & Events</a></span>
                 </div>
-                <a class="btn btn-secondary desktop-only" href="#"> Explore all research + insights <i class="fas fa-arrow-right"></i> </a>
+                <a class="btn btn-secondary desktop-only" href="#"> Explore all research + insights <i class="fas fa-chevron-right "></i> </a>
                 <a class="link mobile-only">View all articles <i class="fas fa-arrow-right" aria-hidden="true"></i> </a>
               </div>
           </div>
