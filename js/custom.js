@@ -70,7 +70,7 @@ if($(window).width() > 768){
 }
 
 //menu full page slide
-$(document).ready(function() {
+$(document).ready(function() { 
   $('.menu-link').menuFullpage({
     side:"right",
     callbackAfter: function() {
@@ -99,16 +99,23 @@ function fullpage_hide($ele){
 $('.fp-prev').append('<span class="fa fa-angle-left"></span>');
 $('.fp-next').append('<span class="fa fa-angle-right"></span>');
 
-
+//select box on hero section - default
 $('body').on("click", function(){
   if($('.selectbox').parent().hasClass('active')){
     $('.selectbox').parent().removeClass('active');
+    $('.fp-slides').css({'z-index':'0'});
   }
 });
 
+//select box on hero section - onlcick dropdown 
 $('.selectbox').on("click", function(e){
   e.stopPropagation();
+   $('.fp-slides').css({'z-index':'2'});
   $(this).parent().toggleClass('active');
+  if($('.selectbox').parent().hasClass('active')){
+  } else{
+     $('.fp-slides').css({'z-index':'0'});
+  }
 });
 
 // Fixing content height issues on home page reaseach block
@@ -139,8 +146,12 @@ function showInfo(evt, cityName) {
 }
 
 function expandList($element) {
-  $($element).parent('div').find('p').toggle();
-  $($element).parent('div').find('.subscribe-serch').toggle();
+  if($(window).width() < 768){ 
+    $($element).parent('div').find('p').toggle();
+    $($element).parent('div').find('.subscribe-serch').toggle();
+    $($element).parent('div').find('ul').toggle();
+
+  }
 }
 
 function slideTab($num){
