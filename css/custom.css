@@ -4150,15 +4150,17 @@ header {
   @media screen and (max-width: 768px) {
     .block.home-top-content {
       text-align: left;
-      width: 100%;
-      /* @include soft--ends(20%); */
-      /* @include soft--sides(30px); */ } }
+      width: 100%; } }
   .block.home-top-content .content h2 {
-    margin: 15px 0; }
+    margin: 10px 0 25px;
+    font-weight: normal;
+    line-height: 1; }
   .block.home-top-content .content article {
     width: 60%;
     margin: auto;
-    color: #424242; }
+    color: #4A4A4A;
+    line-height: 1.67;
+    font-weight: normal; }
     @media screen and (max-width: 1440px) {
       .block.home-top-content .content article {
         width: 70%; } }
@@ -4465,12 +4467,11 @@ header {
   padding-top: 4em;
   padding-bottom: 4em; }
   .title-block h2 {
-    font-weight: 400;
+    font-weight: normal;
     text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 0;
     font-size: 25px;
-    font-family: Gibson, sans-serif; }
+    font-family: Gibson, sans-serif;
+    line-height: 1.5; }
 
 .featured-image {
   position: absolute;

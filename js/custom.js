@@ -79,6 +79,16 @@ $(document).ready(function() {
   });     
 });
 
+// fixed main nav when scrolling down
+$(window).scroll(function() {    
+  var scrollTop = $(window).scrollTop();
+  if (scrollTop > 100) {
+    $('.main-navbar').addClass("scrolled");
+  } else {
+    $('.main-navbar').removeClass("scrolled");
+  }
+});
+
 function fullpage_hide($ele){
   if($ele.hasClass('menu-open')){
       alert();
