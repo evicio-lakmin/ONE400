@@ -4150,15 +4150,17 @@ header {
   @media screen and (max-width: 768px) {
     .block.home-top-content {
       text-align: left;
-      width: 100%;
-      /* @include soft--ends(20%); */
-      /* @include soft--sides(30px); */ } }
+      width: 100%; } }
   .block.home-top-content .content h2 {
-    margin: 15px 0; }
+    margin: 10px 0 25px;
+    font-weight: normal;
+    line-height: 1; }
   .block.home-top-content .content article {
     width: 60%;
     margin: auto;
-    color: #424242; }
+    color: #4A4A4A;
+    line-height: 1.67;
+    font-weight: normal; }
     @media screen and (max-width: 1440px) {
       .block.home-top-content .content article {
         width: 70%; } }
@@ -4239,7 +4241,7 @@ header {
     overflow: hidden;
     cursor: pointer;
     font-size: 21px;
-    margin-right: 3.5px;
+    margin-right: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4301,8 +4303,7 @@ header {
           padding-bottom: 15px;
           padding-left: 2em;
           padding-right: 2em;
-          /* line-height: 1.3; */
-         } }
+          line-height: 1.3; } }
       .service-rollovers .tab .inner a {
         position: absolute;
         bottom: 18px;
@@ -4327,9 +4328,7 @@ header {
   left: 0;
   right: 0;
   height: 100%;
-  opacity: 0.73;
-  background-color: #061b2b;
- }
+  background-color: rgba(2, 2, 2, 0.5); }
   .header-slider .fp-controlArrow, .header-slider .fp-slidesNav {
     display: none; }
   .header-slider .slide .content {
@@ -4398,7 +4397,7 @@ header {
       position: absolute;
       bottom: 0;
       color: #4493f7;
-      font-size: 9px;
+      font-size: 12px;
       font-weight: 700;
       display: none;
       width: 200%;
@@ -4468,12 +4467,11 @@ header {
   padding-top: 4em;
   padding-bottom: 4em; }
   .title-block h2 {
-    font-weight: 400;
+    font-weight: normal;
     text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 0;
     font-size: 25px;
-    font-family: Gibson, sans-serif; }
+    font-family: Gibson, sans-serif;
+    line-height: 1.5; }
 
 .featured-image {
   position: absolute;
@@ -4624,8 +4622,6 @@ header {
     z-index: 99;
     position: relative;
     background-color: #f8f8f8; }
-    .research-blocks .content-bottom-block .btn {
-      min-width: 286px; }
     @media screen and (max-width: 768px) {
       .research-blocks .content-bottom-block {
         flex-direction: column; } }

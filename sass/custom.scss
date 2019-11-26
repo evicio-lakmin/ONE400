@@ -34,18 +34,20 @@ header {
   @media screen and (max-width: $break--M) {
     @include text-align(left);
     width: 100%;
-    /* @include soft--ends(20%); */
-    /* @include soft--sides(30px); */
   }
   .content {
     h2 {
         @extend .h4;
-        margin: 15px 0;
+        margin: 10px 0 25px;
+        font-weight: normal;
+        line-height: 1;
     }
     article {
       width: 60%;
       margin: auto;
-      color: $grayDark;
+      color: $default-font-color;
+      line-height: 1.67;
+      font-weight: normal;
       @media screen and (max-width: $break--XL) { 
         width: 70%;
       }
@@ -433,11 +435,11 @@ header {
   text-align: center;
   @include soft--ends(4em);
   h2 {
-    font-weight: 400;
+    font-weight: normal;
     @include text-transform();
-    @include flush--ends();
     font-size: 25px;
     font-family: $base-font-secondary;
+    line-height: 1.5;
     @media screen and (max-width: $break--M) {
      //font-size: 30px;
     }
