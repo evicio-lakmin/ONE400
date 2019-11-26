@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: $base-font-primary-bold;
+  src:  url("../assets/fonts/FreightTextPro/FreightTexPro.otf") format("opentype"),
+        url('../assets/fonts/FreightTextPro/FreightTextProBook-Regular.ttf')  format('truetype'),
+        url('../assets/fonts/FreightTextPro/FreightTextProBook-Regular.woff')  format('woff');
+}
+
+@font-face {
   font-family: $base-font-secondary;
   src:  url('../assets/fonts/Gibson/Gibson-Regular.eot'), /* IE9 Compat Modes */
         url("../assets/fonts/Gibson/Gibson-Regular.otf") format("opentype"), 
@@ -14,6 +21,8 @@
         url('../assets/fonts/Gibson/Gibson-Regular.woff2')  format('woff2'); /* Super Modern Browsers */
 }
 
+
+FreightTextProBold
 
 html,body {
   width:100%;

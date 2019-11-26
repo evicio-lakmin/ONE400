@@ -574,8 +574,8 @@ header {
     box-sizing: border-box;
       a.link {
         display: block;
-        @include push--ends(5%);
-        
+        // @include push--ends(5%);
+        margin-bottom: 5%;
         font-weight: 400;
         font-family: $base-font-secondary;
         @media screen and (max-width: $break--M) {
