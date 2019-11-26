@@ -546,8 +546,8 @@ header {
     @include push--ends(5%);
     font-family: $base-font-secondary;
     font-size: 15px;
-    font-weight: 200;
-    line-height: 25px;
+    font-weight: normal;
+    line-height: 1.67;
     max-width: 417px;
     color: $default-font-color;
     @media screen and (max-width: $break--M) {
@@ -560,6 +560,7 @@ header {
   h2 {
     @include push--ends(5px);
     font-size: 35px;
+    line-height: 0.71;
     @media screen and (max-width: $break--M) {
       margin-top: 1em;
     }
@@ -574,8 +575,7 @@ header {
     box-sizing: border-box;
       a.link {
         display: block;
-        // @include push--ends(5%);
-        margin-bottom: 5%;
+        line-height: 1.67;
         font-weight: 400;
         font-family: $base-font-secondary;
         @media screen and (max-width: $break--M) {
