@@ -14,10 +14,12 @@
   @include soft--ends(23px);
   @include soft--sides(50px);
   min-width: 270px;
+  min-height: 64px;
   font-family: $base-font-secondary;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 17.5px;
   color: #fff;
+  line-height: 0.91;
 
   &:hover,
   &:focus {

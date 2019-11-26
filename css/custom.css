@@ -793,10 +793,12 @@
   padding-left: 50px;
   padding-right: 50px;
   min-width: 270px;
+  min-height: 64px;
   font-family: Gibson, sans-serif;
   text-decoration: none;
-  font-size: 16px;
-  color: #fff; }
+  font-size: 17.5px;
+  color: #fff;
+  line-height: 0.91; }
   .btn:hover, .btn:focus {
     text-decoration: none; }
   .btn:active, .btn.active {
@@ -4502,8 +4504,7 @@ header {
         width: 100%; } }
   @media screen and (max-width: 768px) {
     .how-can-we-help-section {
-      width: 100%;
-      /* @include soft--sides(30px); */ } }
+      width: 100%; } }
   .how-can-we-help-section .left h6 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -4525,11 +4526,9 @@ header {
         font-size: 36px; } }
   .how-can-we-help-section .right {
     text-align: center; }
-    .how-can-we-help-section .right .btn {
-      min-width: 300px; }
-      @media screen and (max-width: 768px) {
-        .how-can-we-help-section .right .btn {
-          min-width: 100%; } }
+    @media screen and (max-width: 768px) {
+      .how-can-we-help-section .right .btn {
+        min-width: 100%; } }
 
 .explore-one-400 {
   background-color: #f8f8f8; }
@@ -4563,7 +4562,9 @@ header {
       .explore-one-400 h2 {
         margin-top: 1em; } }
   .explore-one-400 .right {
-    padding-top: 7.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-left: 10%;
     padding-right: 10%;
     box-sizing: border-box; }
@@ -4603,10 +4604,15 @@ header {
       .research-blocks .inner-content p {
         display: none; } }
   .research-blocks .inner-content .btn-secondary.desktop-only, .research-blocks .inner-content .btn-secondary.become-a-click-block {
-    display: inline-block; }
+    max-width: 286px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; }
     .research-blocks .inner-content .btn-secondary.desktop-only .fas, .research-blocks .inner-content .btn-secondary.become-a-click-block .fas {
       float: right;
-      margin: 0 0 0  20px; }
+      margin: 0 0 0  10px;
+      font-size: 0.9rem; }
   .research-blocks .content-info {
     font-size: 12px;
     display: block;
@@ -4716,32 +4722,32 @@ header {
 .become-a-click-block {
   background-color: #FFFFFF;
   text-align: center;
-  padding-top: 5em;
-  padding-bottom: 5em; }
+  padding-top: 105px;
+  padding-bottom: 95px; }
   .become-a-click-block .content {
     width: 45%;
     margin-left: auto;
     margin-right: auto; }
     @media screen and (max-width: 1440px) {
       .become-a-click-block .content {
-        width: 75%; } }
+        width: 80%; } }
     @media screen and (min-width: 1440px) {
       .become-a-click-block .content {
         width: 60%; } }
   .become-a-click-block h2 {
-    margin: 0 0 20px;
+    margin: 0 0 42px;
     font-size: 45px;
-    font-family: Freight-Tex-Pro; }
+    font-family: Freight-Tex-Pro;
+    line-height: 1.11; }
   .become-a-click-block h4 {
     font-family: Gibson, sans-serif;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 68px;
     font-size: 25px;
-    font-weight: 100;
-    width: 75%;
+    font-weight: normal;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.4em; }
+    line-height: 1.4; }
 
 footer {
   padding-top: 4em;
