@@ -175,7 +175,7 @@
   margin-left: 0;
   margin-right: 0; }
 
-.X1, .S1, .M1, .L1, .XL1, .X2, .S2, .M2, .L2, .XL2, .X3, .S3, .M3, .L3, .XL3, .X4, .S4, .M4, footer .footer-rows .left-column, footer .footer-rows .right-column > div, .L4, .XL4, .X5, .S5, .M5, .research-blocks .reasarch-right-block, .L5, .XL5, .X6, .S6, .M6, .how-can-we-help-section .left, .how-can-we-help-section .right, .explore-one-400 .left, .explore-one-400 .right, .L6, .XL6, .X7, .S7, .M7, .research-blocks .reasarch-left-block, .L7, .XL7, .X8, .S8, .M8, footer .footer-rows .right-column, .L8, .XL8, .X9, .S9, .M9, .L9, .XL9, .X10, .S10, .M10, .L10, .XL10, .X11, .S11, .M11, .L11, .XL11, .X12, .S12, .M12, .L12, .XL12 {
+.X1, .S1, .M1, .L1, .XL1, .X2, .S2, .M2, .L2, .XL2, .X3, .S3, .M3, footer .footer-rows .right-column > div, .L3, .XL3, .X4, .S4, .M4, footer .footer-rows .left-column, .L4, .XL4, .X5, .S5, .M5, .research-blocks .reasarch-right-block, .L5, .XL5, .X6, .S6, .M6, .how-can-we-help-section .left, .how-can-we-help-section .right, .explore-one-400 .left, .explore-one-400 .right, .L6, .XL6, .X7, .S7, .M7, .research-blocks .reasarch-left-block, .L7, .XL7, .X8, .S8, .M8, footer .footer-rows .right-column, .L8, .XL8, .X9, .S9, .M9, .L9, .XL9, .X10, .S10, .M10, .L10, .XL10, .X11, .S11, .M11, .L11, .XL11, .X12, .S12, .M12, .L12, .XL12 {
   flex: 0 0 100%;
   max-width: 100%;
   min-height: 1px;
@@ -455,10 +455,10 @@
   .M2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%; }
-  .M3 {
+  .M3, footer .footer-rows .right-column > div {
     flex-basis: 25%;
     max-width: 25%; }
-  .M4, footer .footer-rows .left-column, footer .footer-rows .right-column > div {
+  .M4, footer .footer-rows .left-column {
     flex-basis: 33.33333%;
     max-width: 33.33333%; }
   .M5, .research-blocks .reasarch-right-block {
@@ -4625,6 +4625,8 @@ header {
     @media screen and (max-width: 768px) {
       .research-blocks .content-bottom-block {
         flex-direction: column; } }
+    .research-blocks .content-bottom-block .btn {
+      min-width: 286px; }
     .research-blocks .content-bottom-block .image {
       width: 30%;
       display: inline-block;
@@ -4777,17 +4779,17 @@ footer {
     overflow: hidden; }
     footer .footer-rows .right-column > div h5 {
       font-weight: bold;
-      font-size: 16px;
+      font-size: 17.5px;
       font-family: Gibson, sans-serif; }
   footer .footer-rows .subscribe-serch {
     display: flex;
-    width: 70%;
+    width: 50%;
     position: relative; }
     @media screen and (max-width: 768px) {
       footer .footer-rows .subscribe-serch {
         width: 100%; } }
   footer p {
-    font-size: 14px; }
+    font-size: 12px; }
   footer a.link {
     color: #1ca8ff;
     font-weight: 400;
@@ -4795,29 +4797,37 @@ footer {
   footer input[type="text"] {
     border: 0;
     background-color: #efefef;
-    height: 35px;
+    height: 41.5px;
     padding: 2px 10px 0 10px;
     color: #0b3354;
     font-weight: 400;
     width: 100%;
-    font-size: 12px; }
+    font-family: Gibson, sans-serif;
+    font-size: 8px; }
   footer button {
-    height: 35px;
+    height: 40.5px;
     border: none;
-    background-color: #1ca8ff;
+    background-color: #0083e3;
     color: #fff;
-    font-weight: 800;
     position: absolute;
-    font-size: 12px;
-    padding: 0 10px;
+    font-size: 9px;
+    padding: 0px 10px;
     cursor: pointer;
-    right: 0px; }
+    right: 0px;
+    min-width: 83.5px;
+    font-family: Gibson, sans-serif; }
   footer .subscribe-links {
+    margin-top: 30px;
     position: relative; }
     footer .subscribe-links .fas {
       position: absolute;
       right: 30px;
       top: 20px; }
+    footer .subscribe-links h5 {
+      font-size: 17.5px;
+      font-weight: bold;
+      font-family: Gibson, sans-serif;
+      margin-bottom: 15px; }
     @media screen and (max-width: 768px) {
       footer .subscribe-links p, footer .subscribe-links .subscribe-serch {
         display: none; }
@@ -4859,7 +4869,7 @@ ul.social-media-icons {
   list-style: none;
   max-width: 180px;
   padding: 0;
-  margin: 15% 0;
+  margin: 10% 0;
   width: 100%; }
   ul.social-media-icons li {
     flex: 1; }
@@ -4878,6 +4888,8 @@ ul.social-media-icons {
       ul.social-media-icons li a i {
         flex: 1;
         font-size: 14px; }
+      ul.social-media-icons li a:hover {
+        background: #0567a3; }
 
 ul.mobile-only.social-media-icons {
   display: none; }
@@ -4907,6 +4919,8 @@ ul.mobile-only.social-media-icons {
     position: relative;
     width: auto;
     min-width: 360px; }
+    .segment-dropdown .selectbox:hover {
+      background-color: rgba(0, 0, 0, 0.3); }
     @media screen and (max-width: 768px) {
       .segment-dropdown .selectbox {
         width: 100%;
@@ -4930,7 +4944,10 @@ ul.mobile-only.social-media-icons {
         animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
         width: 100%; }
   .segment-dropdown .dropdown-menu {
-    display: none; }
+    /*display: none;*/
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear; }
     .segment-dropdown .dropdown-menu:before {
       content: "";
       display: block;
@@ -4973,12 +4990,14 @@ ul.mobile-only.social-media-icons {
           .segment-dropdown .dropdown-menu ul li a p {
             font-size: 16px; }
   .segment-dropdown.active .dropdown-menu {
-    display: block; }
+    /* display: block;*/
+    background-color: #FFFFFF;
+    visibility: visible;
+    opacity: 1; }
   .segment-dropdown .contentwrapper {
     position: absolute;
     top: 140px;
     width: 50%;
-    background-color: #FFFFFF;
     left: -35px; }
     @media screen and (max-width: 768px) {
       .segment-dropdown .contentwrapper {
@@ -5118,6 +5137,32 @@ ul.mobile-only.social-media-icons {
     @media screen and (max-width: 768px) {
       .contact-modal .content-right .form .btn {
         width: 100%; } }
+
+.link-section {
+  position: relative; }
+  .link-section ul {
+    padding: 0; }
+    .link-section ul li a {
+      font-family: Gibson, sans-serif;
+      font-size: 12px;
+      margin-bottom: 15px;
+      display: block;
+      color: #000;
+      text-decoration: none; }
+      .link-section ul li a :hover {
+        color: gray;
+        /* opacity: 0.9; */ }
+  .link-section .fas {
+    position: absolute;
+    right: 30px;
+    top: 20px; }
+  @media screen and (max-width: 768px) {
+    .link-section ul {
+      display: none; }
+    .link-section h5 {
+      display: block;
+      border-bottom: 1px solid #b5b5b5;
+      padding: 5% 0; } }
 
 .no-js #loader {
   display: none; }
