@@ -542,7 +542,7 @@ header {
       }
     }
   }
-  h6 {
+  h6 { 
     @include push--ends(5%);
     font-family: $base-font-secondary;
     font-size: 15px;
