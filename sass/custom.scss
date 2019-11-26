@@ -83,6 +83,18 @@ header {
         min-width: 100%;
         min-height: 100%;
       }
+
+      .video-background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #061b2b;
+        opacity: .73;
+      }
   }
 
   .header-content {
@@ -261,7 +273,7 @@ header {
     left: 0;
     right: 0;
     height: 100%;
-    background-color: rgba(2, 2, 2, 0.5);
+    // background-color: rgba(2, 2, 2, 0.5);
     .fp-controlArrow, .fp-slidesNav {
       display: none;
     }
@@ -533,9 +545,10 @@ header {
   h6 {
     @include push--ends(5%);
     font-family: $base-font-secondary;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 200;
     line-height: 25px;
+    max-width: 417px;
     color: $default-font-color;
     @media screen and (max-width: $break--M) {
       margin-bottom: 2em;
