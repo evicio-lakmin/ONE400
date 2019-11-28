@@ -422,11 +422,14 @@ header {
         margin-bottom: 5%;
         display: block;
         font-family: $base-font-secondary;
+        font-weight: normal;
+        line-height: 2.75;
       }
 
       a.btn {
-        @include push--ends(10%);
+        @include push--ends(9%);
         opacity: 0.9;
+        line-height: 1;
         @media screen and (max-width: $break--M) {
           @include push--ends(20%);
           width: 100%;
@@ -445,13 +448,13 @@ header {
 
 .title-block {
   text-align: center;
-  @include soft--ends(4em);
+  @include soft--ends(3em);
   h2 {
     font-weight: normal;
     @include text-transform();
     font-size: 25px;
     font-family: $base-font-secondary;
-    line-height: 1.5;
+    line-height: 2.2;
     @media screen and (max-width: $break--M) {
      //font-size: 30px;
     }
@@ -602,26 +605,29 @@ header {
   background-color: $whiteDark;
   h2 {
     font-size: 35px;
-    // @include soft--ends(5% 2%);
     margin-top:5%;
     margin-bottom: 2%;
-    line-height: 1em;
+    line-height: 1.29;
     @media screen and (max-width: $break--M) {
       font-size: 36px;
     }
   }
   h5 {
-    font-weight: 400;
-   font-size: 20px;
+    line-height: 2.75;
+    font-weight: normal;
+    font-size: 20px;
     font-family: $base-font-secondary;
   }
   a.link {
     color :$white;
-    
+    font-weight: normal;
+    line-height: 2.67;
   }
   .inner-content {
       p{
         color: $default-font-color;
+        line-height: 1.67;
+        font-weight: normal;
         @media screen and (max-width: $break--M) {
           display: none;
         }
@@ -650,7 +656,8 @@ header {
       text-decoration: none;
     }
     span {
-      font-size: 12px;
+      font-size: 10px;
+      line-height: 2.5;
     }
   }
   .content-bottom-block {
@@ -675,7 +682,6 @@ header {
       @media screen and (max-width: $break--M) {
         width: 35%;
       }
-      // top: -80px;
       img { 
         vertical-align: sub;
         @media screen and (max-width: $break--M) {
@@ -685,7 +691,6 @@ header {
     }
   }
   .post.content {
-      // height: 100vh !important;
       color: #fff;
       z-index: 9;
       position: relative;
@@ -699,10 +704,13 @@ header {
         height: auto !important;
       }
       span {
-        font-size: 12px;
+        font-size: 10px;
+        line-height: 2.5;
       }
       h2 { 
         font-size: 45px;
+        line-height: 1;
+        margin-bottom: 3%;
       }
   }
   @extend .row;
