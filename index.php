@@ -371,7 +371,7 @@ get_header();
           <div class="content-info">
               <span>10.21.19 </span> |  <span> Article in <a href="#">Technology </a> </span>
           </div>
-          <a href="" class="desktop-only link">Read the post <i class="fas fa-arrow-right"></i> </a>
+          <a href="#" class="desktop-only link">Read the post <i class="fas fa-arrow-right"></i> </a>
         </div>
         <div class="overlay"></div>
         <div class="content-bottom-block pd-l pd-r">
@@ -448,9 +448,9 @@ get_header();
         <div class="right">
             <h2 class="text-center">Explore ONE400</h2>
             <h6 class="text-center">Innovation doesn’t start with technology, it starts with people. At ONE400 we have dedicated team members whose very job is to innovate and contribute to our clients success on a daily basis.</h6>
-            <a class="link desktop-only">Learn more about us <i class="fas fa-arrow-right"></i> </a>
-            <a class="btn mobile-only btn-has-icon btn-secondary">Learn more about us <i class="fas fa-arrow-right"></i> </a>
-            <a class="link">Meet the team <i class="fas fa-arrow-right"></i> </a>
+            <a href="#" class="link desktop-only">Learn more about us <i class="fas fa-arrow-right"></i> </a>
+            <a href="#"class="btn mobile-only btn-has-icon btn-secondary">Learn more about us <i class="fas fa-arrow-right"></i> </a>
+            <a href="#" class="link">Meet the team <i class="fas fa-arrow-right"></i> </a>
         </div>
       </div>
   </section>
