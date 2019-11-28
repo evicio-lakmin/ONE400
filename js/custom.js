@@ -1,11 +1,14 @@
 $(window).load(function() {
   // Animate loader off screen
   
-  setImageHeight();
+  
   console.log("image height added");
   $(".se-pre-con").fadeOut("slow");
+   setTimeout(function(){ setImageHeight(); }, 2000);
 
 });
+
+
 
 if($(window).width() > 768){ 
 
@@ -24,12 +27,24 @@ if($(window).width() > 768){
     fadingEffect: true,
     fixedElements: 'header',
     afterSlideLoad: function(section, origin, destination, direction){
+    console.log(section.index);
       console.log(origin.index);
-      console.log(direction)
-      if(origin.index == 2 && direction =='right'){
-        fullpage_api.setAutoScrolling(false);
-        // fullpage_api.moveTo(0, 0);
+
+        if(section.index == 0){
+            if(origin.index == 2 && direction =='right'){
+              console.log("disabled scrollBar");
+            fullpage_api.setAutoScrolling(false);
+            setTimeout(function(){ setImageHeight(); }, 2000);
+        }
+
+        if(section.index == 2){
+          console.log("disabled scrollBar");
+          fullpage_api.setAutoScrolling(false);
+        }
+
+        
       }
+
     },
     onLeave: function(origin, destination, direction){
       var leavingSection = this;
@@ -96,8 +111,8 @@ function fullpage_hide($ele){
 }
 
 
-$('.fp-prev').append('<span class="fa fa-angle-left"></span>');
-$('.fp-next').append('<span class="fa fa-angle-right"></span>');
+$('.fp-prev').append('<span class="arrow is-left"></span>');
+$('.fp-next').append('<span class="arrow is-right"></span>');
 
 //select box on hero section - default
 $('body').on("click", function(){
@@ -120,9 +135,10 @@ $('.selectbox').on("click", function(e){
 
 // Fixing content height issues on home page reaseach block
 function setImageHeight(){
-  $imageContent = $('.reasarch-right-block').find('img'); 
+  $imageContent = $('.reasarch-right-block').find('.image'); 
   $Content = $('.reasarch-left-block').find('.content');
   $imageHeight = $imageContent.height(); 
+  console.log($imageHeight);
   $Content.css("height", $imageHeight);
 }
 

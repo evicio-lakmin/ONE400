@@ -22,7 +22,7 @@
 }
 
 
-FreightTextProBold
+// FreightTextProBold
 
 html,body {
   width:100%;
@@ -181,3 +181,98 @@ img{
     visibility: hidden  !important;
   }
 } 
+
+@mixin rotate($angle) {
+  -moz-transform: rotate($angle);
+  -ms-transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+  transform: rotate($angle);
+}
+
+@mixin arrow($arrowSize: 12px, $arrowBorderSize: 3px, $arrowBarWidth: 2px, $arrowBarHeight: 25px) {
+  //display: inline-block;
+  height: $arrowSize;
+  position: relative;
+  width: $arrowSize;
+    display: flex;
+    margin: 13px;
+  &::after {
+    border-bottom-style: solid;
+    border-bottom-width: $arrowBorderSize;
+    border-right-style: solid;
+    border-right-width: $arrowBorderSize;
+    content: '';
+    display: inline-block;
+    height: $arrowSize;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $arrowSize;
+  }
+
+  // Triangle shape state
+  &.is-triangle::after {
+    border-style: solid;
+    border-width: 0 0 $arrowSize $arrowSize;
+    height: 0;
+    width: 0;
+  }
+  
+  // Check shape state
+  &.is-check::after {
+    width: $arrowSize / 2;
+  }
+
+  // Arrow Bar
+  &.arrow-bar::before {
+    bottom: 1px;
+    content: '';
+    height: $arrowBarHeight;
+    position: absolute;
+    right: 0;
+    transform-origin: bottom;
+    width: $arrowBarWidth;
+    @include rotate(-45deg);
+  }
+
+  // States
+  &.is-top {
+    @include rotate(225deg);
+  }
+
+  &.is-right {
+    @include rotate(315deg);
+  }
+
+  &.is-bottom {
+    @include rotate(45deg);
+  }
+
+  &.is-left {
+    @include rotate(135deg);
+  }
+}
+
+@mixin arrowColor($color) {
+  &,
+  .arrow {
+    &::after {
+      border-color: $color;
+    }
+
+    &.is-triangle::after {
+      border-color: transparent;
+      border-bottom-color: $color;
+    }
+
+    &::before {
+      background-color: $color;
+    }
+  }
+}
+
+.arrow {
+  // margin: 25px;
+  @include arrow(12px, 2px, 2px, 10px);
+  @include arrowColor($white);
+}
