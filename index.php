@@ -366,7 +366,7 @@ get_header();
 
         <div class="content-back-img" ></div>
         <div class="post content pd-l pd-r ">
-          <h5>Tranding</h5>
+          <h5>Trending</h5>
           <h2>Subscription legal plans and why your law firm needs one</h2>
           <div class="content-info">
               <span>10.21.19 </span> |  <span> Article in <a href="#">Technology </a> </span>
