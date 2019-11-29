@@ -43,7 +43,7 @@ span{
   @include font-size($base-font-size);
   line-height: $base-line-height;
   font-family: $base-font-secondary;
-  font-weight: 300;
+  font-weight: normal;
   font-style: normal;
 }
 

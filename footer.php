@@ -54,9 +54,9 @@
             </p>
             <p>
               New York<br />
-              576 Fifth Ave Suite 903 <br />
-              New York, NY 10036 <br />
-              1.646.374.2512 
+              576 Fifth Ave Suite <br />
+              903<br />
+              New York, NY 10036 
             </p>
             <p>
               Guadalajara<br />

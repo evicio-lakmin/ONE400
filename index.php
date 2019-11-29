@@ -394,8 +394,13 @@ get_header();
 
         <div class="content-back-img" ></div>
         <div class="post content pd-l pd-r ">
+<<<<<<< HEAD
           <h5>Tranding</h5>
           <h2><?php the_title(); ?></h2>
+=======
+          <h5>Trending</h5>
+          <h2>Subscription legal plans and why your law firm needs one</h2>
+>>>>>>> fad0084bc5659be9691062a8171ceb7dd0d2c3c4
           <div class="content-info">
               <span><?php echo get_the_date( 'd.m.y' ) ?></span> |  <span> Article in <a href="#"><?php the_category(',') ?> </a> </span>
           </div>
