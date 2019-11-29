@@ -397,7 +397,6 @@ get_header();
         <div class="post content pd-l pd-r ">
           <h5>Tranding</h5>
           <h2><?php the_title(); ?></h2>
-
           <div class="content-info">
               <span><?php echo get_the_date( 'd.m.y' ) ?></span> |  <span> Article in <a href="#"><?php the_category(',') ?> </a> </span>
           </div>
