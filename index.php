@@ -374,7 +374,7 @@ get_header();
 
 			$firstPost = true;
 			$_index_no = 1;
-
+			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 			while ( $blog_query->have_posts() ) : 
 			
 				$blog_query->the_post(); 
@@ -388,7 +388,8 @@ get_header();
             <picture>
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/post-right.webp" type="image/webp">
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post-right.png" type="image/jpeg"> 
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post-right.png" alt="Alt Text!">
+                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post-right.png" alt="Alt Text!"> -->
+                  <img src="<?php echo $featured_img_url; ?>" />
               </picture>
           </div>
 
@@ -430,7 +431,7 @@ get_header();
 		            <picture>
 		                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/post-left.webp" type="image/webp">
 		                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post-left.png" type="image/jpeg"> 
-		                <?php the_post_thumbnail(); ?>
+		                <img src="<?php echo $featured_img_url; ?>" />
 		              </picture>
 		          </div>
 		        </div>
@@ -470,6 +471,8 @@ get_header();
 			while ( $blog_query->have_posts() ) : 
 			
 				$blog_query->the_post(); 
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+
 		?>
 
 
@@ -477,9 +480,9 @@ get_header();
           <picture>
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/post-right.webp" type="image/webp">
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post-right.png" type="image/jpeg"> 
-             <?php if ($_index_no == 1) { 
-              the_post_thumbnail();
-             } ?>
+             <?php if ($_index_no == 1) {  ?>
+              <img src="<?php echo $featured_img_url; ?>" />
+             <?php } ?>
           </picture>
         </div>
 
