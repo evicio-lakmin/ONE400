@@ -27,10 +27,10 @@ get_header();
             <div class="content">
                 <div class="tab-navigation fadeInDown animated">
                   <ul>
-                    <li onclick="slideTab(1)" class="active"><span><!-- SERVICE BY SEGMENT --></span></li>
-                    <li onclick="slideTab(2)"></li>
-                    <li onclick="slideTab(3)"></li>
-                    <li onclick="slideTab(4)"></li>
+                    <li onclick="slideTab(1)" class="slide1"><span><!-- SERVICE BY SEGMENT --></span></li>
+                    <li onclick="slideTab(2)" class="slide2"></li>
+                    <li onclick="slideTab(3)" class="slide3"></li>
+                    <li onclick="slideTab(4)" class="slide4"></li>
                   </ul>
                 </div>
                 <h3 class="title fadeInDown animated">Fueling the Future of Legal Technology</h3>
@@ -124,10 +124,10 @@ get_header();
           <div class="content">
             <div class="tab-navigation">
               <ul>
-                <li onclick="slideTab(1)" class="active"></li>
-                <li onclick="slideTab(2)" class="active"><span><!-- SERVICE BY SEGMENT --></span></li>
-                <li onclick="slideTab(3)"></li>
-                <li onclick="slideTab(4)"></li>
+                <li onclick="slideTab(1)" class="slide1"></li>
+                <li onclick="slideTab(2)" class="slide2"><span><!-- SERVICE BY SEGMENT --></span></li>
+                <li onclick="slideTab(3)" class="slide3"></li>
+                <li onclick="slideTab(4)" class="slide4"></li>
               </ul>
             </div>
             <h3 class="title">Empowering Creative Businesses</h3>
@@ -149,10 +149,10 @@ get_header();
               <div class="content">
                   <div class="tab-navigation">
                     <ul>
-                      <li onclick="slideTab(1)" class="active"></li>
-                      <li onclick="slideTab(2)" class="active"></li>
-                      <li onclick="slideTab(3)"class="active"><span><!-- SERVICE SPOTLIGHT --></span></li>
-                      <li onclick="slideTab(4)"></li>
+	                    <li onclick="slideTab(1)" class="slide1"></li>
+	                    <li onclick="slideTab(2)" class="slide2"></li>
+	                    <li onclick="slideTab(3)" class="slide3"><span><!-- SERVICE SPOTLIGHT --></span></li>
+	                	<li onclick="slideTab(4)" class="slide4"></li>
                     </ul>
                   </div>
                   <h3 class="title">Legal Hosting & Management</h3>
@@ -175,10 +175,10 @@ get_header();
       <div class="content">
         <div class="tab-navigation">
           <ul>
-            <li onclick="slideTab(1)" class="active"></li>
-            <li onclick="slideTab(2)" class="active"></li>
-            <li onclick="slideTab(3)" class="active"></li>
-            <li onclick="slideTab(4)" class="active"><span><!-- ARTICLE --></span></li>
+            <li onclick="slideTab(1)" class="slide1"></li>
+            <li onclick="slideTab(2)" class="slide2"></li>
+            <li onclick="slideTab(3)" class="slide3"></li>
+            <li onclick="slideTab(4)" class="slide4"><span><!-- ARTICLE --></span></li>
           </ul>
         </div>
         <h3 class="title">How the latest tech will shake up legal</h3>
@@ -394,13 +394,9 @@ get_header();
 
         <div class="content-back-img" ></div>
         <div class="post content pd-l pd-r ">
-<<<<<<< HEAD
           <h5>Tranding</h5>
           <h2><?php the_title(); ?></h2>
-=======
-          <h5>Trending</h5>
-          <h2>Subscription legal plans and why your law firm needs one</h2>
->>>>>>> fad0084bc5659be9691062a8171ceb7dd0d2c3c4
+
           <div class="content-info">
               <span><?php echo get_the_date( 'd.m.y' ) ?></span> |  <span> Article in <a href="#"><?php the_category(',') ?> </a> </span>
           </div>
