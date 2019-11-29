@@ -336,6 +336,7 @@ header {
           display: block;
           opacity: 1;
           transition: 1s;
+
           //transition-delay: 1s;
         }
       }
@@ -359,11 +360,19 @@ header {
     width: 77px;
     display: inline-block;
     position: relative;
+    background: linear-gradient(to right, $lightblue 50%, $gray 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    // transition: all 5s ease-in;
+
+
     @media screen and (max-width: $break--M) { 
       width: 60px; 
     }
     &.active {
       background-color: $lightblue;
+      background-position: left bottom;
+      transition-duration: 5s;
       span {
         display: block;
       }

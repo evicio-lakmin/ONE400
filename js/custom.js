@@ -1,10 +1,20 @@
 $(window).load(function() {
   // Animate loader off screen
   
-  
+  $(".slide1").addClass("active");
   console.log("image height added");
   $(".se-pre-con").fadeOut("slow");
-   setTimeout(function(){ setImageHeight(); }, 2000);
+   setTimeout(function(){ 
+    setImageHeight(); 
+  }, 1000);
+
+
+setInterval(function(){ 
+    fullpage_api.moveSlideRight();
+    console.log("slided");
+  }, 6000);
+
+
 
 });
 
@@ -16,30 +26,58 @@ if($(window).width() > 768){
   new fullpage('.fullpage', {
     licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
     scrollHorizontally: false,
-    autoScrolling:true,
+    autoScrolling: "automatic",
     slidesNavigation: true,
-    css3: false,
-    dragAndMove: false,
+    css3: true,
+    dragAndMove: true,
     scrollBar: true,
     //normalScrollElements: '.home-top-content, .research-section, .become-a-click-block, .copyrights',
     fitToSection: false,
-    lazyLoad: true,
+    lazyLoad: false,
     fadingEffect: true,
     fixedElements: 'header',
     afterSlideLoad: function(section, origin, destination, direction){
-    console.log(section.index);
-      console.log(origin.index);
+      console.log("section" + section.index);
+      console.log("slide" +origin.index);
 
         if(section.index == 0){
             if(origin.index == 2 && direction =='right'){
-              console.log("disabled scrollBar");
-            fullpage_api.setAutoScrolling(false);
+              // console.log("disabled scrollBar");
+            // fullpage_api.setAutoScrolling(false);
             setTimeout(function(){ setImageHeight(); }, 2000);
+            // $(".tab-navigation ul li").removeClass("active");
+            // $(".slide1").addClass("active");
         }
+
+
+        
+        if(origin.index == 0){
+          console.log(origin.index + " Loaded");
+          
+          $(".slide2").addClass("active");
+        }
+
+        if(origin.index == 1){
+          console.log(origin.index + " Loaded");
+          $(".slide3").addClass("active");
+        }
+
+        if(origin.index == 2){
+          console.log(origin.index + " Loaded");
+          $(".slide4").addClass("active");
+        }
+        if(origin.index == 3){
+          $(".tab-navigation ul li").removeClass("active");
+          console.log(origin.index + " Loaded");
+          setTimeout(function(){ 
+           $(".slide1").addClass("active");
+          }, 1000);
+          
+        }
+
 
         if(section.index == 2){
           console.log("disabled scrollBar");
-          fullpage_api.setAutoScrolling(false);
         }
 
         
@@ -55,8 +93,8 @@ if($(window).width() > 768){
       }
   
       else if(origin.index == 1 && direction == 'up'){
-        fullpage_api.setAutoScrolling(true);
-        fullpage_api.moveTo(0, 0);
+        // fullpage_api.setAutoScrolling(true);
+        // fullpage_api.moveTo(0, 0);
       }
     },
     afterLoad: function(origin, destination, direction){
@@ -171,7 +209,8 @@ function expandList($element) {
 }
 
 function slideTab($num){
-  fullpage_api.moveTo(1, $num - 1);
+   // temporary disabled
+   // fullpage_api.moveTo(1, $num - 1);
 }
 
 // Mobile main menu handling
