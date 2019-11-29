@@ -128,7 +128,7 @@ HEADER FILE
           <nav class="nav-drill">
             <ul class="nav-items nav-level-1">
               <li class="nav-item nav-expand">
-                <a class="nav-link nav-expand-link" href="#">Services</a>
+                <a class="nav-link nav-expand-link" href="#">Services <i class="fas fa-chevron-right mobile-only " aria-hidden="true"></i></a>
                 <ul class="nav-items nav-expand-content">
                   <li class="nav-item nav-expand">
                       <input id="collapsible1" class="toggle" type="checkbox">
