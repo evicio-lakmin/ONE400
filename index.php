@@ -27,7 +27,7 @@ get_header();
             <div class="content">
                 <div class="tab-navigation fadeInDown animated">
                   <ul>
-                    <li onclick="slideTab(1)" class="active"><span>SERVICE BY SEGMENT</span></li>
+                    <li onclick="slideTab(1)" class="active"><span><!-- SERVICE BY SEGMENT --></span></li>
                     <li onclick="slideTab(2)"></li>
                     <li onclick="slideTab(3)"></li>
                     <li onclick="slideTab(4)"></li>
@@ -124,8 +124,8 @@ get_header();
           <div class="content">
             <div class="tab-navigation">
               <ul>
-                <li onclick="slideTab(1)"></li>
-                <li onclick="slideTab(2)" class="active"><span>SERVICE BY SEGMENT</span></li>
+                <li onclick="slideTab(1)" class="active"></li>
+                <li onclick="slideTab(2)" class="active"><span><!-- SERVICE BY SEGMENT --></span></li>
                 <li onclick="slideTab(3)"></li>
                 <li onclick="slideTab(4)"></li>
               </ul>
@@ -149,9 +149,9 @@ get_header();
               <div class="content">
                   <div class="tab-navigation">
                     <ul>
-                      <li onclick="slideTab(1)"></li>
-                      <li onclick="slideTab(2)"></li>
-                      <li onclick="slideTab(3)"class="active"><span>SERVICE SPOTLIGHT</span></li>
+                      <li onclick="slideTab(1)" class="active"></li>
+                      <li onclick="slideTab(2)" class="active"></li>
+                      <li onclick="slideTab(3)"class="active"><span><!-- SERVICE SPOTLIGHT --></span></li>
                       <li onclick="slideTab(4)"></li>
                     </ul>
                   </div>
@@ -175,10 +175,10 @@ get_header();
       <div class="content">
         <div class="tab-navigation">
           <ul>
-            <li onclick="slideTab(1)"></li>
-            <li onclick="slideTab(2)"></li>
-            <li onclick="slideTab(3)"></li>
-            <li onclick="slideTab(4)" class="active"><span>ARTICLE</span></li>
+            <li onclick="slideTab(1)" class="active"></li>
+            <li onclick="slideTab(2)" class="active"></li>
+            <li onclick="slideTab(3)" class="active"></li>
+            <li onclick="slideTab(4)" class="active"><span><!-- ARTICLE --></span></li>
           </ul>
         </div>
         <h3 class="title">How the latest tech will shake up legal</h3>
@@ -353,9 +353,37 @@ get_header();
         <h2>Research & Insights</h2>
       </div>
     </div>
-    <div class="research-blocks">
+    <div class="research-blocks">	
       <!-- reasarch-left-block -->
       <div class="reasarch-left-block">
+     	<?php 
+		
+		//getting first 3 blogs
+
+		$args = array(
+		    'post_type'=> 'blog',
+		    'areas'    => '',
+		    'order'    => 'ASC',
+		    'showposts' => 3, 
+		    'orderby' => 1
+		    );              
+
+		$blog_query = new WP_Query( $args );
+
+		if($blog_query->have_posts() ) : 
+
+			$firstPost = true;
+			$_index_no = 1;
+
+			while ( $blog_query->have_posts() ) : 
+			
+				$blog_query->the_post(); 
+		?>
+
+
+	
+	<?php if($firstPost) { ?>
+
           <div class="image mobile-only">
             <picture>
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/post-right.webp" type="image/webp">
@@ -366,63 +394,123 @@ get_header();
 
         <div class="content-back-img" ></div>
         <div class="post content pd-l pd-r ">
+<<<<<<< HEAD
+          <h5>Tranding</h5>
+          <h2><?php the_title(); ?></h2>
+=======
           <h5>Trending</h5>
           <h2>Subscription legal plans and why your law firm needs one</h2>
+>>>>>>> fad0084bc5659be9691062a8171ceb7dd0d2c3c4
           <div class="content-info">
-              <span>10.21.19 </span> |  <span> Article in <a href="#">Technology </a> </span>
+              <span><?php echo get_the_date( 'd.m.y' ) ?></span> |  <span> Article in <a href="#"><?php the_category(',') ?> </a> </span>
           </div>
-          <a href="#" class="desktop-only link">Read the post <i class="fas fa-arrow-right"></i> </a>
+          <a href=" <?php the_permalink(); ?> " class="desktop-only link">Read the post <i class="fas fa-arrow-right"></i> </a>
         </div>
         <div class="overlay"></div>
-        <div class="content-bottom-block pd-l pd-r">
-          <div class="inner-content">
-            <h2>Blockchain for Attorneys</h2>
-            <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</P>
-            <div class="content-info">
-                <span>10.21.19 </span> |  <span>Article in  <a href="#">Technology </a></span>
-            </div>
-          </div>
 
-          <div class="inner-content mobile-only">
-            <h2>Pull a fourth article from the blog</h2>
-            <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</P>
-            <div class="content-info">
-                <span>10.21.19 </span> |  <span>Article in  <a href="#">Technology </a></span>
-            </div>
-          </div>
-          
-          <div class="image">
-            <picture>
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/post-left.webp" type="image/webp">
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post-left.png" type="image/jpeg"> 
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post-left.png" alt="Alt Text!">
-              </picture>
-          </div>
-        </div>
-      </div>
+
+		<?php } ?>
+
+		<?php if ($_index_no == 2) { ?>
+
+			 <div class="content-bottom-block pd-l pd-r">
+		          <div class="inner-content">
+		           	<h2><?php the_title(); ?></h2>
+		            <P><?php the_content(); ?></P>
+		            <div class="content-info">
+		                <span><?php echo get_the_date( 'd.m.y' ) ?>  </span> |  <span>Article in <?php the_category(',') ?></span>
+		            </div>
+		          </div>
+		          <?php if ($_index_no == 3) { ?>
+		          <div class="inner-content mobile-only">
+		            <h2><?php the_title(); ?></h2>
+		            <P><?php the_content(); ?></P>
+		            <div class="content-info">
+		                <span><?php echo get_the_date( 'd.m.y' ) ?> </span> |  <span>Article in  <?php the_category(',') ?> </span>
+		            </div>
+		          </div>
+		          <?php } ?>
+		          <div class="image">
+		            <picture>
+		                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/post-left.webp" type="image/webp">
+		                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post-left.png" type="image/jpeg"> 
+		                <?php the_post_thumbnail(); ?>
+		              </picture>
+		          </div>
+		        </div>
+		<?php } ?>
+		<?php 
+
+			$firstPost = false;
+			$_index_no++;
+			endwhile; 
+			endif; 
+			wp_reset_postdata(); 
+		?>
+ 		</div>
+
       <!-- reasarch-right-block -->
       <div class="reasarch-right-block">
+
+
+      	<?php 
+		
+		//getting first 3 blogs
+
+		$args = array(
+		    'post_type'=> 'blog',
+		    'areas'    => '',
+		    'order'    => 'ASC',
+		    'showposts' => 3, 
+		    'orderby' => 1
+		    );              
+
+		$blog_query = new WP_Query( $args );
+
+		if($blog_query->have_posts() ) : 
+
+			$_index_no = 1;
+
+			while ( $blog_query->have_posts() ) : 
+			
+				$blog_query->the_post(); 
+		?>
+
+
         <div class="image">
           <picture>
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/post-right.webp" type="image/webp">
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post-right.png" type="image/jpeg"> 
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post-right.png" alt="Alt Text!">
+             <?php if ($_index_no == 1) { 
+              the_post_thumbnail();
+             } ?>
           </picture>
         </div>
+
+        <?php if ($_index_no == 3) { ?>
           <div class="content-bottom-block pd-r">
               <div class="inner-content">
-                <h2>How the latest tech will shake up legal</h2>
+                <h2><?php the_title(); ?></h2>
 
                 <div class="content-info">
-                    <span>10.21.19 </span> |  <span>Article in <a href="#">News & Events</a></span>
+                    <span> <?php echo get_the_date( 'd.m.y' ) ?> </span> |  <span>Article in <?php the_category(',') ?> </span>
                 </div>
                 <a class="btn btn-secondary desktop-only" href="#"> Explore all research + insights <i class="fas fa-arrow-right"></i> </a>
-                <a class="link mobile-only">View all articles <i class="fas fa-arrow-right" aria-hidden="true"></i> </a>
+                <a href="#" class="link mobile-only">View all articles <i class="fas fa-arrow-right" aria-hidden="true"></i> </a>
               </div>
           </div>
-      </div>
+      	<?php 
+      		} 
+
+			$_index_no++;
+			endwhile; 
+			endif; 
+			wp_reset_postdata(); 
+		?>
+		</div>
     </div>
   </section>
+
   <!-- ENDS CASE STUDIES SECTION  -->
   <!-- STARTS BECOME A CLIENT SECTION -->
   <section class="become-a-click-block fp-auto-height section">

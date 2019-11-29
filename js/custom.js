@@ -15,12 +15,12 @@ if($(window).width() > 768){
   //scroll plugin settings 
   new fullpage('.fullpage', {
     licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
-    scrollHorizontally: true,
+    scrollHorizontally: false,
     autoScrolling:true,
     slidesNavigation: true,
     css3: false,
     dragAndMove: false,
-    scrollBar: false,
+    scrollBar: true,
     //normalScrollElements: '.home-top-content, .research-section, .become-a-click-block, .copyrights',
     fitToSection: false,
     lazyLoad: true,
