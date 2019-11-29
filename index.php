@@ -27,10 +27,10 @@ get_header();
             <div class="content">
                 <div class="tab-navigation fadeInDown animated">
                   <ul>
-                    <li onclick="slideTab(1)" class="active"><span><!-- SERVICE BY SEGMENT --></span></li>
-                    <li onclick="slideTab(2)"></li>
-                    <li onclick="slideTab(3)"></li>
-                    <li onclick="slideTab(4)"></li>
+                    <li onclick="slideTab(1)" class="slide1"><span><!-- SERVICE BY SEGMENT --></span></li>
+                    <li onclick="slideTab(2)" class="slide2"></li>
+                    <li onclick="slideTab(3)" class="slide3"></li>
+                    <li onclick="slideTab(4)" class="slide4"></li>
                   </ul>
                 </div>
                 <h3 class="title fadeInDown animated">Fueling the Future of Legal Technology</h3>
@@ -124,10 +124,10 @@ get_header();
           <div class="content">
             <div class="tab-navigation">
               <ul>
-                <li onclick="slideTab(1)" class="active"></li>
-                <li onclick="slideTab(2)" class="active"><span><!-- SERVICE BY SEGMENT --></span></li>
-                <li onclick="slideTab(3)"></li>
-                <li onclick="slideTab(4)"></li>
+                <li onclick="slideTab(1)" class="slide1"></li>
+                <li onclick="slideTab(2)" class="slide2"><span><!-- SERVICE BY SEGMENT --></span></li>
+                <li onclick="slideTab(3)" class="slide3"></li>
+                <li onclick="slideTab(4)" class="slide4"></li>
               </ul>
             </div>
             <h3 class="title">Empowering Creative Businesses</h3>
@@ -149,10 +149,10 @@ get_header();
               <div class="content">
                   <div class="tab-navigation">
                     <ul>
-                      <li onclick="slideTab(1)" class="active"></li>
-                      <li onclick="slideTab(2)" class="active"></li>
-                      <li onclick="slideTab(3)"class="active"><span><!-- SERVICE SPOTLIGHT --></span></li>
-                      <li onclick="slideTab(4)"></li>
+	                    <li onclick="slideTab(1)" class="slide1"></li>
+	                    <li onclick="slideTab(2)" class="slide2"></li>
+	                    <li onclick="slideTab(3)" class="slide3"><span><!-- SERVICE SPOTLIGHT --></span></li>
+	                	<li onclick="slideTab(4)" class="slide4"></li>
                     </ul>
                   </div>
                   <h3 class="title">Legal Hosting & Management</h3>
@@ -175,10 +175,10 @@ get_header();
       <div class="content">
         <div class="tab-navigation">
           <ul>
-            <li onclick="slideTab(1)" class="active"></li>
-            <li onclick="slideTab(2)" class="active"></li>
-            <li onclick="slideTab(3)" class="active"></li>
-            <li onclick="slideTab(4)" class="active"><span><!-- ARTICLE --></span></li>
+            <li onclick="slideTab(1)" class="slide1"></li>
+            <li onclick="slideTab(2)" class="slide2"></li>
+            <li onclick="slideTab(3)" class="slide3"></li>
+            <li onclick="slideTab(4)" class="slide4"><span><!-- ARTICLE --></span></li>
           </ul>
         </div>
         <h3 class="title">How the latest tech will shake up legal</h3>
@@ -374,7 +374,7 @@ get_header();
 
 			$firstPost = true;
 			$_index_no = 1;
-
+			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 			while ( $blog_query->have_posts() ) : 
 			
 				$blog_query->the_post(); 
@@ -388,7 +388,8 @@ get_header();
             <picture>
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/post-right.webp" type="image/webp">
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post-right.png" type="image/jpeg"> 
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post-right.png" alt="Alt Text!">
+                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post-right.png" alt="Alt Text!"> -->
+                  <img src="<?php echo $featured_img_url; ?>" />
               </picture>
           </div>
 
@@ -429,7 +430,7 @@ get_header();
 		            <picture>
 		                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/post-left.webp" type="image/webp">
 		                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post-left.png" type="image/jpeg"> 
-		                <?php the_post_thumbnail(); ?>
+		                <img src="<?php echo $featured_img_url; ?>" />
 		              </picture>
 		          </div>
 		        </div>
@@ -469,6 +470,8 @@ get_header();
 			while ( $blog_query->have_posts() ) : 
 			
 				$blog_query->the_post(); 
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+
 		?>
 
 
@@ -476,9 +479,9 @@ get_header();
           <picture>
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/post-right.webp" type="image/webp">
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post-right.png" type="image/jpeg"> 
-             <?php if ($_index_no == 1) { 
-              the_post_thumbnail();
-             } ?>
+             <?php if ($_index_no == 1) {  ?>
+              <img src="<?php echo $featured_img_url; ?>" />
+             <?php } ?>
           </picture>
         </div>
 
