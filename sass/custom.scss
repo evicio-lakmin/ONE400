@@ -326,18 +326,13 @@ header {
         }
       }
       .tab-navigation {
-        // display: none;
         opacity: 0;
-        // transition: 1s;
-        // transition-delay: 1s;
       }
       &.active{
         .tab-navigation {
           display: block;
           opacity: 1;
           transition: 1s;
-
-          //transition-delay: 1s;
         }
       }
     }
@@ -363,7 +358,6 @@ header {
     background: linear-gradient(to right, $lightblue 50%, $gray 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    // transition: all 5s ease-in;
 
 
     @media screen and (max-width: $break--M) { 
@@ -417,15 +411,12 @@ header {
       }
     }
     .content {
-      /* margin-top: 25%; */
       display: inline-block;
       width: 50%;
       color: $white;
 
       @media screen and (max-width: $break--M) {
         width: 100%;
-        /* margin-top: 35%; */
-       // @include soft--sides(20px);
       }
       
       h1 {
@@ -476,7 +467,6 @@ header {
     font-family: $base-font-secondary;
     line-height: 2.2;
     @media screen and (max-width: $break--M) {
-     //font-size: 30px;
     }
   }
 }
