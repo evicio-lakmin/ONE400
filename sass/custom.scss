@@ -124,6 +124,7 @@ header {
       width: 40%;
       @media (max-width: $screen--M) {
         width: 100%;
+        font-size: 20px;
       }
     }
   }
@@ -186,8 +187,8 @@ header {
       span {
         font-size: 17.5px;
         line-height: 1.43;
-        @media (max-width: $screen--XL) {
-        font-size: 15px;
+        @media (max-width: $screen--M) {
+        font-size: 20px;
         }
       }
 
@@ -275,6 +276,9 @@ header {
     .fp-controlArrow, .fp-slidesNav {
       display: none;
     }
+    @media (max-width: $screen--M) {  
+      height: 500px !important;
+    }
     .slide {
       .fp-tableCell{
         display: flex;
@@ -282,6 +286,10 @@ header {
 
         @media (min-width: $screen--M) {          
           padding-bottom: 130px;
+        }
+        @media (max-width: $screen--M) {  
+          align-items: center;
+          display: block;
         }
       }
 
@@ -423,7 +431,7 @@ header {
         font-size: 45px;
         line-height: 1;
         width: 75%;
-        @media screen and (max-width: $break--M) {
+        @media screen and (max-width: $break--MM) {
           font-size: 36px;
           @include push--ends(10%);
         }
@@ -1227,17 +1235,26 @@ ul.mobile-only.social-media-icons {
   height: auto;
   overflow: hidden;
 
-  @media screen and (max-width: $break--M){
-    display:none;
+  @media screen and (max-width: $screen--M){
+    z-index: -1;
+    width: 50%;
+    right: -3%;
+    bottom: -50px;
   }
 }
 .fp-slides {
-  @media screen and (max-width: $break--M){
+  @media screen and (max-width: $screen--M){
     overflow: initial !important;
-    margin-top:25%;
-    padding-bottom: 40%;
+    margin-top: 18vh;
     float: left;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+  }
+  @media screen and (max-width: 768px){
+    margin-top: 20vh;
+    min-height: 45vh;
   }
 }
 

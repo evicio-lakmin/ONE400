@@ -152,7 +152,7 @@
 		font-size: 1rem;
     line-height: 1.5em;
     font-size: 40px !important;
-		font-weight: 300;
+		font-weight: normal;
 	}
 	
 	&-expand {
@@ -177,7 +177,7 @@
 			.nav-link {
         font-family: $base-font-secondary;
         font-size: 20px !important;
-        font-weight: 400 !important;
+        font-weight: normal !important;
         color: $black !important;
         padding: 40px 0 !important;
       }
@@ -200,7 +200,7 @@
               font-size: 20px !important;
               font-family: $base-font-secondary;    
               text-transform: unset !important;
-              font-weight: 400 !important;
+              font-weight: normal !important;
             }
           }
         }
@@ -213,7 +213,6 @@
       .nav-link-collapse {
         font-family: $base-font-secondary;
         font-size: 20px !important;
-        font-weight: 400 !important;
         color: $black !important;
         padding: 40px 0 !important;
         display: flex;
@@ -303,7 +302,7 @@
 
 #menu li a {
   color: $black;
-  font-size: 4rem;
+  font-size: 65px;
   text-decoration: none;
   font-weight: 600; 
   padding: 20px 0;
@@ -474,7 +473,7 @@ box-shadow: none;
     padding-right: 3rem;
 
     h3{
-      font-size: 36px;
+      font-size: 25px;
       font-weight: 500;
       width: 75%;
       @media screen and (max-width: $break--M){
@@ -489,7 +488,7 @@ box-shadow: none;
 
       li{
         text-align: left !important;
-        font-size: 21px;        
+        font-size: 15px;        
         font-family: $base-font-secondary;
         color: $default-font-color;
         line-height: 30px;
