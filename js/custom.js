@@ -13,12 +13,7 @@ setInterval(function(){
     fullpage_api.moveSlideRight();
     console.log("slided");
   }, 6000);
-
-
-
 });
-
-
 
 if($(window).width() > 768){ 
 
@@ -48,8 +43,6 @@ if($(window).width() > 768){
             // $(".tab-navigation ul li").removeClass("active");
             // $(".slide1").addClass("active");
         }
-
-
         
         if(origin.index == 0){
           console.log(origin.index + " Loaded");
@@ -75,12 +68,9 @@ if($(window).width() > 768){
           
         }
 
-
         if(section.index == 2){
           console.log("disabled scrollBar");
         }
-
-        
       }
 
     },

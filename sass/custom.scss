@@ -697,8 +697,11 @@ header {
       position: absolute;
       bottom: 0px;
       right: 0;
-      @media screen and (max-width: $break--M) {
-        width: 35%;
+      @media screen and (max-width: $break--LL) {
+        width: 40%;
+      }
+      @media screen and (max-width: $break--L) {
+        width: 45%;
       }
       img { 
         vertical-align: sub;
@@ -746,7 +749,12 @@ header {
         width: 100%;
         border-bottom: 1px solid $gray;
       }
-      
+      @media screen and (max-width: $break--LL) {
+        width: 60%;
+      }
+      @media screen and (max-width: $break--L) {
+        width: 55%;
+      }
     }
 
     @media screen and (max-width: $break--M) {
