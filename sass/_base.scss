@@ -179,8 +179,8 @@ img{
 }
 .title {
   font-size: 65px;
-  @media screen and (max-width: 767px) {
-    font-size: 40px;
+  @media screen and (max-width: $break--MM) {
+    font-size: 55px;
    
   }
 }

@@ -435,7 +435,7 @@ header {
         line-height: 1;
         width: 75%;
         @media screen and (max-width: 767px) {
-          font-size: 36px;
+          // font-size: 36px;
           @include push--ends(10%);
         }
       }
@@ -540,7 +540,7 @@ header {
       font-size: 45px;
       margin-bottom:1em;
       line-height: 1;
-      @media screen and (max-width: $break--M) {
+      @media screen and (max-width: $break--MM) {
         font-size: 36px;
       } 
     }
@@ -611,9 +611,10 @@ header {
         margin-bottom: 3%;
         color:$black;
         font-family: $base-font-secondary;
-        @media screen and (max-width: $break--M) {
-          @include push--ends(15%);
-        }
+        
+    }
+    @media screen and (max-width: $break--M) {
+      margin-bottom: 2rem;
     }
   }
 }
@@ -629,8 +630,8 @@ header {
     margin-top:5%;
     margin-bottom: 2%;
     line-height: 1.29;
-    @media screen and (max-width: $break--M) {
-      font-size: 36px;
+    @media screen and (max-width: $break--MM) {
+      font-size: 25px;
     }
   }
   h5 {
