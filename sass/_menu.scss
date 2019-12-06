@@ -21,6 +21,9 @@
       width: 122px;
     }
   }
+  .fixed-logo{
+    display: none;
+  }
 }
 
 .go-back-icon{
@@ -73,6 +76,25 @@
                 transition-property: bottom, transform;
       }
     }
+}
+
+
+.scrolled{
+  .mob-menu-ham{
+    span{
+      background: $blue;
+
+      &::after, &::before{
+        background: $blue;
+      }
+    }
+  }
+  .def-logo{
+    display: none;
+  }
+  .fixed-logo{
+    display: block;
+  }
 }
 
 .nav-is-toggled{
@@ -254,7 +276,7 @@
 .panel-logo{  
   margin-left: 5%;
   margin-top: 30px;
-  color: #0567A3;
+  color: $blue;
   font-size: 30px;
   position: absolute;
   z-index: 1010;
@@ -285,7 +307,7 @@
 }
 #menu ul.desktop,  #contact ul.desktop {
   margin-top: 150px;
-  @media (max-width: $screen--L) {
+  @media (max-width: $break--LL) {
     margin-top: 100px;
   }
 }
@@ -325,14 +347,14 @@
 .menu-link {
   z-index: 1001;
   display: block;
-  position: fixed;
+  // position: fixed;
   top: 0;
   right: 3vw;
   overflow: hidden;
   margin: 0;
   padding: 0;
-  width: 80px;
-  height: 80px;
+  width: 28px;
+  height: 70px;
   font-size: 0;
   text-indent: -9999px;
   -webkit-appearance: none;
@@ -438,8 +460,17 @@ box-shadow: none;
     flex: 5;
   }
   .menu-item-info{
-    flex: 6;
-    margin-top: 150px;
+    flex: 10;
+    margin-top: 100px;
+
+    @media screen and (min-width: $break--LL){
+      flex: 6;
+      margin-top: 150px;
+    }
+  }
+  .menu-link{
+    position: absolute;
+    right: 5vw;
   }
 }
 .open-modal-active {
@@ -509,7 +540,7 @@ box-shadow: none;
       }
     }
 
-    @media (max-width: $screen--L) {
+    @media (max-width: $break--M) {
       display: none;
     }
   }

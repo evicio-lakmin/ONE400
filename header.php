@@ -23,14 +23,17 @@ HEADER FILE
 <!-- Main NavBar -->
 <nav class="main-navbar">   
   <div class="nav-container desktop-only">
-    <div class="logo"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/nav-logo.svg" alt=""></a></div>       
+    <div class="logo"><a href="#">
+      <img class="def-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/nav-logo.svg" alt="">
+      <img class="fixed-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/nav-logo_b.png" alt="">
+    </a></div>       
     <div class="search-area">
       <div class="search-container">
         <input class="search-input" type="text" placeholder="Search...">
         <div class="search-icon"></div>
       </div>
     </div> 
-    <div>
+    <div class="ham-icon-wrapper">
       <a href="#menu" class="menu-link">
         <span>Menu</span>
       </a>
@@ -41,6 +44,9 @@ HEADER FILE
     <div id="menu" class="panel">
       <div class="menu-container">
         <div class="panel-logo"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/nav-logo_b.png" alt=""></a></div>
+        <a href="#menu" class="menu-link">
+            <span>Menu</span>
+          </a>
         <!-- Main Menu Items -->
         <div class="menu-items menu-tab desktop-only">
             <nav>
@@ -55,6 +61,7 @@ HEADER FILE
         </div>
         <!-- Main Menu Items Info -->
         <div class="menu-item-info">
+          
           <!-- Services -->
             <div id="Services" class="tabcontent">
                 <div class="info-content">
@@ -122,7 +129,10 @@ HEADER FILE
         <!-- Mobile Main Menu -->
         <div class="mobile-only">
           <header class="nav-top mobile-only">            
-            <div class="mob-logo"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/nav-logo.svg" alt=""></a></div> 
+            <div class="mob-logo"><a href="#">
+              <img class="def-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/nav-logo.svg" alt="">
+              <img class="fixed-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/nav-logo_b.png" alt="">
+            </a></div> 
             <a class="mob-menu-ham" id="ham"><span></span></a>    
           </header>
           <nav class="nav-drill">

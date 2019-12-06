@@ -250,7 +250,7 @@ get_header();
             <h2 class="h2">Design a plan for the present and future of your organization</h2>
             <article class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor consectetur adipiscing elitconsectetur adipiscing elit.</article>
 
-            <div class="mobile-only"> <a class="btn btn-block btn-primary">Explore all services</a> </div>
+            <div class="mobile-only mb-2"> <a class="btn btn-block btn-primary">Explore all services</a> </div>
           </div>
       </div>
     </section>

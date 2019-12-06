@@ -21,10 +21,11 @@ if($(window).width() > 768){
   new fullpage('.fullpage', {
     licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
     scrollHorizontally: false,
-    autoScrolling: "automatic",
-    slidesNavigation: true,
+    autoScrolling: false,
+    slidesNavigation: false,
     css3: true,
     dragAndMove: true,
+    setResponsive: true,
     scrollBar: true,
     //normalScrollElements: '.home-top-content, .research-section, .become-a-click-block, .copyrights',
     fitToSection: false,
@@ -102,7 +103,8 @@ if($(window).width() > 768){
     licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
     scrollHorizontally: true,
     autoScrolling:false,
-    slidesNavigation: true,
+    slidesNavigation: false,    
+    setResponsive: true,
     css3: true,
     scrollBar: false,
     fitToSection: false,
@@ -125,10 +127,12 @@ $(document).ready(function() {
 // fixed main nav when scrolling down
 $(window).scroll(function() {    
   var scrollTop = $(window).scrollTop();
-  if (scrollTop > 100) {
+  if (scrollTop > 10) {
     $('.main-navbar').addClass("scrolled");
+    $('.nav-top').addClass("scrolled");
   } else {
     $('.main-navbar').removeClass("scrolled");
+    $('.nav-top').removeClass("scrolled");
   }
 });
 
