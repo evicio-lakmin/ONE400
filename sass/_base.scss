@@ -13,12 +13,34 @@
 }
 
 @font-face {
+  font-family: $base-font-primary-ProBook;
+  src:  url("../assets/fonts/FreightTextPro/FreightTextProBook-Regular.otf") format("opentype"),
+        url('../assets/fonts/FreightTextPro/FreightTextProBook-Regular.woff')  format('woff'),
+        url("../assets/fonts/FreightTextPro/FreightTextProBook-Regular.woff2") format("woff2");     
+}
+
+@font-face {
+  font-family: $base-font-primary-ProBold;
+  src:  url("../assets/fonts/FreightTextPro/FreightTextProBold-Regular.otf") format("opentype"),    
+}
+
+@font-face {
   font-family: $base-font-secondary;
   src:  url('../assets/fonts/Gibson/Gibson-Regular.eot'), /* IE9 Compat Modes */
         url("../assets/fonts/Gibson/Gibson-Regular.otf") format("opentype"), 
         url('../assets/fonts/Gibson/Gibson-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
         url('../assets/fonts/Gibson/Gibson-Regular.woff')  format('woff'),  /* Pretty Modern Browsers */
         url('../assets/fonts/Gibson/Gibson-Regular.woff2')  format('woff2'); /* Super Modern Browsers */
+}
+
+@font-face {
+  font-family: $base-font-secondary-Bold;
+  src:  url("../assets/fonts/Gibson/Gibson-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: $base-font-secondary-SemiBold;
+  src:  url("../assets/fonts/Gibson/Gibson-SemiBold.otf") format("opentype");
 }
 
 
@@ -55,7 +77,7 @@ h5,
 h6 {
   margin:0;
   padding:0;
-  font-family: $base-font-primary;
+  font-family: $base-font-primary-ProBold;
 }
 
 h1, .h1 {
@@ -97,7 +119,7 @@ h6, .h6 {
    /*  max-width: 768px; */
   }
 
-  @media screen and (max-width: $break--M) { 
+  @media screen and (max-width: $screen--M) { 
     padding: 0 30px !important;
   }
 
@@ -144,6 +166,10 @@ h6, .h6 {
   
 }
 
+.mb-2{
+  margin-bottom: 2rem;
+}
+
 img{
   width:100%;
 }
@@ -153,8 +179,8 @@ img{
 }
 .title {
   font-size: 65px;
-  @media (max-width: $screen--M) {
-    font-size: 40px;
+  @media screen and (max-width: $break--MM) {
+    font-size: 55px;
    
   }
 }

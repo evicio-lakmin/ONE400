@@ -41,6 +41,7 @@ header {
         margin: 10px 0 25px;
         font-weight: normal;
         line-height: 1;
+        font-family: $base-font-primary-ProBook;
     }
     article {
       width: 60%;
@@ -124,6 +125,7 @@ header {
       width: 40%;
       @media (max-width: $screen--M) {
         width: 100%;
+        font-size: 20px;
       }
     }
   }
@@ -186,8 +188,8 @@ header {
       span {
         font-size: 17.5px;
         line-height: 1.43;
-        @media (max-width: $screen--XL) {
-        font-size: 15px;
+        @media (max-width: $screen--M) {
+        font-size: 20px;
         }
       }
 
@@ -275,6 +277,9 @@ header {
     .fp-controlArrow, .fp-slidesNav {
       display: none;
     }
+    @media (max-width: $screen--M) {  
+      height: 500px !important;
+    }
     .slide {
       .fp-tableCell{
         display: flex;
@@ -283,23 +288,23 @@ header {
         @media (min-width: $screen--M) {          
           padding-bottom: 130px;
         }
+        @media (max-width: $screen--M) {  
+          align-items: center;
+          display: block;
+        }
       }
 
       .content {
         position: relative;
         height: 58vh;
-       /* @media (max-width: $screen--L) {
-          padding: 5%;
-        }  */
         @media (max-width: $screen--M) {
-          height: 38vh;
-          /* display: none; */
+          height: 50vh;
         }
         .right-content {
             font-family: $base-font-secondary;
             position: absolute;
             width: 20%;
-            right: 5em;
+            right: 0;
             top: 5%;    
             border-left: 2px solid;
             font-size: 14px;
@@ -342,7 +347,7 @@ header {
   padding: 0;
   margin-bottom: 24px;
 
-  @media screen and (max-width: $break--M) { 
+  @media screen and (max-width: $screen--M) { 
     display: none;
   }
   li {
@@ -392,6 +397,12 @@ header {
     }
   }
 
+  .fp-slides{
+    @media screen and (max-width: $screen--M){
+      margin-top: 0;
+    }
+  }
+
   .slide {
     background-size: cover !important;
     background-position: center !important;
@@ -423,8 +434,8 @@ header {
         font-size: 45px;
         line-height: 1;
         width: 75%;
-        @media screen and (max-width: $break--M) {
-          font-size: 36px;
+        @media screen and (max-width: 767px) {
+          // font-size: 36px;
           @include push--ends(10%);
         }
       }
@@ -529,7 +540,7 @@ header {
       font-size: 45px;
       margin-bottom:1em;
       line-height: 1;
-      @media screen and (max-width: $break--M) {
+      @media screen and (max-width: $break--MM) {
         font-size: 36px;
       } 
     }
@@ -550,9 +561,9 @@ header {
  
   background-color: $whiteDark; 
 
-  @media screen and (max-width: $break--M) {
-    @include soft--ends(10%);
-  }
+  // @media screen and (max-width: $break--M) {
+  //   @include soft--ends(10%);
+  // }
   .left {
     @extend .M6;
     .image {
@@ -600,9 +611,10 @@ header {
         margin-bottom: 3%;
         color:$black;
         font-family: $base-font-secondary;
-        @media screen and (max-width: $break--M) {
-          @include push--ends(15%);
-        }
+        
+    }
+    @media screen and (max-width: $break--M) {
+      margin-bottom: 2rem;
     }
   }
 }
@@ -618,8 +630,8 @@ header {
     margin-top:5%;
     margin-bottom: 2%;
     line-height: 1.29;
-    @media screen and (max-width: $break--M) {
-      font-size: 36px;
+    @media screen and (max-width: $break--MM) {
+      font-size: 25px;
     }
   }
   h5 {
@@ -689,8 +701,11 @@ header {
       position: absolute;
       bottom: 0px;
       right: 0;
-      @media screen and (max-width: $break--M) {
-        width: 35%;
+      @media screen and (max-width: $break--LL) {
+        width: 40%;
+      }
+      @media screen and (max-width: $break--L) {
+        width: 45%;
       }
       img { 
         vertical-align: sub;
@@ -738,7 +753,12 @@ header {
         width: 100%;
         border-bottom: 1px solid $gray;
       }
-      
+      @media screen and (max-width: $break--LL) {
+        width: 60%;
+      }
+      @media screen and (max-width: $break--L) {
+        width: 55%;
+      }
     }
 
     @media screen and (max-width: $break--M) {
@@ -759,7 +779,7 @@ header {
       @media screen and (max-width: $break--M) {
         @include soft--sides(20px);
         a.link.mobile-only {
-            margin: 15% 0px;
+            margin: 10% 0px;
             color: $black;
         }
       }
@@ -886,7 +906,7 @@ footer {
         h5 {
           font-weight: 600;
           font-size: 17.5px;
-          font-family: $base-font-secondary;
+          font-family: $base-font-secondary-SemiBold;
           line-height: 1.43;
         }
       }
@@ -903,6 +923,7 @@ footer {
   }
   p{
     font-size: 12px;
+    margin-bottom: 2rem;
   }
   a.link {
     color: $linkBlue;
@@ -949,7 +970,7 @@ footer {
     h5 {
         font-size: 17.5px;
         font-weight: 600;
-        font-family: $base-font-secondary;
+        font-family: $base-font-secondary-SemiBold;
         margin-bottom: 15px;
     }
     @media screen and (max-width: $break--M){
@@ -1219,25 +1240,36 @@ ul.mobile-only.social-media-icons {
 }
 .featured-image2 {
   position: absolute;
-  bottom: 5%;
-  width: 35%;
-  right: 12%;
-  z-index: 1;
+  z-index: -1;
+  width: 50%;
+  right: -3%;
+  bottom: 0;
   margin: 0;
   height: auto;
   overflow: hidden;
 
-  @media screen and (max-width: $break--M){
-    display:none;
+  @media screen and (min-width: $screen--MM){    
+    width: 35%;
+    right: 12%;
+  }
+
+  @media screen and (min-width: $screen--M + 1){    
+    bottom: 5%;
   }
 }
 .fp-slides {
-  @media screen and (max-width: $break--M){
+  @media screen and (max-width: $screen--M){
     overflow: initial !important;
-    margin-top:25%;
-    padding-bottom: 40%;
+    margin-top: 18vh;
     float: left;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+  }
+  @media screen and (max-width: 768px){
+    // margin-top: 20vh;
+    min-height: 45vh;
   }
 }
 
@@ -1349,7 +1381,7 @@ ul.mobile-only.social-media-icons {
           a {
             font-family: $base-font-secondary;
             font-size: 12px;
-            margin-bottom: 5px;
+            margin-bottom: 0.6rem;
             display: block;
             color: #000;
             text-decoration: none;

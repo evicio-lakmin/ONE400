@@ -250,7 +250,7 @@ get_header();
             <h2 class="h2">Design a plan for the present and future of your organization</h2>
             <article class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor consectetur adipiscing elitconsectetur adipiscing elit.</article>
 
-            <div class="mobile-only"> <a class="btn btn-block btn-primary">Explore all services</a> </div>
+            <div class="mobile-only mb-2"> <a class="btn btn-block btn-primary">Explore all services</a> </div>
           </div>
       </div>
     </section>
@@ -395,12 +395,12 @@ get_header();
 
         <div class="content-back-img" ></div>
         <div class="post content pd-l pd-r ">
-          <h5>Tranding</h5>
+          <h5>Trending</h5>
           <h2><?php the_title(); ?></h2>
           <div class="content-info">
               <span><?php echo get_the_date( 'd.m.y' ) ?></span> |  <span> Article in <a href="#"><?php the_category(',') ?> </a> </span>
           </div>
-          <a href=" <?php the_permalink(); ?> " class="desktop-only link">Read the post <i class="fas fa-arrow-right"></i> </a>
+          <a href=" <?php the_permalink(); ?> " class="link">Read the post <i class="fas fa-arrow-right"></i> </a>
         </div>
         <div class="overlay"></div>
 
@@ -534,8 +534,8 @@ get_header();
         <div class="right">
             <h2 class="text-center">Explore ONE400</h2>
             <h6 class="text-center">Innovation doesn’t start with technology, it starts with people. At ONE400 we have dedicated team members whose very job is to innovate and contribute to our clients success on a daily basis.</h6>
-            <a href="#" class="link desktop-only">Learn more about us <i class="fas fa-arrow-right"></i> </a>
-            <a href="#"class="btn mobile-only btn-has-icon btn-secondary">Learn more about us <i class="fas fa-arrow-right"></i> </a>
+            <a href="#" class="link ">Learn more about us <i class="fas fa-arrow-right"></i> </a>
+            <!-- <a href="#"class="btn mobile-only btn-has-icon btn-secondary">Learn more about us <i class="fas fa-arrow-right"></i> </a> -->
             <a href="#" class="link">Meet the team <i class="fas fa-arrow-right"></i> </a>
         </div>
       </div>

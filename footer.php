@@ -114,7 +114,8 @@
       <div class="panel-logo"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/nav-logo_b.png" alt=""></a></div>
       <!-- Main Menu Items -->
       <div class="modal-close">
-          <i class="fa fa-close"></i>
+          <!-- <i class="fa fa-close"></i> -->
+          <span class="close-icon"></span>
         </div>
       <div class="inner-content">
           <div class="content-left">
@@ -153,15 +154,15 @@
             <div class="form">
                 <form class="contact100-form validate-form">
                   <div class="wrap-input100 validate-input" data-validate="Please enter your name">
-                    <input class="input100" type="text" name="name" placeholder="Name of Business*">
+                    <input class="input100" type="text" name="name" placeholder="Name of Business">
                     <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
-                    <input class="input100" type="text" name="email" placeholder="E-mail*">
+                    <input class="input100" type="text" name="email" placeholder="E-mail">
                     <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
-                    <input class="input100" type="text" name="phone" placeholder="Phone">
+                    <input class="input100" type="text" name="phone" placeholder="Phone (Optional)">
                     <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Please enter your message">

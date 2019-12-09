@@ -12,7 +12,8 @@ $name--L: L;
 $name--XL: XL;
 
 $break--S:  480px;
-$break--M:  980px;
+$break--M:  979px;
+$break--MM:  767px;
 $break--LL: 1280px;
 $break--L:  1024px;
 $break--XM: 992px;
@@ -20,6 +21,7 @@ $break--XL: 1440px;
 
 $screen--S:  $break--S + 1;
 $screen--M:  $break--M + 1;
+$screen--MM:  $break--MM + 1;
 $screen--L:  $break--L + 1;
 $screen--XL: $break--XL + 1;
 
@@ -39,9 +41,13 @@ $nav-level-border-color: #8D8C8C;
 $default-font-color : #4A4A4A;
 $base-font-primary : Freight-Tex-Pro;
 $base-font-primary-bold : FreightTextProBold;
+$base-font-primary-ProBold : FreightTextProBold-Regular;
+$base-font-primary-ProBook : FreightTextProBook-Regular; 
 
 
-$base-font-secondary : Gibson, sans-serif;
+$base-font-secondary : Gibson-Regular;
+$base-font-secondary-Bold: Gibson-Bold;
+$base-font-secondary-SemiBold: Gibson-SemiBold;
 $base-font-size: 15px !default;
 $base-line-height: 1.67 !default;
 $btn-font-weight : 400;

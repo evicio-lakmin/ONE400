@@ -21,6 +21,9 @@
       width: 122px;
     }
   }
+  .fixed-logo{
+    display: none;
+  }
 }
 
 .go-back-icon{
@@ -73,6 +76,25 @@
                 transition-property: bottom, transform;
       }
     }
+}
+
+
+.scrolled{
+  .mob-menu-ham{
+    span{
+      background: $blue;
+
+      &::after, &::before{
+        background: $blue;
+      }
+    }
+  }
+  .def-logo{
+    display: none;
+  }
+  .fixed-logo{
+    display: block;
+  }
 }
 
 .nav-is-toggled{
@@ -152,7 +174,7 @@
 		font-size: 1rem;
     line-height: 1.5em;
     font-size: 40px !important;
-		font-weight: 300;
+		font-weight: normal;
 	}
 	
 	&-expand {
@@ -177,7 +199,7 @@
 			.nav-link {
         font-family: $base-font-secondary;
         font-size: 20px !important;
-        font-weight: 400 !important;
+        font-weight: normal !important;
         color: $black !important;
         padding: 40px 0 !important;
       }
@@ -200,7 +222,7 @@
               font-size: 20px !important;
               font-family: $base-font-secondary;    
               text-transform: unset !important;
-              font-weight: 400 !important;
+              font-weight: normal !important;
             }
           }
         }
@@ -213,7 +235,6 @@
       .nav-link-collapse {
         font-family: $base-font-secondary;
         font-size: 20px !important;
-        font-weight: 400 !important;
         color: $black !important;
         padding: 40px 0 !important;
         display: flex;
@@ -255,7 +276,7 @@
 .panel-logo{  
   margin-left: 5%;
   margin-top: 30px;
-  color: #0567A3;
+  color: $blue;
   font-size: 30px;
   position: absolute;
   z-index: 1010;
@@ -286,7 +307,7 @@
 }
 #menu ul.desktop,  #contact ul.desktop {
   margin-top: 150px;
-  @media (max-width: $screen--L) {
+  @media (max-width: $break--LL) {
     margin-top: 100px;
   }
 }
@@ -303,7 +324,7 @@
 
 #menu li a {
   color: $black;
-  font-size: 4rem;
+  font-size: 65px;
   text-decoration: none;
   font-weight: 600; 
   padding: 20px 0;
@@ -326,14 +347,14 @@
 .menu-link {
   z-index: 1001;
   display: block;
-  position: fixed;
+  // position: fixed;
   top: 0;
   right: 3vw;
   overflow: hidden;
   margin: 0;
   padding: 0;
-  width: 80px;
-  height: 80px;
+  width: 28px;
+  height: 70px;
   font-size: 0;
   text-indent: -9999px;
   -webkit-appearance: none;
@@ -439,8 +460,17 @@ box-shadow: none;
     flex: 5;
   }
   .menu-item-info{
-    flex: 6;
-    margin-top: 150px;
+    flex: 10;
+    margin-top: 100px;
+
+    @media screen and (min-width: $break--LL){
+      flex: 6;
+      margin-top: 150px;
+    }
+  }
+  .menu-link{
+    position: absolute;
+    right: 5vw;
   }
 }
 .open-modal-active {
@@ -458,6 +488,34 @@ box-shadow: none;
   top: 20px;
   right: 30px;
   font-size: 36px;
+
+  .close-icon{
+    display: block;
+    position: absolute;
+    top: 20px;
+    width: 26.5px;
+    height: 1.9px;
+    right: 65px;
+
+    &::after, &::before{
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 1.9px;
+      border-radius: 2px;
+      background-color: $black;
+      content: "";
+      transition-delay: 0.3s, 0;
+    }
+
+    &::after{
+      transform: rotate(45deg);
+    }
+    &::before{
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 /* Style the tab content */
@@ -472,9 +530,10 @@ box-shadow: none;
     border-left: 2px solid #000;
     padding-left: 2rem;
     padding-right: 3rem;
+    width: 40%; 
 
     h3{
-      font-size: 36px;
+      font-size: 25px;
       font-weight: 500;
       width: 75%;
       @media screen and (max-width: $break--M){
@@ -489,7 +548,7 @@ box-shadow: none;
 
       li{
         text-align: left !important;
-        font-size: 21px;        
+        font-size: 15px;        
         font-family: $base-font-secondary;
         color: $default-font-color;
         line-height: 30px;
@@ -510,7 +569,7 @@ box-shadow: none;
       }
     }
 
-    @media (max-width: $screen--L) {
+    @media (max-width: $break--M) {
       display: none;
     }
   }
