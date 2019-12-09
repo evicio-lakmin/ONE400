@@ -493,9 +493,10 @@ box-shadow: none;
     display: block;
     position: absolute;
     top: 20px;
-    width: 26.5px;
+    width: 20.8px;
     height: 1.9px;
     right: 65px;
+    cursor: pointer;
 
     &::after, &::before{
       position: absolute;

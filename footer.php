@@ -158,7 +158,7 @@
                     <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
-                    <input class="input100" type="text" name="email" placeholder="E-mail">
+                    <input class="input100" type="text" name="email" placeholder="Email">
                     <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
