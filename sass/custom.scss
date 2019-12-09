@@ -1320,10 +1320,11 @@ ul.mobile-only.social-media-icons {
     }
     h2{
       font-size: 65px;
+      font-weight: normal;
     }
     h5 {
       font-size: 25px;
-      font-weight: 500;
+      font-weight: normal;
       width: 80%;
       font-family: $base-font-primary-ProBook;
       @media screen and (max-width: $break--M){
@@ -1361,6 +1362,7 @@ ul.mobile-only.social-media-icons {
         display: block;
         padding: 15px;
         font-family: $base-font-secondary;
+        font-size: 14px;
       } 
       .btn {
         margin: 5% auto;
