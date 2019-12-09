@@ -15,94 +15,10 @@ setInterval(function(){
   }, 6000);
 });
 
-if($(window).width() > 768){ 
-
-  //scroll plugin settings 
-  new fullpage('.fullpage', {
-    licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
-    scrollHorizontally: false,
-    autoScrolling: false,
-    slidesNavigation: false,
-    css3: true,
-    dragAndMove: true,
-    setResponsive: true,
-    scrollBar: true,
-    //normalScrollElements: '.home-top-content, .research-section, .become-a-click-block, .copyrights',
-    fitToSection: false,
-    lazyLoad: false,
-    fadingEffect: true,
-    fixedElements: 'header',
-    afterSlideLoad: function(section, origin, destination, direction){
-      console.log("section" + section.index);
-      console.log("slide" +origin.index);
-
-        if(section.index == 0){
-            if(origin.index == 2 && direction =='right'){
-              // console.log("disabled scrollBar");
-            // fullpage_api.setAutoScrolling(false);
-            setTimeout(function(){ setImageHeight(); }, 2000);
-            // $(".tab-navigation ul li").removeClass("active");
-            // $(".slide1").addClass("active");
-        }
-        
-        if(origin.index == 0){
-          console.log(origin.index + " Loaded");
-          
-          $(".slide2").addClass("active");
-        }
-
-        if(origin.index == 1){
-          console.log(origin.index + " Loaded");
-          $(".slide3").addClass("active");
-        }
-
-        if(origin.index == 2){
-          console.log(origin.index + " Loaded");
-          $(".slide4").addClass("active");
-        }
-        if(origin.index == 3){
-          $(".tab-navigation ul li").removeClass("active");
-          console.log(origin.index + " Loaded");
-          setTimeout(function(){ 
-           $(".slide1").addClass("active");
-          }, 1000);
-          
-        }
-
-        if(section.index == 2){
-          console.log("disabled scrollBar");
-        }
-      }
-
-    },
-    onLeave: function(origin, destination, direction){
-      var leavingSection = this;
-  
-      //after leaving section 2
-      if(origin.index == 1 && direction =='down'){
-        // alert("Going to section 3!");
-      }
-  
-      else if(origin.index == 1 && direction == 'up'){
-        // fullpage_api.setAutoScrolling(true);
-        // fullpage_api.moveTo(0, 0);
-      }
-    },
-    afterLoad: function(origin, destination, direction){
-      // console.log(direction);
-      // console.log(origin.index);
-      // if(direction == "down" && origin.index == 0){
-      //   fullpage_api.moveTo(0, 0);
-      // }
-    }
-  });
-} else {
-  $('.header-slider').addClass('fp-auto-height');
-  //scroll plugin settings 
-  new fullpage('.fullpage', {
-    licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
+new fullpage('.fullpage', {
+  licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
     scrollHorizontally: true,
-    autoScrolling:false,
+    autoScrolling: false,
     slidesNavigation: false,    
     setResponsive: true,
     css3: true,
@@ -111,8 +27,106 @@ if($(window).width() > 768){
     fitToSectionDelay: 1000,
     lazyLoad: true,
     fixedElements: 'header'
-  });
-}
+});
+
+// if($(window).width() > 768){ 
+
+//   //scroll plugin settings 
+//   new fullpage('.fullpage', {
+//     licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
+//     scrollHorizontally: false,
+//     autoScrolling: false,
+//     slidesNavigation: false,
+//     css3: true,
+//     dragAndMove: true,
+//     setResponsive: true,
+//     scrollBar: true,
+//     //normalScrollElements: '.home-top-content, .research-section, .become-a-click-block, .copyrights',
+//     fitToSection: false,
+//     lazyLoad: false,
+//     fadingEffect: true,
+//     fixedElements: 'header',
+//     afterSlideLoad: function(section, origin, destination, direction){
+//       console.log("section" + section.index);
+//       console.log("slide" +origin.index);
+
+//         if(section.index == 0){
+//             if(origin.index == 2 && direction =='right'){
+//               // console.log("disabled scrollBar");
+//             // fullpage_api.setAutoScrolling(false);
+//             setTimeout(function(){ setImageHeight(); }, 2000);
+//             // $(".tab-navigation ul li").removeClass("active");
+//             // $(".slide1").addClass("active");
+//         }
+        
+//         if(origin.index == 0){
+//           console.log(origin.index + " Loaded");
+          
+//           $(".slide2").addClass("active");
+//         }
+
+//         if(origin.index == 1){
+//           console.log(origin.index + " Loaded");
+//           $(".slide3").addClass("active");
+//         }
+
+//         if(origin.index == 2){
+//           console.log(origin.index + " Loaded");
+//           $(".slide4").addClass("active");
+//         }
+//         if(origin.index == 3){
+//           $(".tab-navigation ul li").removeClass("active");
+//           console.log(origin.index + " Loaded");
+//           setTimeout(function(){ 
+//            $(".slide1").addClass("active");
+//           }, 1000);
+          
+//         }
+
+//         if(section.index == 2){
+//           console.log("disabled scrollBar");
+//         }
+//       }
+
+//     },
+//     onLeave: function(origin, destination, direction){
+//       var leavingSection = this;
+  
+//       //after leaving section 2
+//       if(origin.index == 1 && direction =='down'){
+//         // alert("Going to section 3!");
+//       }
+  
+//       else if(origin.index == 1 && direction == 'up'){
+//         // fullpage_api.setAutoScrolling(true);
+//         // fullpage_api.moveTo(0, 0);
+//       }
+//     },
+//     afterLoad: function(origin, destination, direction){
+//       // console.log(direction);
+//       // console.log(origin.index);
+//       // if(direction == "down" && origin.index == 0){
+//       //   fullpage_api.moveTo(0, 0);
+//       // }
+//     }
+//   });
+// } else {
+//   $('.header-slider').addClass('fp-auto-height');
+//   //scroll plugin settings 
+//   new fullpage('.fullpage', {
+//     licenseKey: '6DDC2A7A-6BD248F9-ACBCB394-2805B093',
+//     scrollHorizontally: true,
+//     autoScrolling: false,
+//     slidesNavigation: false,    
+//     setResponsive: true,
+//     css3: true,
+//     scrollBar: false,
+//     fitToSection: false,
+//     fitToSectionDelay: 1000,
+//     lazyLoad: true,
+//     fixedElements: 'header'
+//   });
+// }
 
 //menu full page slide
 $(document).ready(function() { 
