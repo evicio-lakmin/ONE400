@@ -46,7 +46,7 @@ get_header();
                         <i class="fa fa-chevron-right fa-rotate-90"></i>
                       </div>
                       <div class="contentwrapper">
-                        <div class="dropdown-menu">
+                        <!-- <div class="dropdown-menu">
                             <ul>
                               <li>
                                 <a href="#"> <p>Solo + Small firm </p>
@@ -104,7 +104,7 @@ get_header();
                                 </a>
                               </li>
                             </ul>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                     <div class="featured-image">
@@ -115,9 +115,67 @@ get_header();
                         </picture>
                     </div>
               </div>
-        </div>
-         
+        </div> 
       </div>
+      <div class="dropdown-menu">
+          <ul>
+            <li>
+              <a href="#"> <p>Solo + Small firm </p>
+              
+              <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/man1.webp" type="image/webp">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/man1.png"pngtype="image/png"> 
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/man1.webp" alt="">
+              </picture>
+            </a>
+            </li>
+            <li>
+              <a href="#"> <p>Solo + Small firm </p>
+              <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/man3.webp" type="image/webp">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/man3.png"pngtype="image/png"> 
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/man3.webp" alt="">
+              </picture>
+              </a>
+            </li>
+            <li>
+              <a href="#"> <p>Solo + Small firm </p>
+              <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/woman.webp" type="image/webp">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/woman.png"pngtype="image/png"> 
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/woman.webp" alt="">
+              </picture>
+            </a>
+            </li>
+            <li>
+              <a href="#"> <p>Solo + Small firm </p>
+              <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/man2.webp" type="image/webp">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/man2.png"pngtype="image/png"> 
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/man2.webp" alt="">
+              </picture>
+            </a>
+            </li>
+            <li>
+              <a href="#"> <p>Solo + Small firm </p>
+              <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/man1.webp" type="image/webp">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/man1.png"pngtype="image/png"> 
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/man1.webp" alt="">
+              </picture>
+            </a>
+            </li>
+            <li>
+              <a href="#"> <p>Solo + Small firm </p>
+              <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/woman.webp" type="image/webp">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/woman.png"pngtype="image/png"> 
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/woman.webp" alt="">
+              </picture>
+              </a>
+            </li>
+          </ul>
+      </div> 
       <!-- slide 02-->
       <div class="tab slide header-content fadeInDown animated" data-anchor="slide2">
         <div class="container">
@@ -194,6 +252,7 @@ get_header();
       </div>
     </div>
   </div>
+  
       <!-- Services tabs on the home page banner area -->
       <div class="service-rollovers">
           <div class="tab pd-l-tab">
@@ -242,7 +301,7 @@ get_header();
           </div>
       </div> 
     </section>
-
+    
     <!-- home page main content block -->
     <section class="block home-top-content fp-auto-height section">
       <div class="container">
@@ -258,7 +317,7 @@ get_header();
     <!-- home page case studies section  -->
     <section class="case-study-section section">
       <!-- slide - case study -->
-      <div class="slide" id="slide0" data-anchor="slide0" 
+      <div class="slide active" id="slide0" data-anchor="slide0" 
       <?php if( strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { ?>
         style="background: url(<?php echo get_template_directory_uri(); ?>/assets/webp/home-case-study.webp);"
           <?php } else { ?>
@@ -280,7 +339,7 @@ get_header();
         </div>
       </div>
     <!-- slide - case study -->
-    <div class="slide" id="slide1" data-anchor="slide1" 
+    <div class="slide active" id="slide1" data-anchor="slide1" 
     <?php if( strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { ?>
         style="background: url(<?php echo get_template_directory_uri(); ?>/assets/webp/home-case-study.webp);"
           <?php } else { ?>
@@ -302,7 +361,7 @@ get_header();
       </div>
     </div>
     <!-- slide - case study -->
-    <div class="slide" id="slide2" data-anchor="slide2" 
+    <div class="slide active" id="slide2" data-anchor="slide2" 
       <?php if( strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { ?>
         style="background: url(<?php echo get_template_directory_uri(); ?>/assets/webp/home-case-study.webp);"
           <?php } else { ?>
@@ -324,7 +383,7 @@ get_header();
         </div>
     </div>
     <!-- slide - case study -->
-    <div class="slide" id="slide3" data-anchor="slide3" 
+    <div class="slide active" id="slide3" data-anchor="slide3" 
     <?php if( strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { ?>
       style="background: url(<?php echo get_template_directory_uri(); ?>/assets/webp/home-case-study.webp);"
         <?php } else { ?>
