@@ -10,7 +10,7 @@ $(window).load(function() {
 
 
 setInterval(function(){ 
-    fullpage_api.moveSlideRight(false);
+    fullpage_api.moveSlideRight();
     console.log("slided");
   }, 6000);
 });
@@ -34,34 +34,28 @@ if($(window).width() > 768){
     fixedElements: 'header',
     moveSlideRight: false,
     afterSlideLoad: function(section, origin, destination, direction){
-      console.log("section" + section.index);
-      console.log("slide" +origin.index);
+      // console.log("section" + section.index);
+      // console.log("slide" +origin.index);
 
         if(section.index == 0){
             if(origin.index == 2 && direction =='right'){
-              // console.log("disabled scrollBar");
             fullpage_api.setAutoScrolling(false);
             setTimeout(function(){ setImageHeight(); }, 2000);
         }
         
         if(origin.index == 0){
-          console.log(origin.index + " Loaded");
-          
           $(".slide2").addClass("active");
         }
 
         if(origin.index == 1){
-          console.log(origin.index + " Loaded");
           $(".slide3").addClass("active");
         }
 
         if(origin.index == 2){
-          console.log(origin.index + " Loaded");
           $(".slide4").addClass("active");
         }
         if(origin.index == 3){
           $(".tab-navigation ul li").removeClass("active");
-          console.log(origin.index + " Loaded");
           setTimeout(function(){ 
            $(".slide1").addClass("active");
           }, 1000);
@@ -149,17 +143,15 @@ $('body').on("click", function(){
     $('.selectbox').parent().removeClass('active');
     $('.fp-slides').css({'z-index':'0'});
   }
+  if($('.header-slider').hasClass('dropped')){
+    $('.header-slider').removeClass('dropped')
+  }
 });
 
 //select box on hero section - onlcick dropdown 
 $('.selectbox').on("click", function(e){
   e.stopPropagation();
-   $('.fp-slides').css({'z-index':'2'});
-  $(this).parent().toggleClass('active');
-  if($('.selectbox').parent().hasClass('active')){
-  } else{
-     $('.fp-slides').css({'z-index':'0'});
-  }
+  $('.header-slider').toggleClass('dropped');
 });
 
 // Fixing content height issues on home page reaseach block

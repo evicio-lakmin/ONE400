@@ -45,66 +45,7 @@ get_header();
                         <div> <h5>Choose your segment</h5></div>
                         <i class="fa fa-chevron-right fa-rotate-90"></i>
                       </div>
-                      <div class="contentwrapper">
-                        <!-- <div class="dropdown-menu">
-                            <ul>
-                              <li>
-                                <a href="#"> <p>Solo + Small firm </p>
-                               
-                                <picture>
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/man1.webp" type="image/webp">
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/man1.png"pngtype="image/png"> 
-                                  <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/man1.webp" alt="">
-                                </picture>
-                              </a>
-                              </li>
-                              <li>
-                                <a href="#"> <p>Solo + Small firm </p>
-                                <picture>
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/man3.webp" type="image/webp">
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/man3.png"pngtype="image/png"> 
-                                  <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/man3.webp" alt="">
-                                </picture>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#"> <p>Solo + Small firm </p>
-                                <picture>
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/woman.webp" type="image/webp">
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/woman.png"pngtype="image/png"> 
-                                  <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/woman.webp" alt="">
-                                </picture>
-                              </a>
-                              </li>
-                              <li>
-                                <a href="#"> <p>Solo + Small firm </p>
-                                <picture>
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/man2.webp" type="image/webp">
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/man2.png"pngtype="image/png"> 
-                                  <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/man2.webp" alt="">
-                                </picture>
-                              </a>
-                              </li>
-                              <li>
-                                <a href="#"> <p>Solo + Small firm </p>
-                                <picture>
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/man1.webp" type="image/webp">
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/man1.png"pngtype="image/png"> 
-                                  <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/man1.webp" alt="">
-                                </picture>
-                              </a>
-                              </li>
-                              <li>
-                                <a href="#"> <p>Solo + Small firm </p>
-                                <picture>
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/webp/woman.webp" type="image/webp">
-                                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/woman.png"pngtype="image/png"> 
-                                  <img src="<?php echo get_template_directory_uri(); ?>/assets/webp/woman.webp" alt="">
-                                </picture>
-                                </a>
-                              </li>
-                            </ul>
-                        </div> -->
+                      <div class="contentwrapper">                       
                       </div>
                     </div>
                     <div class="featured-image">

@@ -273,7 +273,6 @@ header {
     left: 0;
     right: 0;
     height: 100%;
-    // background-color: rgba(2, 2, 2, 0.5);
     .fp-controlArrow, .fp-slidesNav {
       display: none;
     }
@@ -296,9 +295,12 @@ header {
 
       .content {
         position: relative;
-        height: 58vh;
+        height: 60vh;
         @media (max-width: $screen--M) {
           height: 50vh;
+        }
+        @media (max-width: $screen--S) {
+          height: 56vh;
         }
         .right-content {
             font-family: $base-font-secondary;
@@ -558,12 +560,7 @@ header {
 }
 
 .explore-one-400 {
- 
   background-color: $whiteDark; 
-
-  // @media screen and (max-width: $break--M) {
-  //   @include soft--ends(10%);
-  // }
   .left {
     @extend .M6;
     .image {
@@ -777,7 +774,7 @@ header {
       @include soft--sides(10%);
 
       @media screen and (max-width: $break--M) {
-        @include soft--sides(20px);
+        @include soft--sides(30px);
         a.link.mobile-only {
             margin: 10% 0px;
             color: $black;
@@ -1076,18 +1073,33 @@ ul.mobile-only.social-media-icons {
 }
 
 .dropdown-menu {
-  /*display: none;*/
   visibility: hidden;
   opacity: 0;
+  border-radius: 1.5px;
   transition: visibility 0s, opacity 0.5s linear;
-  background-color: rgb(146, 88, 88);
-  visibility: visible;
-  opacity: 1;
   position: absolute;
-  z-index: 99;
-  top: 70%;
-  left: 15em;
-  width: 50%;
+  z-index: 99;  
+  width: 86%;
+  left: 0;
+  @include push--sides(30px);
+  margin-top: 70vh;
+
+  @media screen and (min-width: $screen--S){
+    width: 94%;
+    margin-top: 50vh;     
+  }
+
+  @media screen and (min-width: $screen--M){
+    width: 50%;
+    @include push--sides(5em);
+    margin-top: 0;  
+    top: 70%;
+  }
+
+  @media screen and (min-width: $screen--XL){
+    width: 40%;
+    @include push--sides(15em);
+  }
 
   &:before {
       content: "";
@@ -1099,7 +1111,7 @@ ul.mobile-only.social-media-icons {
       border-bottom: 15px solid #ffffff;
       position: absolute;
       top: -15px;
-      left: 50px;
+      left: -10%;
       right: 0;
       text-align: center;
       margin: auto;
@@ -1138,10 +1150,9 @@ ul.mobile-only.social-media-icons {
   }
 }
 
-.active{ 
+.dropped{ 
   .dropdown-menu {
-   /* display: block;*/
-    background-color: rgb(146, 88, 88);;
+    background-color: $white;
     visibility: visible;
     opacity: 1;
   }
@@ -1192,69 +1203,6 @@ ul.mobile-only.social-media-icons {
       }
     } 
   }
-  // .dropdown-menu {
-  //   /*display: none;*/
-  //   visibility: hidden;
-  //   opacity: 0;
-  //   transition: visibility 0s, opacity 0.5s linear;
-
-  //   &:before {
-  //       content: "";
-  //       display: block;
-  //       width: 0px;
-  //       height: 0px;
-  //       border-left: 15px solid transparent;
-  //       border-right: 15px solid transparent;
-  //       border-bottom: 15px solid #ffffff;
-  //       position: absolute;
-  //       top: -15px;
-  //       left: 50px;
-  //       right: 0;
-  //       text-align: center;
-  //       margin: auto;
-  //   }
-  //   ul {
-  //     padding: 0;
-  //     margin: 0;
-  //     list-style: none;
-  //     text-align: center;
-  //     li {
-  //       display: inline-block;
-  //       width: 45%;
-  //       padding: 5px;
-  //       border-bottom: 1px solid #d8d8d8;
-  //       margin: 5px 2%;
-  //       white-space: normal;
-
-  //       @media screen and (max-width: $break--M){
-  //         width: 100%;
-  //         padding: 15px;
-  //         margin: 5px 0%;
-  //       }
-
-  //       img {width: 50px;}
-  //       a {
-  //         color :$black;
-  //         text-decoration: none;
-  //         display: flex;
-  //         font-family: $base-font-secondary;
-  //         justify-content: space-between;
-  //         p {
-  //           font-size: 16px;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-  
-  // &.active{ 
-  //   .dropdown-menu {
-  //    /* display: block;*/
-  //     background-color: #FFFFFF;
-  //     visibility: visible;
-  //     opacity: 1;
-  //   }
-  // }
 
   .contentwrapper {
     position: absolute;
@@ -1327,7 +1275,7 @@ ul.mobile-only.social-media-icons {
   }
 
   @media screen and (min-width: $screen--M + 1){    
-    bottom: 5%;
+    bottom: 7%;
   }
 }
 .fp-slides {
@@ -1340,9 +1288,16 @@ ul.mobile-only.social-media-icons {
     flex-direction: column;
     min-height: 60vh;
   }
-  @media screen and (max-width: 768px){
-    // margin-top: 20vh;
+  @media screen and (max-width: $screen--MM){
     min-height: 45vh;
+  }
+}
+
+.header-slider{
+  .fp-slides{
+    @media screen and (max-width: $screen--S){      
+      margin-bottom: 8vh;
+    }
   }
 }
 
@@ -1450,9 +1405,6 @@ ul.mobile-only.social-media-icons {
     } 
   }
 }
-
-
-
 
 .link-section {
   position: relative;
